@@ -26,20 +26,20 @@ else
   echo "[gemini] Symlinked: $GEMINI_EXT -> $GEMINI_SRC"
 fi
 
-# --- Obsidian symlink (deferred until vault migration completes) ---
-# To enable: set OBSIDIAN_VAULT below and uncomment
-# OBSIDIAN_VAULT=""
-# if [ -n "$OBSIDIAN_VAULT" ] && [ -d "$OBSIDIAN_VAULT" ]; then
-#   OBSIDIAN_LINK="$OBSIDIAN_VAULT/Teaching Skills"
-#   if [ ! -L "$OBSIDIAN_LINK" ]; then
-#     ln -s "$REPO/ir-teaching/skills" "$OBSIDIAN_LINK"
-#     echo "[obsidian] Symlinked: $OBSIDIAN_LINK -> $REPO/ir-teaching/skills"
-#   else
-#     echo "[obsidian] Already symlinked."
-#   fi
-# else
-#   echo "[obsidian] Skipped — vault path not set (pending vault migration)"
-# fi
+# --- Obsidian symlink ---
+OBSIDIAN_VAULT="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Second Brain"
+OBSIDIAN_LINK="$OBSIDIAN_VAULT/Teaching Skills"
+
+if [ -d "$OBSIDIAN_VAULT" ]; then
+  if [ -L "$OBSIDIAN_LINK" ]; then
+    echo "[obsidian] Already symlinked: $OBSIDIAN_LINK -> $(readlink "$OBSIDIAN_LINK")"
+  else
+    ln -s "$REPO/ir-teaching/skills" "$OBSIDIAN_LINK"
+    echo "[obsidian] Symlinked: $OBSIDIAN_LINK -> $REPO/ir-teaching/skills"
+  fi
+else
+  echo "[obsidian] Skipped — vault not found at $OBSIDIAN_VAULT"
+fi
 
 echo ""
 echo "Done. Update Claude Code marketplace path in ~/.claude/settings.json if not already done."
