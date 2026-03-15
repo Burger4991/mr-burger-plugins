@@ -1,0 +1,9 @@
+{
+  "name": "ir-data-pipeline",
+  "version": "1.0.0",
+  "description": "Student assessment data pipeline for Intensive Reading — ingest, validate, analyze, group, and report on FAST PM, NWEA, and other assessment data",
+  "author": {
+    "name": "Mr. Burger"
+  },
+  "keywords": ["data-analysis", "assessment", "student-data", "progress-monitoring", "reporting"]
+}
