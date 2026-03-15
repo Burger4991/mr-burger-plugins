@@ -27,7 +27,7 @@ else
 fi
 
 # --- Obsidian symlink ---
-OBSIDIAN_VAULT="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Second Brain"
+OBSIDIAN_VAULT="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Teaching/Teaching"
 OBSIDIAN_LINK="$OBSIDIAN_VAULT/Teaching Skills"
 
 if [ -d "$OBSIDIAN_VAULT" ]; then
