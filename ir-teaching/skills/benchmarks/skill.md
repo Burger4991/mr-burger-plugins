@@ -1,19 +1,16 @@
 ---
 name: benchmarks
 description: >
-  Florida BEST ELA 10th grade benchmark standard guides — all 10 reading standards in one skill.
-  Covers: R.1.1 Literary Elements (character, setting, plot), R.1.2 Theme (universal themes),
-  R.1.3 Coming of Age & Conflicting Perspectives (perspective transformation, author's craft),
-  R.1.4 Layers of Meaning & Ambiguity in Poetry (multiple meanings, unresolved ideas),
-  R.2.1 Text Structure & Features, R.2.2 Central Idea (historical American speeches/essays),
-  R.2.3 Purpose & Perspective (author's purpose), R.2.4 Argument (claims, evidence, reasoning),
-  R.3.1 Figurative Language & Mood (metaphor, simile, personification),
-  R.3.4 Rhetoric (ethos, pathos, logos, rhetorical devices).
-  Each guide includes: standard statement, clarifications, analytical process, organizer structures,
-  question stems from Planning Cards, achievement level descriptors (Levels 2-5), ESOL scaffolds,
-  prerequisite mini-lessons, and feedback checkpoints.
-  Use when planning units, creating organizers, writing assessments, designing rubrics,
-  looking up achievement levels, finding question stems, or aligning to any ELA.10.R benchmark.
+  Routing hub and cross-benchmark reference for all 10 Florida BEST ELA 10th grade reading standards.
+  Use this skill when the user needs to COMPARE multiple benchmarks, see ALL benchmarks at once,
+  or when you need to route to the correct standalone benchmark skill by code or topic.
+  For a SINGLE specific benchmark (e.g., "tell me about R.1.2" or "theme achievement levels"),
+  prefer the standalone benchmark-* skill instead (benchmark-theme, benchmark-argument, etc.).
+  This skill routes to: R.1.1 Literary Elements, R.1.2 Theme, R.1.3 Point of View,
+  R.1.4 Poetry, R.2.1 Text Structure, R.2.2 Central Idea, R.2.3 Purpose & Perspective,
+  R.2.4 Argument, R.3.1 Figurative Language, R.3.4 Rhetoric.
+  Use when comparing benchmarks, viewing the full benchmark map, or when unsure which
+  specific benchmark applies to a user's request.
 ---
 
 # Florida BEST ELA Benchmarks — 10th Grade

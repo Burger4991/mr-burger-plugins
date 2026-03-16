@@ -1,7 +1,13 @@
 ---
 name: reporting-category-tracker
 description: >
-  This skill should be used when "tracking student performance" across the 4 NWEA reporting categories or "identifying intervention needs". Use when "conducting progress monitoring", "creating intervention groups", "before instructional planning meetings", or "analyzing performance trends".
+  Use when tracking student performance across the 4 NWEA reporting categories (Reading Across Genres,
+  Reading Informational Text, Prose & Poetry, Vocabulary). Use when identifying intervention needs,
+  conducting progress monitoring, creating intervention groups, before instructional planning meetings,
+  or analyzing performance trends.
+
+  IMPORTANT: This analyzes NWEA REPORTING CATEGORIES, not individual FAST benchmarks. For analysis of
+  specific FAST benchmarks, use benchmark-mastery-analyzer instead.
 version: 0.1.0
 ---
 # Reporting Category Tracker Skill

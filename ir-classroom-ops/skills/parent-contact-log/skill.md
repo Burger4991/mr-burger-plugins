@@ -1,10 +1,11 @@
 ---
 name: parent-contact-log
 description: >
-  This skill should be used when "logging parent contacts", "documenting phone calls home",
-  "tracking email communication with families", or "pulling contact history for a student".
-  Use when /log detects parent contact input, when "preparing for conferences", "documenting
-  RTI parent involvement", or "generating contact accountability records".
+  This skill should be used when "logging parent contacts", "tracking parent communication",
+  "documenting phone calls home", or recording any parent/guardian interaction.
+  Specifically for logging parent/guardian COMMUNICATION events (calls, emails, conferences),
+  not classroom behavior observations. Use when the /log command detects a parent contact
+  or when generating contact histories.
 version: 1.0.0
 ---
 

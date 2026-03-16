@@ -1,7 +1,13 @@
 ---
 name: intervention-planner
 description: >
-  This skill should be used when "creating flexible instructional groups" or "planning differentiated instruction" based on assessment data. Use when "after assessment periods", "starting new IR units", "identifying Tier 2/3 interventions", or "developing small-group instruction schedules".
+  Use when creating flexible instructional groups based on overall performance levels and intervention
+  tiers. Use after assessment periods, starting new IR units, identifying Tier 1/2/3 interventions, or
+  developing small-group instruction schedules. Creates High/Middle/Low performance groups and Tier
+  1/2/3 intervention designations.
+
+  Note: For groups focused on specific benchmark weaknesses (e.g., all students struggling with Theme),
+  use benchmark-mastery-analyzer. For category-specific group analysis, use reporting-category-tracker.
 version: 0.1.0
 ---
 # Intervention Planner & Grouping Skill

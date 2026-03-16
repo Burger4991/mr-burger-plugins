@@ -1,11 +1,10 @@
 ---
 name: area-context
 description: >
-  This skill should be used when "determining the right area for a task", "routing content to
-  the correct Second Brain folder", or "providing context about project locations and file paths".
-  Use when "processing new brain dumps", "organizing notes by life area", "finding where files
-  should go", or "understanding the six life areas: Teaching, Career, Music, Dog Training,
-  Personal, Tech".
+  This skill provides context for personal life AREAS (teaching, personal, tech) and project
+  file locations. Use when determining which life area a task or note belongs to, or when
+  needing context about the user's projects and file locations. About personal life areas
+  and project file organization, not plugin ownership or inter-plugin routing.
 version: 1.0.0
 ---
 

@@ -1,12 +1,15 @@
 ---
 name: report-builder
 description: >
-  Use to generate final Excel reports from analysis data. Use this as the LAST step after
-  quality checks and growth analysis are complete. Trigger when: ready to present data to
-  stakeholders, need professional Excel output, assessment analysis finished.
-  Assemble comprehensive multi-sheet Excel reports from intermediate analysis CSVs.
-  Originally built for PM assessment data but adaptable to any student data pipeline.
-  Use after running growth-analyzer and data-quality-checker.
+  Use to generate comprehensive multi-sheet Excel workbooks from analysis data. Creates professional
+  16-sheet reports with KPI dashboards, formatted data tables, and multiple views. Use this as the LAST step
+  after quality checks and growth analysis are complete. Trigger when: assembling multi-sheet Excel reports,
+  need formatted dashboards, generating comprehensive data workbooks for stakeholder review, assessment
+  analysis is finished.
+
+  Note: For presentation-ready charts and graphs (PNG, PDF, PowerPoint format), use
+  data-visualization-builder instead.
+version: 0.1.0
 ---
 
 # Assessment Report Builder

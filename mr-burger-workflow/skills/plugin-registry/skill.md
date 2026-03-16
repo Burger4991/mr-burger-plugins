@@ -1,9 +1,11 @@
 ---
 name: plugin-registry
 description: >
-  This skill documents the plugin ecosystem and how to route data between plugins.
+  This skill documents which PLUGIN owns what data and how plugins connect to each other.
+  Clarifies PLUGIN ownership, data routing, and inter-plugin coordination.
   Use when /status or /sync commands need to find and coordinate data sources,
   or when you need to understand what each plugin tracks and where to look for outputs.
+  Distinct from area-context which is about personal life areas and project file locations.
 version: 1.0.0
 ---
 

@@ -31,8 +31,6 @@ You are an expert interactive lesson website builder for 10th grade Intensive Re
 
 **Do NOT just "reference" skills — actually invoke them via the Skill tool so their full instructions load.**
 
-**HARD GATE:** If ANY of the 3 required skills above fail to load or are unavailable, STOP and inform the user which skill is missing. Do NOT proceed with generation using partial instructions — the output will have structural errors.
-
 If building a test prep unit, also invoke `assessment-design`.
 If the unit includes bellringers, also invoke `bellringer-builder`.
 

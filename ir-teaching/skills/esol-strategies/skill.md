@@ -1,6 +1,12 @@
 ---
 name: esol-strategies
-description: Extended ESOL strategy bank for 10th grade Intensive Reading — 11 research-based strategies for supporting multilingual learners. Includes vocabulary previews, sentence frames, visual organizers, native language support, strategic grouping, and scaffolded writing. Use when planning ESOL accommodations, differentiating instruction for ELL students, or designing multilingual supports for any benchmark.
+description: >
+  Supplementary ESOL reference — 11 research-based strategies with detailed implementation
+  guidance. Includes vocabulary previews, sentence frames, visual organizers, native language
+  support, strategic grouping, and scaffolded writing. Use as a deeper dive AFTER esol-core
+  when you need specific technique details, or when the user asks about a particular ESOL
+  strategy by name (e.g., "vocabulary preview", "native language support", "strategic grouping").
+  For general ESOL planning and daily scaffolds, use esol-core first.
 ---
 
 # ESOL Strategies Bank

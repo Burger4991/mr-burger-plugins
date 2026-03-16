@@ -1,7 +1,13 @@
 ---
 name: data-visualization-builder
 description: >
-  This skill should be used when "creating visual reports" or "generating presentation-ready charts" from assessment data. Use when "preparing for administrative meetings", "conducting parent conferences", or "showcasing student growth trajectories" with NWEA and FAST data.
+  Use to generate presentation-ready visual reports (charts, graphs, dashboards) from assessment data.
+  Creates PNG/PDF/PowerPoint-formatted visualizations for visual storytelling. Use when creating data-driven
+  presentations, conducting parent conferences, showcasing growth trajectories, preparing for meetings
+  where visual impact matters, or when you need charts (not spreadsheet format).
+
+  Note: For comprehensive multi-sheet Excel workbooks with formatted tables and KPI dashboards, use
+  report-builder instead.
 version: 0.1.0
 ---
 # Data Visualization Builder Skill

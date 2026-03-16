@@ -4,9 +4,10 @@ description: >
   Use when building a substitute teacher folder. Use this when "creating substitute materials",
   "preparing emergency sub plans", or assembling the permanent reference binder a sub needs.
   Trigger when: setting up new classroom, semester starts, updating sub materials.
-  Different from sub-plan-generator agent which creates daily plans — this builds the FOLDER.
-  This skill should be used when "building a sub folder", "creating substitute materials",
-  "preparing emergency sub plans", or assembling everything a substitute teacher needs.
+  Builds a PERMANENT reference folder with all materials a sub needs (class lists, seating charts,
+  procedures), distinct from the sub-plan-generator agent which creates daily lesson plans.
+  Use when setting up a sub folder or compiling substitute materials. For daily sub plans,
+  use the sub-plan-generator agent instead.
 version: 1.0.0
 ---
 

@@ -1,11 +1,13 @@
 ---
 name: esol-core
 description: >
-  Use when planning lessons with ESOL or multilingual learners. Use this anytime you need
-  scaffolding strategies, sentence frames, vocabulary support, or differentiation for
-  non-native speakers. Complete ESOL strategy bank for 10th grade Intensive Reading.
-  Core daily strategies, extended techniques, modifications, and scaffolding progression.
-  Use for daily lesson planning, differentiation, and supporting multilingual learners.
+  PRIMARY ESOL skill — use this FIRST for any ESOL or multilingual learner support.
+  Contains the complete strategy bank: 8 core daily strategies, extended techniques,
+  modifications, scaffolding progression, and daily minimums. Use when planning lessons
+  with ESOL students, building scaffolds, creating sentence frames, differentiating for
+  non-native speakers, or embedding ESOL supports into any IR unit. This is the go-to
+  skill for all ESOL needs; esol-strategies is a supplementary reference with additional
+  detail on 11 specific research-based techniques.
 ---
 
 # ESOL Strategies - Complete Guide
