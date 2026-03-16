@@ -1,6 +1,6 @@
 ---
 name: bellringer-builder
-description: Context clues bellringer creation for 10th grade Intensive Reading. Selects 18 Tier 2/academic words from unit text (3 per day × 6 days), creates context clue bellringers (2 MC + 1 written response), generates answer keys, and scaffolds difficulty across days. Use when building student packets, creating answer keys, or filling vocabulary units.
+description: MUST USE this skill whenever the user needs to create, build, write, or design bellringers for 10th grade Intensive Reading. Trigger on: "create bellringers", "build bellringers", "make bellringers for Days 1-6", "need 18 vocabulary words with context clues", "design context clue bellringers", "bellringer format"... Creates context clue items with 2 MC + 1 written response per day, scaffolded difficulty Days 1-6, complete with answer keys and context clue type variety.
 ---
 
 # Bellringer Builder Skill

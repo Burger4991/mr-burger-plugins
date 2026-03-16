@@ -1,9 +1,7 @@
 ---
 name: benchmark-point-of-view
-description: DEPRECATED - Consolidated into benchmarks skill. Use benchmarks instead for all benchmark guides.
+description: "ELA.10.R.1.3 Coming of Age & Conflicting Perspectives — Complete benchmark guide for analyzing perspective transformation, author's craft, and conflicting viewpoints. Includes standard statement, clarifications, analytical process, organizer structures, Planning Card question stems, achievement level descriptors (Levels 2-5), ESOL scaffolds, mini-lessons, and feedback checkpoints. Use when planning perspective units, creating organizers for R.1.3, or aligning assessments."
 ---
-
-> **NOTE: This skill has been consolidated into the `benchmarks` skill.** Use `benchmarks` instead — it contains all 10 standard guides, the reference guide, and a routing table.
 
 
 # ELA.10.R.1.3 - Point of View & Perspective (Grade 10)

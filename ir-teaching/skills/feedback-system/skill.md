@@ -1,6 +1,6 @@
 ---
 name: feedback-system
-description: Comprehensive feedback system for 10th grade IR using practice→feedback→revise→submit workflow. Use when planning feedback strategies, creating feedback forms, or integrating formative assessment into units.
+description: MUST USE this skill whenever the user needs to plan feedback, create feedback forms, or integrate formative assessment into a unit. Trigger on: "feedback system", "how do I give feedback", "create feedback form", "revision workflow", "practice then submit", "formative assessment"... Complete workflow system (practice → feedback → revise → submit) with 3-stage feedback forms (Days 1-2 comprehension, Days 3-4 organizer, Days 5-6 assessment), implementation timing, and student accountability strategies.
 ---
 
 # IR Feedback System

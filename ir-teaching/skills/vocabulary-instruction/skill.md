@@ -1,6 +1,6 @@
 ---
 name: vocabulary-instruction
-description: Vocabulary selection, instruction, and assessment for 10th grade Intensive Reading. Tier 2/3 word selection criteria, 6-day vocabulary progression, bellringer word integration, teaching strategies by word type, and ESOL vocabulary scaffolds. Use when selecting unit vocabulary, designing bellringers, or planning vocabulary instruction.
+description: MUST USE this skill whenever the user needs to select vocabulary, design vocabulary instruction, or plan bellringer words. Trigger on: "select vocabulary", "which words should I teach", "vocabulary instruction", "Tier 2 words", "how do I teach vocabulary", "vocabulary scaffolds", "bellringer words"... Complete system: Tier 1/2/3 criteria, word selection framework, 5-step teaching routine, strategies by word type, ESOL scaffolds by proficiency level, vocabulary assessment methods, and integration with bellringer-builder.
 ---
 
 # Vocabulary Instruction Skill

@@ -1,12 +1,6 @@
 ---
 name: benchmark-mastery-analyzer
-description: >
-  Analyze student performance at the individual Florida BEST benchmark level using FAST PM data.
-  Use when analyzing FAST PM results (PM1, PM2, PM3), identifying benchmark mastery gaps,
-  mapping ELA.10.R benchmarks to NWEA reporting categories, creating flexible student groups
-  based on benchmark proficiency, tracking benchmark progress across assessment periods,
-  or planning differentiated instruction based on benchmark data. Bridges ir-teaching
-  benchmarks with ir-data-pipeline student data analysis.
+description: MUST USE this skill whenever the user needs to analyze individual benchmark mastery using FAST PM data. Trigger on: "analyze benchmark data", "what benchmarks are my students struggling with", "create groups by benchmark", "compare FAST to NWEA scores", "benchmark progress tracking", "which benchmarks do I need to teach"... Analyzes student performance at the specific benchmark level (R.1.1, R.2.2, etc.) using FAST PM data, maps to NWEA categories, and recommends unit priorities.
 ---
 
 # Benchmark Mastery Analyzer Skill

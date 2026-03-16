@@ -20,22 +20,24 @@ description: >
 
 ## How to Use
 
-When a user mentions a benchmark code (e.g., ELA.10.R.1.2) or topic (e.g., "theme"), load the corresponding guide from the `standards/` sub-directory. Each guide contains the full standard, clarifications, analytical process, organizer structures, question stems, achievement levels, ESOL scaffolds, mini-lessons, and feedback checkpoints.
+This skill serves as a **routing table and quick-reference hub**. Each benchmark also has a standalone skill (`benchmark-argument`, `benchmark-theme`, etc.) that can be triggered directly. The `standards/` sub-directory mirrors their content for consolidated access.
+
+When a user mentions a benchmark code (e.g., ELA.10.R.1.2) or topic (e.g., "theme"), either load the corresponding guide from `standards/` OR trigger the standalone `benchmark-*` skill directly. Each guide contains the full standard, clarifications, analytical process, organizer structures, question stems, achievement levels, ESOL scaffolds, mini-lessons, and feedback checkpoints.
 
 ## Benchmark Routing Table
 
-| Code | Topic | File |
-|------|-------|------|
-| ELA.10.R.1.1 | Literary Elements (character, setting, plot) | `standards/literary-elements.md` |
-| ELA.10.R.1.2 | Theme (universal themes, theme development) | `standards/theme.md` |
-| ELA.10.R.1.3 | Coming of Age & Conflicting Perspectives (perspective transformation) | `standards/point-of-view.md` |
-| ELA.10.R.1.4 | Layers of Meaning & Ambiguity in Poetry (multiple meanings, unresolved ideas) | `standards/poetry.md` |
-| ELA.10.R.2.1 | Text Structure & Features (organizational patterns) | `standards/text-structure.md` |
-| ELA.10.R.2.2 | Central Idea (informational texts) | `standards/central-idea.md` |
-| ELA.10.R.2.3 | Purpose & Perspective (author's purpose, historical) | `standards/purpose-perspective.md` |
-| ELA.10.R.2.4 | Argument (claims, evidence, reasoning) | `standards/argument.md` |
-| ELA.10.R.3.1 | Figurative Language & Mood (metaphor, simile, mood) | `standards/figurative-language.md` |
-| ELA.10.R.3.4 | Understanding Rhetoric (appeals, devices) | `standards/rhetoric.md` |
+| Code | Topic | File | Standalone Skill |
+|------|-------|------|-----------------|
+| ELA.10.R.1.1 | Literary Elements (character, setting, plot) | `standards/literary-elements.md` | `benchmark-literary-elements` |
+| ELA.10.R.1.2 | Theme (universal themes, theme development) | `standards/theme.md` | `benchmark-theme` |
+| ELA.10.R.1.3 | Coming of Age & Conflicting Perspectives (perspective transformation) | `standards/point-of-view.md` | `benchmark-point-of-view` |
+| ELA.10.R.1.4 | Layers of Meaning & Ambiguity in Poetry (multiple meanings, unresolved ideas) | `standards/poetry.md` | `benchmark-poetry` |
+| ELA.10.R.2.1 | Text Structure & Features (organizational patterns) | `standards/text-structure.md` | `benchmark-text-structure` |
+| ELA.10.R.2.2 | Central Idea (informational texts) | `standards/central-idea.md` | `benchmark-central-idea` |
+| ELA.10.R.2.3 | Purpose & Perspective (author's purpose, historical) | `standards/purpose-perspective.md` | `benchmark-purpose-perspective` |
+| ELA.10.R.2.4 | Argument (claims, evidence, reasoning) | `standards/argument.md` | `benchmark-argument` |
+| ELA.10.R.3.1 | Figurative Language & Mood (metaphor, simile, mood) | `standards/figurative-language.md` | `benchmark-figurative-language` |
+| ELA.10.R.3.4 | Understanding Rhetoric (appeals, devices) | `standards/rhetoric.md` | `benchmark-rhetoric` |
 
 ## Quick Reference
 

@@ -1,11 +1,6 @@
 ---
 name: unit-quality-gate
-description: >
-  Run a structured quality checklist on a completed 6-day IR unit before calling it done.
-  Verifies all 4 deliverables exist and are synchronized, bellringers are complete, organizer
-  is scaffolded correctly, assessment and feedback form are present and aligned, and ESOL
-  modifications are included if needed. Use at end of unit build or anytime to spot-check
-  quality. Called automatically by unit-builder-protocol after every build.
+description: MUST USE this skill at the end of every unit build before saying "it's done". Trigger on: "is my unit complete", "check my unit", "verify the unit", "before I print", "quality check", "spot-check deliverables"... Structured 9-point quality checklist: benchmark alignment (HIGHEST priority), all 4 deliverables, file synchronization, bellringers, organizer scaffolding, assessment, feedback form, ESOL modifications, and brand compliance.
 ---
 
 # Unit Quality Gate

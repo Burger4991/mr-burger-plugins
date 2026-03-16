@@ -1,9 +1,16 @@
 {
   "name": "ir-teaching",
-  "version": "1.0.0",
-  "description": "Complete 10th grade Intensive Reading teaching system — Florida BEST ELA benchmarks, 6-day unit building, lesson planning, ESOL support, assessments, and rubrics",
+  "version": "2.2.0",
+  "description": "Complete 10th grade Intensive Reading teaching system \u2014 Florida BEST ELA benchmarks, 6-day unit building, lesson planning, ESOL support, assessments, and rubrics",
   "author": {
     "name": "Mr. Burger"
   },
-  "keywords": ["teaching", "intensive-reading", "florida", "best-ela", "lesson-planning", "esol"]
+  "keywords": [
+    "teaching",
+    "intensive-reading",
+    "florida",
+    "best-ela",
+    "lesson-planning",
+    "esol"
+  ]
 }

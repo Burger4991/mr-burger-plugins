@@ -1,9 +1,7 @@
 ---
 name: benchmark-central-idea
-description: DEPRECATED - Consolidated into benchmarks skill. Use benchmarks instead for all benchmark guides.
+description: "ELA.10.R.2.2 Central Idea — Complete benchmark guide for analyzing central ideas in informational texts, especially historical American speeches and essays. Includes standard statement, clarifications, analytical process, organizer structures, Planning Card question stems, achievement level descriptors (Levels 2-5), ESOL scaffolds, mini-lessons, and feedback checkpoints. Use when planning central idea units, creating organizers for R.2.2, or aligning assessments."
 ---
-
-> **NOTE: This skill has been consolidated into the `benchmarks` skill.** Use `benchmarks` instead — it contains all 10 standard guides, the reference guide, and a routing table.
 
 
 # ELA.10.R.2.2 - Central Idea (Grade 10)

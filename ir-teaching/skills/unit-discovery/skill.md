@@ -1,11 +1,6 @@
 ---
 name: unit-discovery
-description: >
-  Optional pre-planning context gathering before menu-mode-planner. Reads district files, surfaces
-  student data patterns, checks recent units to avoid repetition, and notes text complexity before
-  planning decisions are made. Use when starting a unit with a district-provided text, when student
-  data should inform planning, or when you want to avoid repeating texts/benchmarks from recent units.
-  Feeds directly into menu-mode-planner as pre-loaded context.
+description: MUST USE this skill before menu-mode-planner when you have district files, student FAST/PM data, or want to check what you've recently taught. Trigger on: "I have a district PDF", "analyze my FAST data first", "check what I taught recently", "avoid repeating benchmarks", "pre-planning context", "what's in the district file"... Pre-planning discovery workflow: extracts district materials, analyzes student data patterns, checks recent units to prevent repetition, and summarizes findings for menu-mode-planner input.
 ---
 
 # Unit Discovery

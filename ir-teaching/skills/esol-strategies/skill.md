@@ -1,10 +1,7 @@
 ---
 name: esol-strategies
-description: DEPRECATED - Merged into esol-core. Use esol-core for all ESOL strategies including this extended bank.
+description: Extended ESOL strategy bank for 10th grade Intensive Reading — 11 research-based strategies for supporting multilingual learners. Includes vocabulary previews, sentence frames, visual organizers, native language support, strategic grouping, and scaffolded writing. Use when planning ESOL accommodations, differentiating instruction for ELL students, or designing multilingual supports for any benchmark.
 ---
-
-> **NOTE: This skill has been merged into `esol-core`.** Use `esol-core` instead — it now contains all 11 strategies, modifications, scaffolding, and grouping guides.
-
 
 # ESOL Strategies Bank
 

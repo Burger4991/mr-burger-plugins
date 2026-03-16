@@ -1,9 +1,7 @@
 ---
 name: benchmark-rhetoric
-description: DEPRECATED - Consolidated into benchmarks skill. Use benchmarks instead for all benchmark guides.
+description: "ELA.10.R.3.4 Understanding Rhetoric — Complete benchmark guide for analyzing rhetorical appeals (ethos, pathos, logos) and rhetorical devices. Includes standard statement, clarifications, analytical process, organizer structures, Planning Card question stems, achievement level descriptors (Levels 2-5), ESOL scaffolds, mini-lessons, and feedback checkpoints. Use when planning rhetoric units, creating organizers for R.3.4, or designing assessments."
 ---
-
-> **NOTE: This skill has been consolidated into the `benchmarks` skill.** Use `benchmarks` instead — it contains all 10 standard guides, the reference guide, and a routing table.
 
 
 # ELA.10.R.3.4 - Understanding Rhetoric (Grade 10)

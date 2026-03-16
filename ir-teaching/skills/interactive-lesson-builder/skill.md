@@ -1,3 +1,12 @@
+---
+name: interactive-lesson-builder
+description: >
+  Build interactive HTML lesson websites for Intensive Reading units that run on Promethean boards.
+  Includes day-tab navigation, STOP protocol on all MC questions, CUBES annotation tools, timer,
+  and teacher-controlled engagement features. Use when generating interactive lesson HTML files,
+  building Promethean board lessons, or creating self-contained HTML lesson websites for any IR unit.
+---
+
 # Interactive Lesson Builder for Intensive Reading (v5 — Shakuntala Architecture)
 
 ---

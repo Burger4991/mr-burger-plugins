@@ -1,9 +1,7 @@
 ---
 name: benchmark-theme
-description: DEPRECATED - Consolidated into benchmarks skill. Use benchmarks instead for all benchmark guides.
+description: "ELA.10.R.1.2 Theme — Complete benchmark guide for analyzing universal themes and theme development in literary texts. Includes standard statement, clarifications, analytical process, organizer structures, Planning Card question stems, achievement level descriptors (Levels 2-5), ESOL scaffolds, mini-lessons, and feedback checkpoints. Use when planning theme units, creating organizers for R.1.2, or aligning assessments."
 ---
-
-> **NOTE: This skill has been consolidated into the `benchmarks` skill.** Use `benchmarks` instead — it contains all 10 standard guides, the reference guide, and a routing table.
 
 
 # ELA.10.R.1.2 - Theme Analysis (Grade 10)

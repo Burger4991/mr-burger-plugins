@@ -1,6 +1,6 @@
 ---
 name: assessment-rubrics
-description: Create rubrics aligned to Florida BEST ELA achievement level descriptors (Levels 2-5) for any assessment type used in 10th grade Intensive Reading. Use when building rubrics for ACE responses, graphic organizers, multiple choice justifications, discussions, and exit tickets.
+description: MUST USE this skill whenever the user needs to create, build, write, or design ANY rubric for 10th grade Intensive Reading assessments. Trigger on: "create a rubric", "build a rubric", "write a scoring rubric", "design a rubric", "need a rubric for ACE responses", "rubric for organizer", "exit ticket rubric"... Differs from assessment-design (which creates test items) by building SCORING RUBRICS aligned to RACE/CER/ACE tiers with benchmark achievement levels.
 ---
 
 # Assessment Rubrics for 10th Grade Intensive Reading

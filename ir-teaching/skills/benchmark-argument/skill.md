@@ -1,9 +1,7 @@
 ---
 name: benchmark-argument
-description: DEPRECATED - Consolidated into benchmarks skill. Use benchmarks instead for all benchmark guides.
+description: "ELA.10.R.2.4 Argument — Complete benchmark guide for analyzing and evaluating opposing arguments, claims, evidence, and reasoning. Includes standard statement, clarifications, analytical process, organizer structures, Planning Card question stems, achievement level descriptors (Levels 2-5), ESOL scaffolds, prerequisite mini-lessons, and feedback checkpoints. Use when planning argument analysis units, creating organizers for R.2.4, writing assessment items, or looking up achievement levels for argument."
 ---
-
-> **NOTE: This skill has been consolidated into the `benchmarks` skill.** Use `benchmarks` instead — it contains all 10 standard guides, the reference guide, and a routing table.
 
 
 # ELA.10.R.2.4 - Argument Analysis (Grade 10)

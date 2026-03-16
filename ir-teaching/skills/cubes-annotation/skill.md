@@ -1,6 +1,6 @@
 ---
 name: cubes-annotation
-description: CUBES annotation protocol for 10th grade Intensive Reading — a general-purpose strategy for annotating BOTH text passages AND questions. Passages use a 3-step layered approach (general close reading → question-driven rereading → synthesis). Questions use a 3-step approach (CUBES → Find Key Details → STOP). Adaptable by benchmark focus. Use when building student packets, creating annotation guides, or embedding annotation instructions into any unit activity.
+description: MUST USE this skill whenever the user needs to teach annotation, embed CUBES instructions in packets, or reference the annotation strategy. Trigger on: "teach annotation", "CUBES strategy", "close reading", "how do I annotate passages", "annotate questions", "create annotation box", "embedding CUBES"... Complete 3-step annotation framework for passages (close reading → question-driven rereading → synthesis) and questions (CUBES → find details → STOP) with benchmark-specific adaptations and embedding templates.
 ---
 
 # CUBES Annotation Protocol — 10th Grade Intensive Reading

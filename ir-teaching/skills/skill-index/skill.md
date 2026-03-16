@@ -1,11 +1,6 @@
 ---
 name: skill-index
-description: >
-  Navigation guide for all 22 ir-teaching skills and 8 agents. Use when unsure which skill to use,
-  when planning a workflow across multiple skills, or when you need to see the full list of
-  available teaching tools. Maps common tasks like "build a unit", "create bellringers",
-  "design an assessment", "write teacher scripts", "adapt for ESOL" to the correct skill or agent.
-  Also shows cross-plugin references to ir-data-pipeline, ir-classroom-ops, mr-burger-workflow, and superpowers-cowork.
+description: MUST USE this skill whenever the user asks "which skill should I use" or needs to navigate the ir-teaching system. Trigger on: "which skill", "what skills exist", "help me find", "how do I get started", "workflow for building a unit", "I need a skill for..."... Complete navigation guide mapping common teaching tasks to the right skill or agent, with quick lookup table, full skill directory, agent descriptions, and workflow diagrams.
 ---
 
 # Skill Discovery Index
@@ -20,42 +15,42 @@ description: >
 
 ## Quick Lookup: "I want to..."
 
-| I want to... | Start with | Then use |
-|---|---|---|
-| Check brand/visual standards for materials | `brand-identity` | (Single source of truth for all design decisions) |
-| Build a full 6-day IR unit | `menu-mode-planner` | → `unit-builder-protocol` (all deliverables) |
-| Plan a single lesson (not IR) | `lesson-plan-coordinator` agent | → `benchmarks` (for standards) |
-| Create student worksheets/packets (standalone) | `student-packet-builder` agent | → `student-packet-design-guide` + `benchmarks` |
-| Check student packet formatting standards | `student-packet-design-guide` | (Typography, layout, frame boxes) |
-| Design a multi-week unit (any subject) | `unit-planner` agent | → `teaching-templates` |
-| Look up a benchmark standard | `benchmarks` skill | Specify code (e.g., ELA.10.R.1.2) or topic |
-| Select vocabulary for bellringers | `vocabulary-instruction` | → `bellringer-builder` (create items) |
-| Create a graphic organizer | `organizer-design` | → `benchmarks` (template options) |
-| Write teacher scripts for gradual release | `gradual-release-scripts` | → `ir-framework` (I Do/We Do structure) |
-| Teach/embed the STOP strategy | `stop-strategy` | → `cubes-annotation` (full workflow) + `assessment-design` (MC items) |
-| Teach/embed the RACE/ACE strategy | `race-strategy` | → `cer-writing-guide` (CER alternative) + `assessment-design` (CR format) |
-| Build CER/ACE writing scaffolds | `cer-writing-guide` | → `assessment-design` (student format) |
-| Design an assessment | `assessment-design` | → `assessment-builder` agent (produces .docx files) |
-| Build assessment .docx files | `assessment-builder` agent | → `assessment-rubrics` (scoring) |
-| Review completed deliverables | `quality-reviewer` agent | Two-stage: spec compliance → quality review |
-| Create bellringers | `bellringer-builder` | → `vocabulary-instruction` (word selection) |
-| Build rubrics | `assessment-rubrics` | → `benchmarks` (achievement levels) |
-| Update an existing unit | `unit-reviser` agent | Handles text swaps, benchmark changes |
-| Diagnose why a unit didn't work | `unit-troubleshooter` | → `unit-reviser` (with diagnosis) |
-| Check if a unit is done | `unit-quality-gate` | (Run automatically after unit-builder-protocol) |
-| Ship / print / archive a unit | `unit-distribution` | (After quality gate passes) |
-| Restore a previous version | `unit-recovery` | (From _archive/ snapshots or git) |
-| Evaluate feedback before revising | `unit-feedback-protocol` | → `unit-reviser` (accepted items only) |
-| Gather context before planning | `unit-discovery` | → `menu-mode-planner` (pre-loaded context) |
-| Quality-check a skill before deploy | `skill-quality-gate` | (Before syncing to ~/.claude/) |
-| Resume an interrupted build | `session-continuity` | → `unit-builder-protocol` (from last batch) |
-| Get a fresh-eyes unit review | `unit-reviewer` agent | Independent cold review of deliverables |
-| Adapt materials for ESOL | `esol-adapter` agent | Transforms materials for specific proficiency levels |
-| Teach annotation strategies | `cubes-annotation` | → `stop-strategy` (STOP detail) |
-| Set up feedback system | `feedback-system` | → `feedback-checkpoint-builder` |
-| Read district files | `district-files-reader` | → `benchmarks` (for alignment) |
-| Manage file versions | `file-management` | (Use with unit-builder-protocol) |
-| Build an interactive lesson for the board | `interactive-lesson-builder` | → requires Lesson Plan + Answer Key |
+| I want to... | Start with | Then use | Requires |
+|---|---|---|---|
+| Check brand/visual standards for materials | `brand-identity` | (Single source of truth for all design decisions) | — |
+| Build a full 6-day IR unit | `menu-mode-planner` | → `unit-builder-protocol` (all deliverables) | Text passage, benchmark selection |
+| Plan a single lesson (not IR) | `lesson-plan-coordinator` agent | → `benchmarks` (for standards) | — |
+| Create student worksheets/packets (standalone) | `student-packet-builder` agent | → `student-packet-design-guide` + `benchmarks` | — |
+| Check student packet formatting standards | `student-packet-design-guide` | (Typography, layout, frame boxes) | — |
+| Design a multi-week unit (any subject) | `unit-planner` agent | → `teaching-templates` | — |
+| Look up a benchmark standard | `benchmarks` skill | Specify code (e.g., ELA.10.R.1.2) or topic | — |
+| Select vocabulary for bellringers | `vocabulary-instruction` | → `bellringer-builder` (create items) | Unit text passage |
+| Create a graphic organizer | `organizer-design` | → `benchmarks` (template options) | Benchmark selected |
+| Write teacher scripts for gradual release | `gradual-release-scripts` | → `ir-framework` (I Do/We Do structure) | Benchmark + organizer |
+| Teach/embed the STOP strategy | `stop-strategy` | → `cubes-annotation` (full workflow) + `assessment-design` (MC items) | — |
+| Teach/embed the RACE/ACE strategy | `race-strategy` | → `cer-writing-guide` (CER alternative) + `assessment-design` (CR format) | — |
+| Build CER/ACE writing scaffolds | `cer-writing-guide` | → `assessment-design` (student format) | — |
+| Design an assessment | `assessment-design` | → `assessment-builder` agent (produces .docx files) | Benchmark + text |
+| Build assessment .docx files | `assessment-builder` agent | → `assessment-rubrics` (scoring) | Benchmark + text + unit config |
+| Review completed deliverables | `quality-reviewer` agent | Two-stage: spec compliance → quality review | Completed deliverable(s) |
+| Create bellringers | `bellringer-builder` | → `vocabulary-instruction` (word selection) | 18 vocabulary words |
+| Build rubrics | `assessment-rubrics` | → `benchmarks` (achievement levels) | Benchmark selected |
+| Update an existing unit | `unit-reviser` agent | Handles text swaps, benchmark changes | Existing unit folder |
+| Diagnose why a unit didn't work | `unit-troubleshooter` | → `unit-reviser` (with diagnosis) | Student data or observation |
+| Check if a unit is done | `unit-quality-gate` | (Run automatically after unit-builder-protocol) | All 4 deliverables |
+| Ship / print / archive a unit | `unit-distribution` | (After quality gate passes) | Quality gate PASS |
+| Restore a previous version | `unit-recovery` | (From _archive/ snapshots or git) | _archive/ folder |
+| Evaluate feedback before revising | `unit-feedback-protocol` | → `unit-reviser` (accepted items only) | Feedback from source |
+| Gather context before planning | `unit-discovery` | → `menu-mode-planner` (pre-loaded context) | — |
+| Quality-check a skill before deploy | `skill-quality-gate` | (Before syncing to ~/.claude/) | — |
+| Resume an interrupted build | `session-continuity` | → `unit-builder-protocol` (from last batch) | _build-state.json |
+| Get a fresh-eyes unit review | `unit-reviewer` agent | Independent cold review of deliverables | Completed unit folder |
+| Adapt materials for ESOL | `esol-adapter` agent | Transforms materials for specific proficiency levels | Completed materials |
+| Teach annotation strategies | `cubes-annotation` | → `stop-strategy` (STOP detail) | — |
+| Set up feedback system | `feedback-system` | → `feedback-checkpoint-builder` | — |
+| Read district files | `district-files-reader` | → `benchmarks` (for alignment) | District PDF/doc files |
+| Manage file versions | `file-management` | (Use with unit-builder-protocol) | — |
+| Build an interactive lesson for the board | `interactive-lesson-builder` | → requires `cubes-annotation` + `ir-framework` | Lesson Plan + Answer Key |
 
 ---
 

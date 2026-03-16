@@ -1,6 +1,6 @@
 ---
 name: gradual-release-scripts
-description: Ready-to-use teacher talk scripts for the I Do / We Do / You Do with Partner / You Do gradual release model. Use when planning Days 3-4 Teacher-Led center or when modeling analytical thinking for any benchmark.
+description: MUST USE this skill whenever the user needs to write teacher-talk scripts, plan I Do/We Do/You Do modeling, or teach gradual release during Teacher-Led center. Trigger on: "teacher scripts", "model the thinking", "I Do We Do You Do", "write the script for", "how do I model theme analysis", "gradual release"... Complete scripts for every phase with benchmark-specific adaptations, circulating prompts, pacing guides, and troubleshooting language for Days 3-4 Teacher-Led rotations.
 ---
 
 # Gradual Release Scripts - Teacher Talk Templates

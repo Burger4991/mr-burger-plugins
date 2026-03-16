@@ -1,11 +1,6 @@
 ---
 name: brand-identity
-description: >
-  Visual brand identity for Mr. Burger's 10th grade Intensive Reading materials.
-  Defines the design language, color system, typography hierarchy, and visual identity
-  that ALL unit deliverables must follow — student packets, lesson plans, answer keys,
-  slides, exit tickets, and cover pages. Reference this skill before generating any
-  deliverable to ensure brand consistency across all units.
+description: MUST READ this skill before creating ANY visual deliverable (student packets, lesson plans, answer keys, slides, exit tickets). Trigger on: "create a packet", "design materials", "what fonts should I use", "color system", "spacing", "visual standards", "brand consistency"... Single source of truth for all design decisions: grayscale palette, Arial typography, spacing system, 8-component library, and 5-point quality-check rubric.
 ---
 
 # Mr. Burger's IR — Brand Identity Guide

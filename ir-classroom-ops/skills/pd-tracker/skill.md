@@ -2,8 +2,9 @@
 name: pd-tracker
 description: >
   This skill should be used when "logging PD hours", "tracking professional development",
-  "recording workshop attendance", or managing certification/recertification requirements.
-  Use when the user mentions PD, inservice, workshops, or certification hours.
+  "recording Florida inservice points", or "documenting recertification progress". Use when
+  "recording workshop attendance", "tracking towards 120-hour recertification cycle",
+  "documenting ESOL or reading specialization training", or "preparing PD summaries for evaluations".
 version: 1.0.0
 ---
 

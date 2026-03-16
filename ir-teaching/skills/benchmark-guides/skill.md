@@ -1,10 +1,7 @@
 ---
 name: benchmark-guides
-description: DEPRECATED - Consolidated into benchmarks skill. Use benchmarks instead for all benchmark guides.
+description: Quick-reference navigation guide for all 10 Florida BEST ELA 10th grade reading benchmarks. Maps benchmark codes (R.1.1-R.3.4) to topics and corresponding skill names. Use when you need to quickly look up which benchmark covers what, or to find the right benchmark-specific skill for a particular standard.
 ---
-
-> **NOTE: This skill has been consolidated into the `benchmarks` skill.** Use `benchmarks` instead — it contains all 10 standard guides, the reference guide, and a routing table.
-
 
 # Florida BEST Benchmark Guides - 10th Grade
 

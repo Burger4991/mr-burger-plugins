@@ -1,13 +1,6 @@
 ---
 name: race-strategy
-description: >
-  RACE writing strategy for constructed responses in 10th grade Intensive Reading.
-  Restate/Answer/Cite/Explain — the default constructed response framework used on every unit.
-  Includes ACE (shortened form without Restate) for exit tickets and quick checks.
-  Three-tier progression: Lite (R+A) → Standard (R+A+C) → Full RACE (R+A+C+E).
-  Use when teaching constructed responses, building CR practice activities, creating student anchor charts,
-  embedding RACE/ACE into assessments and packets, or when agents need the definitive RACE reference.
-  Works with cer-writing-guide (CER alternative for argument units) and assessment-design (CR format).
+description: MUST USE this skill whenever the user needs to teach constructed response writing, embed RACE/ACE format, or score a CR response. Trigger on: "RACE strategy", "write a constructed response", "ACE format", "how do I teach RACE", "restate answer cite explain", "CR framework", "three-tier RACE"... Default constructed response framework (Restate/Answer/Cite/Explain) with ACE shortened form, 3-tier progression (Lite/Standard/Full), teaching sequence Days 1-6, scoring rubrics, and benchmark-specific adaptations.
 ---
 
 # RACE Strategy — 10th Grade Intensive Reading

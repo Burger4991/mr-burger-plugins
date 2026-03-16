@@ -1,6 +1,11 @@
 ---
 name: data-quality-checker
-description: Validate student assessment data completeness and flag quality issues. Works with FAST PM, NWEA, or any multi-period assessment data. Use before running growth analysis or building reports.
+description: >
+  This skill should be used when "validating data quality", "checking for missing scores",
+  "flagging data errors before analysis", or "preparing data for growth reports". Use when
+  "before running growth-analyzer", "after receiving new assessment exports", "identifying
+  duplicate or incomplete records", or "checking assessment data integrity". Works with
+  FAST PM, NWEA, or any multi-period assessment data.
 ---
 
 # Data Quality Checker

@@ -1,6 +1,11 @@
 ---
 name: growth-analyzer
-description: Calculate student growth metrics, risk scores, and intervention tier assignments from any multi-period assessment data. Supports FAST PM, NWEA, and custom assessments. Use when analyzing student progress between assessment periods.
+description: >
+  This skill should be used when "calculating student growth", "assigning RTI intervention tiers",
+  "projecting proficiency probability", or "analyzing progress between PM1/PM2/PM3". Use when
+  "identifying at-risk students", "preparing growth data for conferences", "flagging acceleration
+  or regression patterns", or "building tier assignment recommendations". Supports FAST PM, NWEA,
+  and custom assessments.
 ---
 
 ## Purpose

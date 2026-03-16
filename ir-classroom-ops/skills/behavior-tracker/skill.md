@@ -1,9 +1,10 @@
 ---
 name: behavior-tracker
 description: >
-  This skill should be used when "tracking student behavior", "logging participation",
-  "documenting classroom behavior", or noting positive/concerning student patterns.
-  Use when the /log command detects behavior-related input.
+  This skill should be used when "logging student behavior", "documenting participation patterns",
+  "tracking positive engagement", or "noting behavioral concerns for RTI". Use when the /log command
+  detects behavior-related input, when "preparing for parent conferences", "documenting intervention
+  attempts", or "recognizing growth in student engagement".
 version: 1.0.0
 ---
 

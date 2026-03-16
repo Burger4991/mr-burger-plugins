@@ -1,10 +1,6 @@
 ---
 name: unit-recovery
-description: >
-  List and restore previous versions of IR unit deliverables from _archive/ snapshots. Use when
-  you need to get back a file from before a revision — "restore the old student packet", "get back
-  the version before I changed the benchmark", "undo the revision". Works with snapshots created
-  by unit-reviser. Also supports git-based recovery if Teaching folder is a git repo.
+description: MUST USE this skill when you need to restore a previous unit version. Trigger on: "restore the old version", "undo this revision", "get back the student packet from before", "previous version", "I want the old benchmark back", "rollback the unit"... Restore unit deliverables from _archive/ snapshots or git history, with options to restore all files or specific deliverables and automatic changelog logging.
 ---
 
 # Unit Recovery

@@ -1,12 +1,14 @@
 ---
 name: stop-strategy
 description: >
-  STOP test-taking strategy for multiple choice questions in 10th grade Intensive Reading.
-  Silly/Tricky/Opposite/Proven — the elimination and proving framework used on every MC item.
-  Two modes: Simplified Default (select Proven + justify) and Full STOP (label all four + justify each).
-  Use when teaching test-taking strategies, building MC practice activities, creating student anchor charts,
-  embedding STOP into assessments, or when agents need the definitive STOP reference.
-  Works with cubes-annotation (CUBES → Find Key Details → STOP) and assessment-design (MC item construction).
+  MUST USE this skill whenever the user needs to teach test-taking strategy, embed STOP format
+  in assessments, or justify MC answers. Trigger on: "STOP strategy", "multiple choice strategy",
+  "teach test-taking", "silly tricky opposite proven", "MC justification", "answer elimination",
+  "STOP protocol". Default MC elimination framework (Silly/Tricky/Opposite/Proven) with two modes
+  (Simplified Default and Full STOP), teaching sequence Days 1-2, anchor charts, practice templates,
+  and ESOL modifications by proficiency level. Works with cubes-annotation (CUBES → Find Key
+  Details → STOP) and assessment-design (MC item construction). See cubes-annotation for the
+  complete 3-step annotation workflow.
 ---
 
 # STOP Strategy — 10th Grade Intensive Reading
