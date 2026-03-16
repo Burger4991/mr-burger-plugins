@@ -41,6 +41,67 @@ else
   echo "[obsidian] Skipped — vault not found at $OBSIDIAN_VAULT"
 fi
 
+# --- Claude Code: symlink skills and agents from all plugins ---
+CLAUDE_SKILLS="$HOME/.claude/skills"
+CLAUDE_AGENTS="$HOME/.claude/agents"
+
+mkdir -p "$CLAUDE_SKILLS" "$CLAUDE_AGENTS"
+
+link_skills() {
+  local plugin="$1"
+  local skills_dir="$REPO/$plugin/skills"
+  if [ ! -d "$skills_dir" ]; then return; fi
+  for skill in "$skills_dir"/*/; do
+    local name="$(basename "$skill")"
+    local target="$CLAUDE_SKILLS/$name"
+    if [ -L "$target" ]; then
+      : # already linked
+    elif [ -e "$target" ]; then
+      echo "[claude-code] SKIP $name — already exists (not a symlink)"
+    else
+      ln -s "$skill" "$target"
+      echo "[claude-code] Linked skill: $name"
+    fi
+  done
+  # also handle .md file skills (flat files)
+  for skill in "$skills_dir"/*.md; do
+    [ -e "$skill" ] || continue
+    local name="$(basename "$skill")"
+    local target="$CLAUDE_SKILLS/$name"
+    if [ -L "$target" ] || [ -e "$target" ]; then : ; else
+      ln -s "$skill" "$target"
+      echo "[claude-code] Linked skill: $name"
+    fi
+  done
+}
+
+link_agents() {
+  local plugin="$1"
+  local agents_dir="$REPO/$plugin/agents"
+  if [ ! -d "$agents_dir" ]; then return; fi
+  for agent in "$agents_dir"/*.md; do
+    [ -e "$agent" ] || continue
+    local name="$(basename "$agent")"
+    local target="$CLAUDE_AGENTS/$name"
+    if [ -L "$target" ]; then
+      : # already linked
+    elif [ -e "$target" ]; then
+      echo "[claude-code] SKIP $name — already exists (not a symlink)"
+    else
+      ln -s "$agent" "$target"
+      echo "[claude-code] Linked agent: $name"
+    fi
+  done
+}
+
+for plugin in ir-teaching ir-data-pipeline ir-classroom-ops mr-burger-workflow; do
+  link_skills "$plugin"
+  link_agents "$plugin"
+done
+
+echo "[claude-code] Skills: $(ls "$CLAUDE_SKILLS" | wc -l | tr -d ' ') linked"
+echo "[claude-code] Agents: $(ls "$CLAUDE_AGENTS" | wc -l | tr -d ' ') linked"
+
 echo ""
 echo "Done. Update Claude Code marketplace path in ~/.claude/settings.json if not already done."
 echo "  Set: extraKnownMarketplaces.mr-burger-plugins.source.path = $REPO"
