@@ -1,11 +1,12 @@
 ---
 name: notion-sync
 description: >
+  Use when syncing between file-based system and Notion. Use this when "syncing to Notion",
+  "pushing tasks to Notion", "pulling completed tasks", or during /plan and /review workflows.
+  Trigger on: weekly planning, task completion review, bidirectional sync needed.
   This skill should be used when "syncing to Notion", "pushing tasks to Notion",
-  "pulling updates from Notion", or "checking Notion connector status". Use when
-  "during /plan sessions", "during /review for task archiving", "performing bidirectional
-  sync between Second Brain and Notion", or when user says "sync", "push to Notion",
-  "update Notion". Requires the Notion MCP connector to be active.
+  or when any command needs to read or write Notion data. Requires the Notion
+  MCP connector to be active.
 version: 1.0.0
 ---
 

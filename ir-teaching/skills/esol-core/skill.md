@@ -1,6 +1,11 @@
 ---
 name: esol-core
-description: MUST USE this skill whenever the user needs to differentiate for ESOL students, plan ESOL strategies, modify assessments, or scaffold language support. Trigger on: "ESOL modifications", "sentence frames", "ELL support", "multilingual learners", "language scaffolds", "how do I differentiate for ESOL", "Tier 1-5 students"... Complete strategy bank: 8 core daily strategies, 11 extended techniques, assessment modifications, grouping strategies, and scaffolding progression Days 1-6 for all proficiency levels.
+description: >
+  Use when planning lessons with ESOL or multilingual learners. Use this anytime you need
+  scaffolding strategies, sentence frames, vocabulary support, or differentiation for
+  non-native speakers. Complete ESOL strategy bank for 10th grade Intensive Reading.
+  Core daily strategies, extended techniques, modifications, and scaffolding progression.
+  Use for daily lesson planning, differentiation, and supporting multilingual learners.
 ---
 
 # ESOL Strategies - Complete Guide
