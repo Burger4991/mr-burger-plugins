@@ -14,6 +14,17 @@ This protocol ensures MC questions are:
 4. **DOK-appropriate** (matched to skill complexity)
 5. **Student-accessible** (clear, not trick questions)
 
+## ⚠️ MANDATORY: DISTRICT QUESTION STEMS
+
+**Before generating ANY MC question for ANY benchmark, you MUST read `references/district-planning-guide.md` and:**
+1. Use ONLY the question stems listed there as your starting templates
+2. Adapt stems by filling in blanks with text-specific details
+3. Check Assessment Limits to ensure your item doesn't violate constraints
+4. Use Achievement Level Descriptors to calibrate difficulty
+5. Follow the Planning Card Analytical Processes to ensure questions align with how students are taught to analyze text
+
+**Do NOT invent new question stem patterns.** Every MC stem should trace back to a district-provided template. The reference file contains stems, assessment limits, achievement level descriptors, and step-by-step analytical processes for all benchmarks (R.1.1–R.3.4, V.1.2, V.1.3).
+
 ---
 
 ## MC QUESTION TYPES & PURPOSES

@@ -9,6 +9,14 @@ description: "ELA.10.R.2.4 Argument — Complete benchmark guide for analyzing a
 ## Standard
 **ELA.10.R.2.4**: Compare opposing arguments on the same topic and evaluate their reasoning and evidence for validity, relevance, and sufficiency.
 
+## ⚠️ DISTRICT ALIGNMENT REQUIRED
+
+When generating MC questions, assessment items, or question stems for this benchmark, you MUST consult `mc-question-generation/references/district-planning-guide.md` for:
+- **Official question stems** (use these as templates — do not invent new patterns)
+- **Assessment limits** (what items CAN and CANNOT ask)
+- **Achievement level descriptors** (calibrate difficulty to Levels 2-5)
+- **Planning Card analytical processes** (align to how students are taught to analyze)
+
 ## Benchmark Clarifications
 This benchmark requires students to analyze **argumentative texts** and evaluate the quality of reasoning and evidence.
 

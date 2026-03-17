@@ -9,6 +9,14 @@ description: "ELA.10.R.1.1 Literary Elements — Complete benchmark guide for an
 ## Standard
 **ELA.10.R.1.1**: Analyze how character development, setting, and plot interact and contribute to the overall meaning.
 
+## ⚠️ DISTRICT ALIGNMENT REQUIRED
+
+When generating MC questions, assessment items, or question stems for this benchmark, you MUST consult `mc-question-generation/references/district-planning-guide.md` for:
+- **Official question stems** (use these as templates — do not invent new patterns)
+- **Assessment limits** (what items CAN and CANNOT ask)
+- **Achievement level descriptors** (calibrate difficulty to Levels 2-5)
+- **Planning Card analytical processes** (align to how students are taught to analyze)
+
 ## Benchmark Clarifications
 Literary elements do not exist in isolation. This benchmark requires students to analyze the **interaction** between elements and their **contribution to meaning**.
 

@@ -9,6 +9,14 @@ description: "ELA.10.R.1.3 Coming of Age & Conflicting Perspectives — Complete
 ## Standard
 **ELA.10.R.1.3**: Analyze and evaluate how the author's choices in point of view create effects such as suspense or humor.
 
+## ⚠️ DISTRICT ALIGNMENT REQUIRED
+
+When generating MC questions, assessment items, or question stems for this benchmark, you MUST consult `mc-question-generation/references/district-planning-guide.md` for:
+- **Official question stems** (use these as templates — do not invent new patterns)
+- **Assessment limits** (what items CAN and CANNOT ask)
+- **Achievement level descriptors** (calibrate difficulty to Levels 2-5)
+- **Planning Card analytical processes** (align to how students are taught to analyze)
+
 ## Benchmark Clarifications
 This benchmark focuses on **literary texts** and how author's choices about WHO tells the story affect the reader's experience.
 

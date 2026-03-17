@@ -9,6 +9,14 @@ description: "ELA.10.R.2.3 Purpose & Perspective — Complete benchmark guide fo
 ## Standard
 **ELA.10.R.2.3**: Analyze author's purpose and perspective in historical and informational texts.
 
+## ⚠️ DISTRICT ALIGNMENT REQUIRED
+
+When generating MC questions, assessment items, or question stems for this benchmark, you MUST consult `mc-question-generation/references/district-planning-guide.md` for:
+- **Official question stems** (use these as templates — do not invent new patterns)
+- **Assessment limits** (what items CAN and CANNOT ask)
+- **Achievement level descriptors** (calibrate difficulty to Levels 2-5)
+- **Planning Card analytical processes** (align to how students are taught to analyze)
+
 ## Benchmark Clarifications
 This benchmark applies to **informational texts** (not literary). Students must identify both **purpose** (why the author wrote it) and **perspective** (the author's viewpoint, bias, or beliefs).
 

@@ -9,6 +9,14 @@ description: "ELA.10.R.2.1 Text Structure & Features — Complete benchmark guid
 ## Standard
 **ELA.10.R.2.1**: Analyze how text structure and text features contribute to meaning and purpose in informational texts.
 
+## ⚠️ DISTRICT ALIGNMENT REQUIRED
+
+When generating MC questions, assessment items, or question stems for this benchmark, you MUST consult `mc-question-generation/references/district-planning-guide.md` for:
+- **Official question stems** (use these as templates — do not invent new patterns)
+- **Assessment limits** (what items CAN and CANNOT ask)
+- **Achievement level descriptors** (calibrate difficulty to Levels 2-5)
+- **Planning Card analytical processes** (align to how students are taught to analyze)
+
 ## Benchmark Clarifications
 This benchmark applies to **informational texts** and has two parts:
 1. **Text structure**: How the text is organized

@@ -9,6 +9,14 @@ description: "ELA.10.R.3.4 Understanding Rhetoric — Complete benchmark guide f
 ## Standard
 **ELA.10.R.3.4**: Analyze rhetorical devices and their effects in speeches and other persuasive texts.
 
+## ⚠️ DISTRICT ALIGNMENT REQUIRED
+
+When generating MC questions, assessment items, or question stems for this benchmark, you MUST consult `mc-question-generation/references/district-planning-guide.md` for:
+- **Official question stems** (use these as templates — do not invent new patterns)
+- **Assessment limits** (what items CAN and CANNOT ask)
+- **Achievement level descriptors** (calibrate difficulty to Levels 2-5)
+- **Planning Card analytical processes** (align to how students are taught to analyze)
+
 ## Benchmark Clarifications
 **Rhetoric** = The art of effective or persuasive speaking/writing. Students must identify rhetorical devices AND analyze their **effect** on the audience.
 

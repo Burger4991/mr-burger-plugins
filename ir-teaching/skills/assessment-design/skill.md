@@ -16,6 +16,20 @@ version: 0.1.0
 
 Florida BEST-aligned assessment design principles for 10th grade Intensive Reading, including STOP protocol, RACE/CER constructed response frameworks, and rubric creation.
 
+## ⚠️ MANDATORY: DISTRICT ALIGNMENT
+
+Before building ANY assessment, you MUST read `mc-question-generation/references/district-planning-guide.md` and follow these rules:
+
+1. **Question Stems**: Use ONLY the district-provided question stem templates. Adapt by filling in blanks with text-specific details. Do NOT invent new stem patterns.
+2. **Assessment Limits**: Check what items CAN and CANNOT ask for the target benchmark. Common violations to avoid:
+   - R.1.2: Do NOT ask students to define the theme → ask HOW it's developed
+   - R.2.2: Do NOT ask to identify the central idea → ask about the SUPPORT for it
+   - R.3.1: Do NOT ask to identify type of figurative language → ask how it creates MOOD
+   - R.3.4: Do NOT ask to identify type of rhetoric → ask how author USES it
+3. **Achievement Levels**: Use Level 3-4 descriptors to calibrate assessment difficulty (not just Level 2 recall)
+4. **Part A/B Format**: Include a mix of single-part and two-part questions. Part A = analysis/identification; Part B = text evidence supporting Part A
+5. **Analytical Processes**: Ensure questions align with the Planning Card step-by-step processes students are taught
+
 ## STOP Protocol (Multiple Choice Design)
 
 STOP is an acronym for analyzing answer choices. Every multiple choice question should have 4 choices that follow this pattern. STOP is taught as Step 3 of the question annotation strategy (CUBES → Find Key Details → STOP) in Days 1-2 and applied independently in Days 5-6 assessments. **For the full STOP teaching guide, anchor charts, practice templates, and ESOL modifications, see `stop-strategy`.**
