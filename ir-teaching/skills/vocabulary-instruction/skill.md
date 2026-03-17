@@ -1,6 +1,6 @@
 ---
 name: vocabulary-instruction
-description: MUST USE this skill whenever the user needs to select vocabulary, design vocabulary instruction, or plan bellringer words. Trigger on: "select vocabulary", "which words should I teach", "vocabulary instruction", "Tier 2 words", "how do I teach vocabulary", "vocabulary scaffolds", "bellringer words"... Complete system: Tier 1/2/3 criteria, word selection framework, 5-step teaching routine, strategies by word type, ESOL scaffolds by proficiency level, vocabulary assessment methods, and integration with bellringer-builder.
+description: "MUST USE this skill whenever the user needs to select vocabulary, design vocabulary instruction, or plan bellringer words. Trigger on: \"select vocabulary\", \"which words should I teach\", \"vocabulary instruction\", \"Tier 2 words\", \"how do I teach vocabulary\", \"vocabulary scaffolds\", \"bellringer words\"... Complete system: Tier 1/2/3 criteria, word selection framework, 5-step teaching routine, strategies by word type, ESOL scaffolds by proficiency level, vocabulary assessment methods, and integration with bellringer-builder."
 ---
 
 # Vocabulary Instruction Skill
@@ -294,6 +294,58 @@ persevere: ________________________________________
 - Misunderstands meaning
 - No attempt
 
+## Bellringer Integration
+
+Vocabulary instruction connects directly to the bellringer-builder skill. Here's how words flow from selection into bellringers:
+
+### Word Selection → Bellringer Pipeline
+
+**Step 1: Select 18 words** using the criteria in this skill (Tier 2/3, grade-appropriate, text-based)
+**Step 2: Reserve 4-6 slots** for benchmark vocabulary (from the benchmark's Common Vocabulary list)
+**Step 3: Route words to bellringer mode:**
+
+| Word Type | Bellringer Mode | Example |
+|-----------|----------------|---------|
+| Words FROM the unit passage with strong context clues | Mode 1 — Context Clue | "persevered" from ¶3 of unit text |
+| Words sharing a prefix/suffix/root | Mode 2 — Morphology | en-/em- set: enable, employ, embrace |
+| Benchmark analytical terms | Mode 3 — Benchmark Vocab | "universal," "implicit," "convey" for Theme |
+
+### Word Type → Teaching Strategy → Bellringer Format
+
+**Abstract words** (theme, perspective, impact):
+- Teaching: Concrete examples from students' lives first → text examples
+- Bellringer: Best as Mode 3 (Benchmark Vocab) with analytical context sentences
+
+**Process/Action words** (analyze, infer, determine):
+- Teaching: Model the process with think-alouds
+- Bellringer: Best as Mode 3 (Benchmark Vocab) — students need these for test directions
+
+**Morphologically rich words** (contradict, counterproductive, unprecedented):
+- Teaching: Break down prefix + base + suffix
+- Bellringer: Best as Mode 2 (Morphology) — grouped by word part
+
+**Context-dependent words** (harbored, depicted, ameliorate):
+- Teaching: Show in text context, identify clue types
+- Bellringer: Best as Mode 1 (Context Clue) — words from the passage
+
+### Bellringer Word Distribution by Day
+
+| Day | Word Difficulty | Word Source |
+|-----|----------------|-------------|
+| 1-2 | Most accessible | Mix of benchmark vocab (Mode 3) + easy passage words (Mode 1) |
+| 3-4 | Moderate | Remaining benchmark vocab + moderate passage words |
+| 5-6 | Most challenging | Passage words only (Mode 1) — assessment conditions |
+
+### Morphology Sets as Supplementary Practice
+
+Mode 2 (Word Parts/Morphology) bellringer sets are standalone — they don't require a specific passage. Use them:
+- As homework/prep assignments on Schoology
+- During test prep units (Q3-Q4) when students work with multiple cold-read texts
+- As warm-up activities when transitioning between units
+- As supplementary practice for students who need word-attack skill building
+
+Recommended: Build 2-3 morphology sets per quarter, cycling through high-frequency prefixes (in-/im-, en-/em-, contra-/counter-, dis-, re-, pre-, mis-, un-).
+
 ## Common Pitfalls to Avoid
 
 ❌ Teaching too many words (7+ overwhelms)
@@ -303,6 +355,7 @@ persevere: ________________________________________
 ❌ Teaching out of context (always use text examples)
 ❌ Testing on Friday, never using again (need spiraling)
 ❌ Assuming students "should know" words (don't assume)
+❌ Using only one bellringer mode — mix modes for variety and skill building
 
 ## Integration with Benchmark Instruction
 

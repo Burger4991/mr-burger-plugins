@@ -1,163 +1,115 @@
 ---
 name: bellringer-builder
-description: MUST USE this skill whenever the user needs to create, build, write, or design bellringers for 10th grade Intensive Reading. Trigger on: "create bellringers", "build bellringers", "make bellringers for Days 1-6", "need 18 vocabulary words with context clues", "design context clue bellringers", "bellringer format"... Creates context clue items with 2 MC + 1 written response per day, scaffolded difficulty Days 1-6, complete with answer keys and context clue type variety.
+description: "MUST USE this skill whenever the user needs to create, build, write, or design bellringers for 10th grade Intensive Reading. Trigger on: \"create bellringers\", \"build bellringers\", \"make bellringers for Days 1-6\", \"vocabulary bellringers\", \"word parts bellringers\", \"morphology bellringers\", \"prefix bellringers\", \"suffix bellringers\", \"root word bellringers\", \"context clue bellringers\", \"benchmark vocab bellringers\", \"bellringer format\", \"18 vocabulary words\", \"design bellringers\"... Supports 3 bellringer modes: (1) Context Clue — words from unit passage, all-MC, \"What does [word] most likely mean?\"; (2) Word Parts/Morphology — prefix/suffix/root-focused, standalone sentences, all-MC, includes title page + strategies reference; (3) Benchmark Vocab — academic terms tied to the benchmark being taught. All modes use STOP distractor design and produce complete answer keys. Creates student-facing .docx bellringer sets with answer keys."
 ---
 
 # Bellringer Builder Skill
 
-Complete protocol for designing context clues bellringers that build vocabulary skills across a 6-day unit in 10th grade Intensive Reading, aligned with Florida BEST ELA.10.V.1 (vocabulary acquisition and use).
-
-## What This Skill Does
-
-**Input:** Unit text + target benchmark (e.g., ELA.10.R.1.2 - Theme)
-
-**Output:**
-1. 18 Tier 2/academic words selected from unit text (3 per day × 6 days)
-2. 6 daily bellringers with context clues for each day's 3 words
-3. Format: 2 multiple-choice context clue items + 1 written response (use word in original sentence)
-4. Teacher answer keys with definitions, context clue types, and acceptable student variations
-5. Scaffolding progression that removes support by Days 5-6
-6. Context clue type variety to build recognition skills
-
-**Key Feature:** Students learn to extract meaning from text clues, NOT from dictionary definitions.
-
-**Timing:** 4 minutes, timed. Ticket awarded for on-time completion.
+Complete protocol for designing vocabulary bellringers for 10th grade Intensive Reading, aligned with Florida BEST ELA.10.V.1 (vocabulary acquisition and use). Supports **three distinct bellringer modes** that can be used independently or combined across a 6-day unit.
 
 ---
 
-## Word Selection Protocol
+## Three Bellringer Modes
 
-### Step 0: Load Benchmark Vocabulary (MANDATORY — Before Selecting Any Words)
+### Mode 1: Context Clue Bellringers (DEFAULT for 6-day units)
+- **Source:** Words from the unit passage
+- **Format:** All multiple choice — "What does [word] most likely mean?"
+- **Purpose:** Build context clue recognition skills using the text students are studying
+- **When:** Default for every 6-day IR unit (Days 1-6)
+- **Word count:** 3 words per day × 6 days = 18 words total
 
-**Before scanning the unit text, load the benchmark standard guide from the `benchmarks` skill and extract the "Common Vocabulary" section.** This gives you the list of Tier 2 academic words and literary terms that students MUST know to understand the benchmark itself.
+### Mode 2: Word Parts / Morphology Bellringers (STANDALONE sets)
+- **Source:** Words sharing a common prefix, suffix, or root
+- **Format:** Title page (prefix meaning + examples + Prefix+Word=New Word table) → Strategies reference page → 4-6 all-MC items with standalone sentences
+- **Purpose:** Teach morphological analysis — breaking words into parts to determine meaning
+- **When:** Standalone sets used alongside units, test prep, or as supplementary vocabulary practice
+- **Word count:** 4-6 words per set, organized by word part
 
-**REQUIREMENT:** At least 4-6 of the 18 bellringer words MUST come from the benchmark's Common Vocabulary list. These are the words students need to understand the benchmark standard, the questions they'll encounter, and the analytical language they'll use in their responses.
+### Mode 3: Benchmark Vocab Bellringers (EMBEDDED in units)
+- **Source:** Academic terms from the benchmark's Planning Card and standards language
+- **Format:** All multiple choice — "What does [word] most likely mean?" using benchmark-aligned sentences
+- **Purpose:** Ensure students know the analytical vocabulary needed to perform on benchmark tasks
+- **When:** Embedded in Days 1-4 of a unit so students learn benchmark language BEFORE the assessment
+- **Word count:** 4-6 benchmark terms per unit, distributed across Days 1-4
 
-**Example — Theme (ELA.10.R.1.2):** Common Vocabulary includes "develop," "analyze," "universal," "emerge," "reveal," "convey," "reinforce," "implicit," "abstract," "trajectory," "motif," "symbol." Select 4-6 of these that appear in the unit text with usable context clues.
+---
 
-**Example — Rhetoric (ELA.10.R.3.4):** Common Vocabulary includes "rhetoric," "ethos," "pathos," "logos," "persuade," "appeal," "credibility." Select 4-6 of these.
+## MODE 1: CONTEXT CLUE BELLRINGERS
 
-**Distribution rule:** Place benchmark vocabulary words on Days 1-4 so students encounter these terms BEFORE the Day 5-6 assessment. Students should not first see benchmark terms on the test.
+### What This Mode Does
 
-### Step 1: Extract Remaining Candidate Words from Unit Text
+**Input:** Unit text + target benchmark
+**Output:**
+1. 18 Tier 2/academic words selected from unit text (3 per day × 6 days)
+2. 6 daily bellringers — ALL multiple choice
+3. Format: 3 MC context clue items per day — "What does [word] most likely mean?"
+4. Teacher answer keys with definitions, context clue types, STOP distractor rationale
+5. Scaffolding progression that removes support by Days 5-6
 
-**After reserving 4-6 slots for benchmark vocabulary, scan the unit text for the remaining 12-14 words:**
+**Key Feature:** Students learn to extract meaning from text clues, NOT from dictionary definitions.
+**Timing:** 4 minutes, timed. Ticket awarded for on-time completion.
+
+### Word Selection Protocol
+
+#### Step 0: Load Benchmark Vocabulary (MANDATORY)
+
+Before scanning the unit text, load the benchmark standard guide and extract the "Common Vocabulary" section. At least 4-6 of the 18 bellringer words MUST come from the benchmark's Common Vocabulary list.
+
+**Distribution rule:** Place benchmark vocabulary words on Days 1-4 so students encounter these terms BEFORE the Day 5-6 assessment.
+
+#### Step 1: Extract Remaining Candidate Words from Unit Text
+
+After reserving 4-6 slots for benchmark vocabulary, scan the unit text for the remaining 12-14 words:
 ✅ Are Tier 2 (high-utility academic) OR Tier 3 (domain-specific) per vocabulary-instruction skill
 ✅ Appear with strong context clues in surrounding sentences
 ✅ Will appear in meaningful sentences (not isolated nouns)
 ✅ Are grade-appropriate (challenging but accessible for 10th graders)
 ✅ Support comprehension of the benchmark concept
 
-### Step 2: Apply Tier 2/3 Criteria
+#### Step 2: Apply Selection Criteria
 
-**Refer to vocabulary-instruction skill for detailed criteria. Quick checklist:**
-
-**Tier 2 (Academic/High-Utility):**
-- Examples: analyze, contribute, convey, demonstrate, determine, establish, infer, interpret, relevant, significant
-- Use in multiple contexts across curriculum
-- Essential for academic success
-- Worth explicit teaching time
-
-**Tier 3 (Domain-Specific/Technical):**
-- Examples: metaphor, symbolism, foreshadowing (literary terms), photosynthesis (science)
-- Teach when essential for text comprehension
-- Less transferable; context-specific
-
-**RED FLAGS - Do NOT select:**
-❌ True Tier 1 words students use correctly in speech and writing (basic conversational vocabulary)
-❌ Proper nouns or character names
-❌ Words appearing only once in the text with no transferable value
-❌ Words with no usable context clues in surrounding sentences
-❌ Words so obscure they need more than a bellringer to teach (requires extended instruction)
-
-**HIGH PRIORITY - DO select words that students:**
+**HIGH PRIORITY — Select words that students:**
 ✅ Recognize but can't define precisely ("I kinda know it" = surface recognition, not functional understanding)
 ✅ Confuse with similar academic words (analyze vs. explain, demonstrate vs. show)
 ✅ Encounter in test directions and benchmark language but misinterpret
 ✅ Use vaguely in writing without precision
-These "familiar but fuzzy" words are the sweet spot for bellringer instruction.
 
-### Step 3: Distribution Across 6 Days
+**RED FLAGS — Do NOT select:**
+❌ True Tier 1 words students use correctly in speech
+❌ Proper nouns or character names
+❌ Words appearing only once with no transferable value
+❌ Words with no usable context clues in surrounding sentences
+❌ Words so obscure they need extended instruction beyond a bellringer
 
-**Difficulty Progression:**
+#### Step 3: Distribution Across 6 Days
 
-| Days | Challenge Level | Example Words | Context Clue Strategy |
-|------|-----------------|----------------|----------------------|
-| 1-2 | **Most Accessible** | synonym in sentence, definition nearby | Direct, obvious clues |
-| 3-4 | **Moderate** | context clues require inference | Mixed types, some subtlety |
-| 5-6 | **Most Challenging** | nuanced meanings, minimal support | Assessment conditions |
+| Days | Challenge Level | Context Clue Strategy |
+|------|-----------------|----------------------|
+| 1-2 | Most Accessible | Direct, obvious clues (definition, synonym, example) |
+| 3-4 | Moderate | Mixed types, some subtlety (antonym, restatement) |
+| 5-6 | Most Challenging | Inference from surrounding text, minimal support |
 
-**Distribution Pattern:**
-- **Days 1-2:** 6 words (3 per day) — easier words with obvious context clues
-- **Days 3-4:** 6 words (3 per day) — moderate difficulty, mixed clue types
-- **Days 5-6:** 6 words (3 per day) — challenging words, requires inference skills
-- **Total:** 18 words across 6 days
+### Context Clue Types
 
-### Step 4: Identify Context Clues in Text
+Students should recognize and use these clue types:
 
-For EACH candidate word, locate the exact sentence where it appears and identify what context clue(s) support understanding:
+1. **Definition/Restatement** — "The protagonist, or main character, faces a difficult choice."
+2. **Example** — "She enjoyed outdoor activities like hiking, kayaking, and rock climbing."
+3. **Synonym** — "The old, dilapidated house... the decrepit shed wasn't much better."
+4. **Antonym** — "Unlike his gregarious brother, Marcus was a hermit who preferred solitude."
+5. **Inference from Surrounding Text** — No direct definition; multiple contextual clues combined.
 
-**Example Analysis:**
+### Student Packet Format (Per Day)
 
-Text: "Despite failing three times, she persevered until she succeeded."
-- Word: **persevered**
-- Context clue type: Antonym (contrasts with "failing") + Synonym (echoed by "succeeded")
-- Context clue phrase: "Despite failing... succeeded" (shows contrast and eventual success)
-
----
-
-## Context Clue Types
-
-**Students should recognize and use these clue types:**
-
-### 1. Definition/Restatement
-"The protagonist, or main character, faces a difficult choice."
-- Definition provided directly in sentence
-- Often marked by "or," "that is," "means"
-
-### 2. Example
-"She enjoyed outdoor activities like hiking, kayaking, and rock climbing."
-- Examples show what the word means
-- Often marked by "like," "such as," "for example"
-
-### 3. Synonym
-"The old, dilapidated house was barely standing, and the decrepit shed wasn't much better."
-- Similar word nearby provides clue
-- Two words with similar meanings used in parallel
-
-### 4. Antonym
-"Unlike his gregarious brother who loved parties, Marcus was a hermit who preferred solitude."
-- Opposite word provides clue by contrast
-- Often marked by "unlike," "but," "however," "instead"
-
-### 5. Inference from Surrounding Text
-"The sky grew dark and ominous. Thunder rumbled. Lightning cracked. The storm was coming."
-- Reader must infer meaning from overall context
-- No direct definition; multiple contextual clues combined
-
----
-
-## Bellringer Format (Per Day)
-
-**Format: 2 Multiple-Choice + 1 Written Response**
+**Format: 3 Multiple-Choice items — ALL MC, no written response**
 **Time: 4 minutes, timed. Ticket for on-time completion.**
-
-**Display Format for Student Packet:**
 
 ```
 CONTEXT CLUES BELLRINGER — Day [#]                    ⏱ 4 minutes
 
-Directions: Use context clues to figure out each underlined word.
+Directions: Use context clues to determine the meaning of each bold word.
 
-1. "[Sentence from text with target word underlined/bolded]" (¶#)
-
-   What does [word] most likely mean?
-   A. [definition option]
-   B. [definition option]
-   C. [definition option]
-   D. [definition option]
-
-2. "[Sentence from text with target word underlined/bolded]" (¶#)
+1. "[Sentence from text with target word in bold]" (¶#)
 
    What does [word] most likely mean?
    A. [definition option]
@@ -165,31 +117,69 @@ Directions: Use context clues to figure out each underlined word.
    C. [definition option]
    D. [definition option]
 
-3. "[Sentence from text with target word underlined/bolded]" (¶#)
+2. "[Sentence from text with target word in bold]" (¶#)
 
-   Use [word] in your own sentence that shows you understand its meaning:
+   What does [word] most likely mean?
+   A. [definition option]
+   B. [definition option]
+   C. [definition option]
+   D. [definition option]
 
-   ________________________________________________________________
+3. "[Sentence from text with target word in bold]" (¶#)
+
+   What does [word] most likely mean?
+   A. [definition option]
+   B. [definition option]
+   C. [definition option]
+   D. [definition option]
 ```
 
-### Requirements for Each Word:
+### MC Answer Choice Design (STOP Format)
 
-✅ **Exact sentence from unit text** (not paraphrased)
-✅ **Paragraph number reference** (¶#) for easy teacher verification
-✅ **Target word underlined or bolded** in the sentence
-✅ **Complete sentence** (not fragment; students need full context)
-✅ **Items 1-2: Four MC options** (one correct, one close, two clearly wrong)
-✅ **Item 3: Written response** — student uses word in an original sentence
-✅ **Variety of context clue types** across the 3 words (not all same type)
+For EACH item, create 4 choices using the STOP distractor framework:
 
-### Example (Day 1, hypothetical "Theme" unit using a coming-of-age story):
+- **S (Silly):** Obviously wrong — unrelated definition, wrong part of speech, absurd meaning
+- **T (Tricky):** Partially correct — synonym that sounds right but doesn't fit context, common definition wrong in this usage
+- **O (Opposite):** Reverse meaning — antonym of correct answer
+- **P (Proven):** Correct — matches definition supported by context clues, can be proven with text evidence
+
+**Randomize STOP placement** — don't always put P as choice D.
+
+### Requirements for Each Item
+
+✅ Exact sentence from unit text (not paraphrased)
+✅ Paragraph number reference (¶#) for teacher verification
+✅ Target word in **bold** in the sentence
+✅ Complete sentence (not fragment)
+✅ Four MC options using STOP format (one correct, one close, one opposite, one clearly wrong)
+✅ Variety of context clue types across the 3 items per day
+
+### Scaffolding Progression
+
+**Days 1-2 (Maximum Support):**
+- After items: Include "Context Clue Types Used Today: [list]"
+- Shorter, more obvious sentences
+- Optional: "Context Clue Hint" line for ESOL Tier 2-3
+
+**Days 3-4 (Moderate Support):**
+- Remove hint lines
+- Keep "Context Clue Types Used Today" at bottom
+- More complex sentences requiring more inference
+
+**Days 5-6 (Minimal Support — Assessment Conditions):**
+- Remove all scaffolds
+- Most challenging words
+- Complex sentences with nuanced meanings
+
+### Example (Day 1, Theme Unit)
 
 ```
 CONTEXT CLUES BELLRINGER — Day 1                    ⏱ 4 minutes
 
-Directions: Use context clues to figure out each underlined word.
+Directions: Use context clues to determine the meaning of each bold word.
 
-1. "Marcus felt abandoned by his parents when they sent him to boarding school, left alone in a strange place far from home." (¶2)
+1. "Marcus felt abandoned by his parents when they sent him to
+   boarding school, left alone in a strange place far from home." (¶2)
 
    What does abandoned most likely mean?
    A. Punished for bad behavior
@@ -197,7 +187,8 @@ Directions: Use context clues to figure out each underlined word.
    C. Sent on an adventure
    D. Given a second chance
 
-2. "She harbored a secret desire to become a writer, keeping her dream hidden from everyone except her closest friend." (¶5)
+2. "She harbored a secret desire to become a writer, keeping her
+   dream hidden from everyone except her closest friend." (¶5)
 
    What does harbored most likely mean?
    A. Shared openly with others
@@ -205,440 +196,544 @@ Directions: Use context clues to figure out each underlined word.
    C. Kept hidden inside
    D. Wrote about in a journal
 
-3. "The old photographs depicted scenes from childhood, showing moments of joy and connection with his family." (¶8)
+3. "The old photographs depicted scenes from childhood, showing
+   moments of joy and connection with his family." (¶8)
 
-   Use depicted in your own sentence that shows you understand its meaning:
+   What does depicted most likely mean?
+   A. Destroyed or damaged
+   B. Showed or represented
+   C. Hidden from view
+   D. Collected over time
 
-   ________________________________________________________________
+Context Clue Types Used Today: Definition, Synonym, Example
 ```
 
 ---
 
-## Answer Key Format
+## MODE 2: WORD PARTS / MORPHOLOGY BELLRINGERS
 
-**Teacher Lesson Plan - Bellringer Answer Key Section:**
+### What This Mode Does
+
+**Input:** A prefix, suffix, or root to teach (e.g., "en-/em- = cause to")
+**Output:**
+1. **Title Page** — Prefix/suffix/root name, meaning, 2 contextual example sentences with bold words, "Prefix + Word = New Word" table
+2. **Strategies Reference Page** — "Unlocking Vocabulary Meanings Strategies" (Active Reading, Connotations, Morphological Breakdown, STOP Elimination)
+3. **4-6 MC Items** — Standalone sentences with bold target words, all using "What is the meaning of the bold word?" stem, 4 answer choices each
+
+**Key Feature:** Words share a common morphological element (prefix/suffix/root). Students learn to decode unfamiliar words by recognizing word parts.
+
+**Source:** Standalone sentences (NOT tied to a specific passage). Sentences should be grade-appropriate, real-world contexts.
+
+### Title Page Template
+
+```
+Prefixes: [prefix-1] [prefix-2] ([meaning])
+
+[Example sentence 1 with bold word containing the prefix.]
+
+[Example sentence 2 with bold word containing the prefix.]
+
+┌─────────────────────────────────────────────┐
+│       Prefix + Word = New Word              │
+├──────────┬──────────┬───────────────────────┤
+│ [prefix] │ [base 1] │ [new word 1]          │
+│ [prefix] │ [base 2] │ [new word 2]          │
+│ [prefix] │ [base 3] │ [new word 3]          │
+└──────────┴──────────┴───────────────────────┘
+```
+
+### Title Page Examples by Prefix
+
+**en- / em- (cause to):**
+- Example 1: "Therapy can **empower** people to overcome personal challenges and improve their mental health."
+- Example 2: "The fishermen found their nets hopelessly **entangled** with seaweed and debris."
+- Table: dis + connect = disconnect | re + do = redo | co + exist = coexist
+
+**contra- / counter- (against, opposite):**
+- Example 1: "The medication is **contraindicated** for patients with severe liver disease, as it can cause serious adverse effects."
+- Example 2: "It may seem **counterintuitive**, but increasing the price of a product can sometimes lead to higher sales due to perceived value."
+- Table: dis + connect = disconnect | re + do = redo | co + exist = coexist
+
+**in- / im- (not):**
+- Example 1: "The ancient ruins were **immovable**, resisting every attempt to relocate them for the highway project."
+- Example 2: "His argument was **incoherent**, jumping from topic to topic without any logical connection."
+- Table: un + happy = unhappy | dis + agree = disagree | non + sense = nonsense
+
+### Strategies Reference Page (REQUIRED — Include in Every Set)
+
+```
+Unlocking Vocabulary Meanings Strategies
+
+Practice Active Reading: Engage actively with the text. When encountering
+an unfamiliar word, try to deduce its meaning from the context in which
+it's used. Look for surrounding words or phrases that might provide clues
+to the word's definition.
+
+Consider Connotations: Pay attention to the emotional tone or cultural
+associations of words. Words may carry positive, negative, or neutral
+connotations, which can influence their meaning in a given context.
+
+Break Down a Word Morphologically: Understand the parts of words such as
+prefixes, suffixes, and roots. This knowledge can help you decipher the
+meanings of unfamiliar words by breaking them down into their constituent
+parts.
+
+Use the S.T.O.P. Process of Elimination: If you're stuck between multiple
+answer choices, eliminate options that don't fit with the context or the
+connotation of the word. This will help you narrow down your choices and
+increase the likelihood of selecting the correct answer.
+```
+
+### MC Item Format (Per Question)
+
+```
+What is the meaning of the bold word?
+
+[Sentence with target word in bold]:
+
+A) [answer choice — complete phrase or clause]
+B) [answer choice — complete phrase or clause]
+C) [answer choice — complete phrase or clause]
+D) [answer choice — complete phrase or clause]
+```
+
+### MC Item Design Rules
+
+**Answer choice format varies by sentence structure:**
+
+**Type A — Sentence completion:** When the sentence ends with a colon or "to:", answer choices complete the sentence. Each choice is a plausible completion, but only one aligns with the bold word's meaning.
+
+Example:
+```
+What is the meaning of the bold word?
+The new software update aims to enable users to:
+A) Fix bugs and glitches in the system.
+B) Customize their interface with different themes.
+C) Access advanced features previously unavailable.
+D) Share files securely across multiple devices.
+```
+(Correct: C — "enable" means to make possible/give ability to access)
+
+**Type B — Direct definition:** When the sentence is complete, answer choices are single-word or short-phrase definitions.
+
+Example:
+```
+What is the meaning of the bold word?
+The witness's testimony seemed to contradict the evidence
+presented by the prosecution, causing confusion in the courtroom.
+a) Support
+b) Confirm
+c) Oppose
+d) Clarify
+```
+(Correct: c — "contradict" means to oppose/go against)
+
+### Word Selection for Morphology Sets
+
+For each set, select 4-6 words that:
+✅ Contain the target prefix/suffix/root
+✅ Are Tier 2 (high-utility academic) — students will encounter these across content areas
+✅ Can be used in grade-appropriate sentences with clear context
+✅ Represent different base words (variety, not just variations of one word)
+✅ Include a mix of Type A and Type B question formats
+
+**Common Prefix Sets for 10th Grade IR:**
+
+| Prefix | Meaning | Example Words |
+|--------|---------|---------------|
+| in-/im- | not | incoherent, immovable, impartial, inadequate, improbable |
+| en-/em- | cause to | enable, employ, encounter, embrace, embark, endorse, empower |
+| contra-/counter- | against, opposite | contradict, contrary, contraband, counterfeit, counterpart, counterproductive |
+| dis- | not, opposite | disregard, disclose, disparity, discredit, dismay |
+| re- | again, back | reaffirm, reconcile, recollect, resilient, retaliate |
+| pre- | before | precedent, precaution, predominant, preliminary, presumptuous |
+| mis- | wrong, bad | misconception, misinterpret, misinform, misrepresent |
+| un- | not | unprecedented, unambiguous, undermined, unrelenting |
+| trans- | across, change | transform, transcend, transition, transparent |
+| inter- | between | intervene, interpret, interdependent, intersperse |
+
+**Common Suffix Sets:**
+
+| Suffix | Meaning | Example Words |
+|--------|---------|---------------|
+| -tion/-sion | act or state of | conviction, implication, persecution, reconciliation |
+| -ous/-ious | full of | ambiguous, conspicuous, tenacious, audacious |
+| -ive | tending to | persuasive, elusive, comprehensive, subjective |
+| -able/-ible | capable of | formidable, inevitable, plausible, vulnerable |
+
+**Common Root Sets:**
+
+| Root | Meaning | Example Words |
+|------|---------|---------------|
+| dict | say, speak | contradict, predict, dictate, verdict, indict |
+| ject | throw | reject, project, conjecture, dejected |
+| cred | believe | credible, discredit, credulous, incredible |
+| spec/spect | look, see | perspective, introspective, spectacle, circumspect |
+
+### Complete Worked Example: en-/em- Set
+
+**Page 1 — Title Page:**
+```
+Prefixes: en- em- (cause to)
+
+Therapy can empower people to overcome personal challenges
+and improve their mental health.
+
+The fishermen found their nets hopelessly entangled with
+seaweed and debris.
+
+    Prefix + Word = New Word
+    ┌────────┬─────────┬──────────────┐
+    │  dis   │ connect │ disconnect   │
+    │  re    │ do      │ redo         │
+    │  co    │ exist   │ coexist      │
+    └────────┴─────────┴──────────────┘
+```
+
+**Page 2 — Strategies Reference:**
+[Include full "Unlocking Vocabulary Meanings Strategies" text as shown above]
+
+**Page 3-5 — MC Items:**
+
+```
+What is the meaning of the bold word?
+The new software update aims to enable users to:
+A) Fix bugs and glitches in the system.
+B) Customize their interface with different themes.
+C) Access advanced features previously unavailable.
+D) Share files securely across multiple devices.
+
+What is the meaning of the bold word?
+The company decided to employ a new strategy in order to:
+A) Increase customer satisfaction and loyalty.
+B) Reduce operating costs and expenses.
+C) Expand into international markets.
+D) Enhance employee training and development programs.
+
+What is the meaning of the bold word?
+During their expedition, the explorers unexpectedly encountered:
+A) A rare species of plant previously unknown to botanists.
+B) A storm that delayed their progress for several days.
+C) An ancient artifact dating back to the Roman Empire.
+D) A local guide who offered to lead them through the jungle.
+
+What is the meaning of the bold word?
+After initial skepticism, the community leaders decided to embrace:
+A) A new recycling initiative to reduce waste in the neighborhood.
+B) Traditional practices to preserve cultural heritage.
+C) A controversial proposal for a large-scale development project.
+D) Modern technology to improve communication among residents.
+
+What is the meaning of the bold word?
+Which of the following actions would most likely lead a
+nutritionist to endorse a particular brand of protein bars?
+A) Conducting a taste test among a group of athletes.
+B) Publishing a scientific study on the benefits of protein consumption.
+C) Collaborating with a celebrity chef to create protein bar recipes.
+D) Providing a list of ingredients and their nutritional values.
+
+What is the meaning of the bold word?
+Before they could embark on their journey across the Pacific
+Ocean, the sailors needed to:
+A) Refuel their vessel with enough supplies for the long voyage.
+B) Chart a course using the latest navigational tools.
+C) Communicate their departure date to the port authorities.
+D) Secure sponsorship from a maritime exploration foundation.
+```
+
+### Answer Key Format for Morphology Sets
+
+```
+WORD PARTS BELLRINGER ANSWER KEY — [Prefix]: [meaning]
+
+1. Word: [target word]
+   Prefix: [prefix] = [meaning]
+   Base word: [base] = [meaning]
+   Combined meaning: [prefix meaning] + [base meaning] = [word meaning]
+   Correct answer: [letter]
+   Full definition: [student-friendly definition]
+   STOP analysis: S = [letter/reason], T = [letter/reason], O = [letter/reason], P = [letter]
+
+2. Word: [target word]
+   [same format]
+```
+
+---
+
+## MODE 3: BENCHMARK VOCAB BELLRINGERS
+
+### What This Mode Does
+
+**Input:** Target benchmark (e.g., ELA.10.R.1.2 Theme)
+**Output:**
+1. 4-6 benchmark-specific academic terms with MC items
+2. Sentences that use the terms in benchmark-relevant contexts
+3. All-MC format matching Context Clue bellringer style
+4. Distributed across Days 1-4 of the unit (before assessment)
+
+**Key Feature:** Students learn the analytical vocabulary OF the benchmark — the words they need to understand what the benchmark is asking them to do.
+
+### Benchmark Vocabulary Banks
+
+**ELA.10.R.1.2 Theme:**
+- convey, demonstrate, reveal, illustrate, develop, analyze, universal, emerge, reinforce, implicit, abstract, trajectory, motif
+
+**ELA.10.R.1.1 Literary Elements:**
+- interact, contribute, characterization, resolution, conflict, motivation, dynamic, static, protagonist, catalyst
+
+**ELA.10.R.1.3 Point of View / Perspective:**
+- perspective, bias, reliability, conflicting, subjective, objective, transformation, naïve, omniscient
+
+**ELA.10.R.1.4 Poetry / Ambiguity:**
+- ambiguity, unresolved, nuance, literal, figurative, juxtaposition, paradox, layers of meaning
+
+**ELA.10.R.2.1 Text Structure:**
+- sequence, compare, contrast, cause, effect, consequence, relationship, organizational, chronological
+
+**ELA.10.R.2.2 Central Idea:**
+- central, crucial, emphasize, establish, essential, contribute, support, develop, reinforce
+
+**ELA.10.R.2.3 Purpose & Perspective:**
+- purpose, perspective, bias, intent, implication, audience, credibility, tone
+
+**ELA.10.R.2.4 Argument:**
+- claim, counterclaim, evidence, reasoning, validity, credibility, logical, fallacy, rebut
+
+**ELA.10.R.3.1 Figurative Language:**
+- figurative, literal, symbolize, metaphor, simile, personification, imagery, mood, connotation
+
+**ELA.10.R.3.4 Rhetoric:**
+- rhetoric, ethos, pathos, logos, persuade, appeal, credibility, rhetorical device, juxtaposition
+
+### Benchmark Vocab Bellringer Format
+
+```
+BENCHMARK VOCABULARY BELLRINGER — Day [#]              ⏱ 4 minutes
+
+Directions: Use context clues to determine the meaning of each bold word.
+These are words you will need to know for our [benchmark name] work.
+
+1. "[Sentence using benchmark term in an analytical context]"
+
+   What does [word] most likely mean?
+   A. [definition option]
+   B. [definition option]
+   C. [definition option]
+   D. [definition option]
+
+2. "[Sentence using benchmark term in an analytical context]"
+
+   What does [word] most likely mean?
+   A. [definition option]
+   B. [definition option]
+   C. [definition option]
+   D. [definition option]
+```
+
+### Example (Theme Unit — Day 1)
+
+```
+BENCHMARK VOCABULARY BELLRINGER — Day 1                ⏱ 4 minutes
+
+Directions: Use context clues to determine the meaning of each bold word.
+These are words you will need to know for our Theme analysis work.
+
+1. "A universal theme is one that applies to people across cultures
+   and time periods, not just to one specific group or era."
+
+   What does universal most likely mean?
+   A. Relating to outer space
+   B. Applying to everyone broadly
+   C. Difficult to understand
+   D. Based on one culture only
+
+2. "The author does not state the theme directly; instead, it is
+   implicit in the characters' actions and the story's outcome."
+
+   What does implicit most likely mean?
+   A. Stated clearly and directly
+   B. Suggested but not directly stated
+   C. Hidden on purpose to confuse readers
+   D. Written in a footnote at the end
+```
+
+### Integration with Context Clue Bellringers
+
+When using Mode 3 alongside Mode 1 in the same unit:
+- **Days 1-2:** Use 1-2 benchmark vocab items + 1-2 context clue items per day
+- **Days 3-4:** Use remaining benchmark vocab items + context clue items
+- **Days 5-6:** Context clue items only (benchmark vocab already taught)
+- **Total still = 3 items per day, 18 items across 6 days**
+
+---
+
+## ANSWER KEY FORMAT (All Modes)
+
+### Context Clue & Benchmark Vocab Answer Key
 
 ```
 DAY [#] BELLRINGER ANSWER KEY
 
 1. Word: [target word] — MC
-   Correct answer: [letter]
+   Correct answer: [letter] ([answer text])
    Definition: [precise, student-friendly definition]
-   Context clue type: [which type(s) apply: Definition, Example, Synonym, Antonym, Inference]
-   Context clue phrase from text: "[exact words from sentence that provide clue]"
-   Why distractors are wrong: B = [reason], C = [reason], D = [reason]
+   Context clue type: [Definition/Example/Synonym/Antonym/Inference]
+   Context clue phrase from text: "[exact words providing clue]"
+   STOP analysis: S=[letter], T=[letter], O=[letter], P=[letter]
+   Why distractors are wrong: [letter] = [reason]; [letter] = [reason]; [letter] = [reason]
 
-2. Word: [target word] — MC
-   Correct answer: [letter]
-   Definition: [precise definition]
-   Context clue type: [type]
-   Context clue phrase from text: "[exact words]"
-   Why distractors are wrong: [brief notes]
-
-3. Word: [target word] — Written Response
-   Definition: [precise definition]
-   Context clue type: [type]
-   Context clue phrase from text: "[exact words]"
-   Acceptable student sentences: [2-3 example sentences that show understanding]
-   Scoring: Full credit = sentence clearly shows meaning; Partial = word used but meaning unclear; No credit = word used incorrectly or not attempted
-
-HOW TO REVIEW (timing: 1 minute after timer ends):
-- Project answers for MC items — students self-check
-- Quick show of hands: "Who got both MC correct?"
-- Spot-check 2-3 written sentences aloud (volunteer or cold call)
-- ESOL Tier 2-3 modification: Provide sentence frame for item 3
-```
-
-### Example Answer Key (Day 1 from above):
-
-```
-DAY 1 BELLRINGER ANSWER KEY
-
-1. Word: abandoned — MC
-   Correct answer: B (Left alone without support)
-   Definition: Left alone, deserted, without support or care
-   Context clue type: Definition/Restatement
-   Context clue phrase: "left alone in a strange place far from home"
-   Why distractors are wrong: A = punishment not mentioned; C = boarding school is not an adventure; D = no second chance implied
-
-2. Word: harbored — MC
-   Correct answer: C (Kept hidden inside)
-   Definition: Kept hidden, held secretly, sheltered
-   Context clue type: Definition/Restatement + Synonym
-   Context clue phrase: "secret desire... keeping her dream hidden"
-   Why distractors are wrong: A = opposite of hidden; B = she still has the desire; D = no mention of writing it down
-
-3. Word: depicted — Written Response
-   Definition: Shown, illustrated, represented in pictures or words
-   Context clue type: Definition/Restatement
-   Context clue phrase: "photographs... showing moments of joy"
-   Acceptable student sentences:
-   - "The mural depicted a battle scene with soldiers on horses."
-   - "The movie depicted life in the 1920s."
-   Scoring: Full credit = sentence clearly shows "depicted" means showed/represented; Partial = word used but meaning unclear; No credit = word used incorrectly or not attempted
+2. [same format for each item]
 
 HOW TO REVIEW (1 minute after timer):
-- Project MC answers — students self-check
-- Quick show of hands: "Who got both MC correct?"
-- Ask 1 volunteer to share their sentence for "depicted"
-- ESOL Tier 2-3: Provide sentence frame for item 3: "The _____ depicted _____, showing _____."
+- Project answers — students self-check
+- Quick show of hands: "Who got all 3 correct?"
+- Discuss 1 tricky item: "Why is [letter] wrong even though it sounds right?"
+- ESOL Tier 2-3: Provide visual or L1 translation for missed words
+```
+
+### Morphology Set Answer Key
+
+```
+WORD PARTS BELLRINGER ANSWER KEY — [Prefix/Suffix/Root]: [meaning]
+
+1. Word: [target word]
+   Prefix/Root: [element] = [meaning]
+   Base word: [base] = [meaning]
+   Combined: [element meaning] + [base meaning] = [full definition]
+   Correct answer: [letter] ([answer text])
+   STOP analysis: S=[letter], T=[letter], O=[letter], P=[letter]
+
+HOW TO REVIEW:
+- Project answers — students self-check
+- Ask: "How does knowing [prefix] = [meaning] help you figure out the word?"
+- Connect to Strategies page: "Which strategy worked best for you?"
 ```
 
 ---
 
-## Scaffolding Progression
+## ESOL MODIFICATIONS (All Modes)
 
-**Systematic removal of support across 6 days, aligned with benchmark achievement levels:**
-
-### Days 1-2: Maximum Support (Foundation Building)
-
-**Bellringer additions:**
-- After target word: Include "Context Clue Hint" line
-  - Example: "Look for the word 'alone' and 'deserted' near the target word"
-- Below the 3 words: Include "Context Clue Types Used Today: [list]" to help students recognize strategies
-- Shorter, more obvious sentences with context clues
-
-**Answer Key includes:**
-- Simplified definitions using grade-level vocabulary
-- Very explicit context clue identification
-- Multiple acceptable variations provided
-
-**Student Support:**
-- Word bank available if needed (matching format for ESOL Tier 3)
-- Teacher provides brief introduction to target words before independent work
-
-### Days 3-4: Moderate Support (Guided Practice)
-
-**Bellringer changes:**
-- Remove the "Context Clue Hint" lines
-- Keep "Context Clue Types Used Today" list at bottom
-- More complex sentences requiring more inference
-- Words with less obvious context clues
-
-**Answer Key includes:**
-- More sophisticated definitions
-- Context clue types identified but require more interpretation
-- Fewer alternative variations (students moving toward precision)
-
-**Student Support:**
-- No word bank (students should recall from Days 1-2)
-- Teacher references previous days' words in instruction
-- Partner work encouraged on harder words
-
-### Days 5-6: Minimal Support (Assessment Conditions)
-
-**Bellringer format:**
-- Remove hint lines (no scaffolds)
-- Remove "Context Clue Types Used Today" list
-- Most challenging words from text
-- Complex sentences with nuanced meanings
-- Assessment-like format
-
-**Answer Key includes:**
-- Grade-appropriate precise definitions
-- Context clue types listed but students must identify independently
-- One acceptable variation only (this is assessment)
-
-**Student Support:**
-- No word banks
-- Independent work (no partners unless doing intervention)
-- This is the assessment condition students will face
-
----
-
-## Sequence Example: Single Word Across 3 Days
-
-**Day 1 (Maximum support):**
-```
-2. "Mrs. Chen's stoic expression never changed, even when she received bad news; she remained calm and controlled." (¶4)
-
-   Word: stoic     My definition: _________________________________
-
-   Hint: Look for words that tell you HOW she acted.
-```
-
-**Day 3 (Moderate support):**
-```
-3. "The commander's stoic demeanor inspired confidence in the soldiers, who knew he would remain composed under pressure." (¶12)
-
-   Word: stoic     My definition: _________________________________
-```
-
-**Day 5 (Assessment conditions):**
-```
-1. "Though the loss was devastating, Keisha's stoic response concealed her inner turmoil from her peers." (¶18)
-
-   Word: stoic     My definition: _________________________________
-```
-
----
-
-## ESOL Modifications
-
-**Tier 1-2 (Beginning ELLs):**
+### ESOL Level 1-2 (Beginning):
 - Provide L1 translations alongside English definitions in answer key
-- Use cognates when available (Spanish: perseverar = persevere)
-- Include images/visual representations of word meanings
+- Use cognates when available (Spanish: contradecir = contradict)
+- Reduce answer choices to 3 (remove the Tricky option)
 - Shorter sentences with fewer challenging words
-- Offer word bank with definitions (matching format)
+- Visuals for word meanings when possible
 
-**Tier 3 (Intermediate ELLs):**
-- Provide word bank of possible definitions (4-5 options for matching)
-- Include definition at bottom of each bellringer for reference
-- Mix of Spanish/English cognates in answer key
-- Encourage use of bilingual dictionary
+### ESOL Level 3 (Intermediate):
+- Standard 4-choice format
+- Include word bank of possible definitions as reference
 - Partner work on Days 1-2
+- Bilingual dictionary permitted
 
-**Tier 4-5 (Advanced ELLs):**
+### ESOL Level 4-5 (Advanced):
 - Standard bellringer format
-- May need 1-2 additional examples in context
-- Can participate in clue type discussions
+- May need 1-2 additional context examples
+- Can participate in review discussions
 - Standard answer key
 
-**Language Modification Principle:**
-Reduce vocabulary load in the *question/directions*, not in the *content words being taught*.
+**Language Modification Principle:** Reduce vocabulary load in the *question/directions*, not in the *content words being taught*.
 
 ---
 
-## Context Clue Type Mix (Key Design Principle)
+## CHOOSING THE RIGHT MODE
 
-**Each day should feature a variety of context clue types to build recognition skills:**
+| Situation | Recommended Mode | Why |
+|-----------|-----------------|-----|
+| Building a standard 6-day IR unit | Mode 1 (Context Clue) | Words from passage build text familiarity |
+| Students struggle with word attack skills | Mode 2 (Morphology) | Teaches transferable decoding strategies |
+| Students don't understand benchmark language | Mode 3 (Benchmark Vocab) | Ensures students know analytical terms |
+| Test prep / Q3-Q4 | Mode 2 (Morphology) | Standalone sets work across multiple texts |
+| New benchmark introduction | Mode 3 + Mode 1 combined | Benchmark terms + passage words together |
+| Supplementary homework/prep | Mode 2 (Morphology) | Self-contained sets don't require a passage |
 
-**Avoid:**
-❌ All 3 words with the same clue type on any day
-❌ Same clue types repeated across days
+### Combining Modes in One Unit
 
-**DO:**
-✅ Mix clue types within each day (3 words = 3 different types when possible)
-✅ Introduce new types gradually:
-   - Days 1-2: Definition, Example, Synonym
-   - Days 3-4: Add Antonym, Restatement
-   - Days 5-6: Emphasize Inference from surrounding text
-
-**Example Distribution (Day 1):**
-1. Definition/Restatement (MC)
-2. Synonym (MC)
-3. Example (Written Response)
-
-**Example Distribution (Day 5):**
-1. Inference (MC)
-2. Antonym (MC)
-3. Inference — multiple clues combined (Written Response)
+**Recommended hybrid for a standard 6-day unit:**
+- Days 1-2: 2 Benchmark Vocab items (Mode 3) + 1 Context Clue item (Mode 1) per day
+- Days 3-4: 1 Benchmark Vocab item (Mode 3) + 2 Context Clue items (Mode 1) per day
+- Days 5-6: 3 Context Clue items (Mode 1) per day — assessment conditions
+- Mode 2 (Morphology) sets: assigned as standalone supplementary practice
 
 ---
 
-## Sentence Selection Criteria
+## OUTPUT SPECIFICATION
 
-**For EACH of the 18 bellringer words, the sentence must:**
+### Deliverables by Mode
 
-✅ Be from the unit text (exact quotation, not paraphrased)
-✅ Be complete (not a fragment; students need full context)
-✅ Include the target word in a position where context clues follow or precede it
-✅ Contain clear context clues (synonyms, definitions, examples, contrasts, inference points)
-✅ Be grade-appropriate in length (generally under 30 words for Days 1-2; can be longer for Days 5-6)
-✅ Include paragraph number reference for teacher verification
+**Mode 1 — Context Clue Bellringers:**
+- 6 daily bellringer pages (integrated into student packet)
+- 3 MC items per day × 6 days = 18 total items
+- Teacher answer key per day (in lesson plan)
+- File: integrated into `[UnitName]_StudentPacket.docx` and `[UnitName]_LessonPlan.docx`
 
-**RED FLAGS - Reject sentences where:**
-❌ Context clues are too far away
-❌ Sentence is too complex (too many difficult words besides target)
-❌ Word appears in isolation with no context support
-❌ Sentence is paraphrased (must use exact text)
+**Mode 2 — Morphology Bellringer Sets:**
+- Title page (prefix/suffix/root + examples + table)
+- Strategies reference page
+- 4-6 MC items (one per page for projection, or 2 per page for print)
+- Teacher answer key
+- File: `[Prefix]_WordParts_Bellringers.docx`
 
----
+**Mode 3 — Benchmark Vocab Bellringers:**
+- 4-6 MC items distributed across Days 1-4
+- Integrated into student packet alongside Mode 1 items
+- Teacher answer key per day
+- File: integrated into unit student packet and lesson plan
 
-## Coordinating with Benchmark Instruction
+### File Naming
 
-**Bellringer vocabulary MUST include benchmark vocabulary — this is not optional.** The bellringer is a daily touchpoint where students encounter and practice the academic language of the benchmark. If students don't know what "analyze," "develop," or "universal" mean, they cannot perform on benchmark-aligned tasks.
-
-**Bellringer vocabulary must complement AND include benchmark vocabulary:**
-
-### For Theme Units (ELA.10.R.1.2):
-- Include theme-related words: convey, demonstrate, reveal, illustrate, support, develop
-- Plus content words from the text (emotions, actions, relationships)
-
-### For Text Structure & Features Units (ELA.10.R.2.1):
-- Include structure words: sequence, compare, contrast, cause, effect, consequence, relationship
-- Plus procedural/informational words from text
-
-### For Central Idea Units (ELA.10.R.2.2):
-- Include main idea language: central, crucial, emphasize, establish, essential, contribute
-- Plus content words from informational text
-
-### For Figurative Language & Mood Units (ELA.10.R.3.1):
-- Include literary language: symbolism, metaphor, imagery, figurative, literal, conveyed
-- Plus text examples of figurative expressions
+- Context Clue (in unit): `[UnitName]_D1-6_StudentPacket_YYYYMMDD.docx`
+- Morphology (standalone): `[Prefix]_WordParts_Bellringers_YYYYMMDD.docx`
+- Benchmark Vocab (in unit): integrated into unit packet
 
 ---
 
-## Assessment Scoring Guide
+## INTEGRATION WITH STUDENT PACKET
 
-**For Days 1-2 (maximum support):**
-```
-2 Points (Full Credit): Definition shows understanding of meaning from context clues
-1 Point (Partial): Definition is related but vague or incomplete
-0 Points (No Credit): Definition is wrong or shows no engagement
-```
-
-**For Days 3-4 (moderate support):**
-```
-2 Points (Full Credit): Definition is accurate and specific
-1 Point (Partial): Definition is related but incomplete or imprecise
-0 Points (No Credit): Definition misses the meaning or shows guessing
-```
-
-**For Days 5-6 (assessment conditions):**
-```
-2 Points (Full Credit): Definition demonstrates understanding and precision
-1 Point (Partial): Definition shows partial understanding but incomplete
-0 Points (No Credit): Definition is inaccurate or not attempted
-```
-
----
-
-## Complete Worked Example: Day 1 Bellringer
-
-**Unit Theme:** Coming-of-age story (fictional narrative)
-**Unit Text (fictional):** "The Watershed Moment"
-**Target Benchmark:** ELA.10.R.1.2 (Theme)
-
-### Student Packet Format:
-
-```
-CONTEXT CLUES BELLRINGER — Day 1                    ⏱ 4 minutes
-
-Directions: Use context clues to figure out each underlined word.
-
-1. "Marcus had always been apathetic about school, showing little interest or enthusiasm for anything his teachers presented." (¶3)
-
-   What does apathetic most likely mean?
-   A. Angry and frustrated
-   B. Lacking interest or enthusiasm
-   C. Excited but nervous
-   D. Confused about expectations
-
-2. "His mother tried to ameliorate the situation by offering to help with homework, but her efforts seemed to make things worse." (¶5)
-
-   What does ameliorate most likely mean?
-   A. Ignore completely
-   B. Make something worse
-   C. Make something better
-   D. Complain about
-
-3. "The old photograph showed Marcus as a child, beaming with joy and vitality, climbing trees and laughing with his friends." (¶7)
-
-   Use vitality in your own sentence that shows you understand its meaning:
-
-   ________________________________________________________________
-
-Context Clue Types Used Today: Definition, Inference, Example
-```
-
-### Lesson Plan Answer Key Section:
-
-```
-DAY 1 BELLRINGER ANSWER KEY
-
-1. Word: apathetic — MC
-   Correct answer: B (Lacking interest or enthusiasm)
-   Definition: Lacking interest or enthusiasm; not caring about something
-   Context clue type: Definition/Restatement
-   Context clue phrase: "showing little interest or enthusiasm for anything"
-   Why distractors are wrong: A = no anger mentioned; C = opposite of apathetic; D = no confusion described
-
-2. Word: ameliorate — MC
-   Correct answer: C (Make something better)
-   Definition: To make something better; to improve
-   Context clue type: Definition/Restatement + Inference
-   Context clue phrase: "tried to... help with homework, but her efforts seemed to make things worse"
-   Why distractors are wrong: A = she tried, not ignored; B = that's what happened despite effort; D = she offered help, not complaints
-
-3. Word: vitality — Written Response
-   Definition: Energy, liveliness, physical vigor and enthusiasm
-   Context clue type: Example
-   Context clue phrase: "beaming with joy... laughing with friends, climbing trees"
-   Acceptable student sentences:
-   - "The puppy ran around the yard with incredible vitality."
-   - "After a good night's sleep, she was full of vitality."
-   Scoring: Full credit = sentence shows vitality means energy/liveliness; Partial = word used but meaning unclear; No credit = word used incorrectly or not attempted
-
-HOW TO REVIEW (1 minute after timer):
-- Project MC answers — students self-check
-- Quick show of hands: "Who got both MC correct?"
-- Ask 1 volunteer to share their sentence for "vitality"
-- ESOL Tier 2-3: Provide sentence frame: "The _____ showed vitality by _____."
-```
-
----
-
-## Cross-References
-
-- **vocabulary-instruction:** Word selection criteria (Tier 2/3), teaching strategies by word type, ESOL vocabulary strategies
-- **unit-builder-protocol:** Phase 2 (vocabulary selection), Phase 4 Step 2 (bellringer creation), Phase 5 (bellringer answer keys)
-- **teaching-templates:** File naming conventions, bellringer format specifications, daily structure requirements, three-file synchronization
-- **esol-core:** ESOL scaffolding strategies, differentiation by English proficiency level, language modification principles
-
----
-
-## Output Specification
-
-### Deliverables Created by This Skill:
-
-**1. Student Bellringer Sheets (integrated into student packet):**
-- 6 daily bellringers, one per day (fits on student packet page)
-- 3 words per day × 6 days = 18 total words
-- Format: 2 MC items + 1 written response per day
-- 4-minute timer; ticket for on-time completion
-- Student-facing (clear, concise directions)
-- Formatted for .docx integration
-
-**2. Teacher Bellringer Answer Keys (in lesson plan):**
-- Organized by day (Day 1-Day 6)
-- Each key includes: word, definition, context clue type, context clue phrase, acceptable variations, scoring guidance
-- Includes "How to Review" section with timing
-- ESOL Tier 2-3 modifications listed
-- Professional, teacher-facing tone
-- Formatted for .docx
-
-**File Naming:**
-- Format: `[UnitName]_Bellringers_D1-6_YYYYMMDD.docx`
-- Example: `CominOfAge_Bellringers_D1-6_20250222.docx`
-- OR integrated into: `ComingOfAge_D1-6_StudentPacket_20250222.docx` and `ComingOfAge_D1-6_LessonPlan_20250222.docx`
-
----
-
-## Integration with Student Packet
-
-**Location in packet:** Beginning of each day section, before Teacher-Led activities
+**Location:** Beginning of each day section, before Teacher-Led activities
 
 **Timing:** 4 minutes timed + 1 minute review = 5 minutes total at start of class
 
 **Workflow:**
 1. Students arrive; bellringer is on screen and in packet
 2. 4-minute timer starts when bell rings
-3. Students complete 2 MC items + 1 written sentence independently
-4. Timer ends; teacher projects MC answers; students self-check (1 min)
+3. Students complete 3 MC items independently
+4. Timer ends; teacher projects answers; students self-check (1 min)
 5. Ticket awarded for on-time completion (all 3 attempted)
 6. Transition to instructional block
 
 ---
 
-## When to Use This Skill
+## CROSS-REFERENCES
 
-Use **bellringer-builder** when you need to:
-- Create 6-day bellringers (18 words total: 3 per day, 2 MC + 1 written)
-- Select Tier 2/3 words from a specific unit text
-- Build answer keys with MC distractors and written response scoring
-- Design scaffolding that removes support by Days 5-6
-- Develop ESOL modifications for bellringers
-- Integrate bellringers into a student packet (fits on daily page)
-- Assess vocabulary knowledge in context (not dictionary definitions)
+- **vocabulary-instruction:** Word selection criteria (Tier 2/3), teaching strategies by word type, ESOL vocabulary strategies, bellringer word integration
+- **mc-question-generation:** STOP distractor framework, MC quality checklist, vocabulary MC patterns
+- **stop-strategy:** STOP elimination protocol that students use on bellringer MC items
+- **unit-builder-protocol:** Phase 2 (vocabulary selection), Phase 4 Step 2 (bellringer creation), Phase 5 (bellringer answer keys)
+- **teaching-templates:** File naming, bellringer format specs, daily structure
+- **esol-core:** ESOL scaffolding strategies, differentiation by proficiency level
+- **brand-identity:** Visual design standards for student-facing materials
 
 ---
 
-*Pulled from: vocabulary-instruction skill, unit-builder-protocol, teaching-templates, Florida BEST ELA standards, context clues instructional research*
+## WHEN TO USE THIS SKILL
+
+Use **bellringer-builder** when you need to:
+- Create 6-day bellringers for any IR unit (Mode 1 — context clue, all-MC)
+- Build standalone word parts/morphology bellringer sets (Mode 2 — prefix/suffix/root)
+- Design benchmark vocabulary bellringers (Mode 3 — analytical terms)
+- Combine modes for a hybrid bellringer approach within one unit
+- Generate answer keys with STOP analysis for any bellringer type
+- Scaffold bellringer difficulty across days
+- Develop ESOL modifications for bellringers
+- Create supplementary vocabulary practice for test prep
+
+---
+
+*Pulled from: vocabulary-instruction skill, mc-question-generation skill, stop-strategy skill, unit-builder-protocol, Florida BEST ELA standards, context clues instructional research, uploaded PDF bellringer exemplars (en-/em-, in-/im-, contra-/counter-)*
 
 *Cross-referenced with: IR Framework, benchmark Planning Cards, ESOL best practices*
 
-*Last Updated: 2026-03-06*
+*Last Updated: 2026-03-17*
 
-*Version: 2.0 - Updated to 3 words/day (18 total), 2 MC + 1 written format, 4-min timer, ticket for completion*
+*Version: 3.0 — Expanded to 3 modes (Context Clue all-MC, Word Parts/Morphology, Benchmark Vocab), added PDF exemplar format for Mode 2, added STOP distractor design for all modes, removed written response component from Mode 1*

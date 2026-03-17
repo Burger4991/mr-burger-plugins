@@ -1,6 +1,6 @@
 ---
 name: mc-question-generation
-description: Systematic protocol for generating MC questions using benchmark question stems, STOP-formatted answer choices, and alignment to DOK levels. Use when building bellringers, comprehension checks, or assessments.
+description: "Systematic protocol for generating MC questions using benchmark question stems, STOP-formatted answer choices, and alignment to DOK levels. Use when building bellringers, comprehension checks, or assessments. Includes vocabulary MC patterns for context clue items and morphology/word-parts items."
 ---
 
 # Multiple Choice Question Generation Protocol
@@ -27,10 +27,17 @@ This protocol ensures MC questions are:
 
 ---
 
-## PROTOCOL 1: BELLRINGER CONTEXT CLUE QUESTIONS
+## PROTOCOL 1: BELLRINGER VOCABULARY MC QUESTIONS
 
-### Step 1: Select Vocabulary Word
-**Criteria:**
+Bellringer vocabulary MC questions come in TWO formats. See bellringer-builder skill for complete bellringer design protocols.
+
+### Format A: Context Clue Questions (from unit passage)
+
+**Stem:** "What does [word] most likely mean?"
+**Source:** Exact sentence from unit text with bold target word + paragraph reference
+**Answer choices:** 4 options using STOP format — definitions/synonyms
+
+**Criteria for word selection:**
 - Tier 2 academic word from unit text
 - Appears in sentence with strong context clues
 - Students unlikely to know definition already
@@ -41,69 +48,72 @@ This protocol ensures MC questions are:
 - **Example**: Word is illustrated ("X such as Y and Z")
 - **Contrast**: Word is contrasted with opposite ("Unlike X, Y is...")
 - **Restatement**: Word is restated in simpler terms ("X, or in other words...")
+- **Inference**: Multiple surrounding clues combined (no direct definition)
 
-### Step 2: Write Question Stem
-**Format:**
+**Example (Context Clue format):**
 ```
-"[Full sentence from text with target word underlined]" (¶#)
+"Knowing that Mrs. Mallard was afflicted with a heart trouble, great care
+was taken to break to her as gently as possible the news of her husband's
+death." (¶1)
 
-What does [word] mean as used in this sentence?
-```
-
-**Guidelines:**
-- Include full sentence (not partial)
-- Underline target word
-- Include paragraph number in parentheses
-- Ask "as used in this sentence" (not general definition)
-
-### Step 3: Create 4 STOP Answer Choices
-
-**Choice Order**: Randomize S/T/O/P (don't always put P as choice D)
-
-**S (Silly) - Obviously Wrong:**
-- Unrelated definition
-- Wrong part of speech
-- Absurd meaning that doesn't fit context
-
-**Examples:**
-- If word is adjective, give noun definition
-- If word is about emotion, give physical object
-- "afflicted" → "celebrated" (opposite emotion)
-
-**T (Tricky) - Partially Correct:**
-- Synonym that sounds right but doesn't fit context
-- Common definition that's wrong in this context
-- Misses key nuance
-
-**Examples:**
-- "elusive" → "colorful" (sounds nice but unrelated to meaning)
-- "repression" → "physical strength" (confuses "strength" from sentence)
-
-**O (Opposite) - Reverse Meaning:**
-- Antonym of correct answer
-- States opposite of what text implies
-
-**Examples:**
-- "afflicted" → "cured of"
-- "monstrous" → "tiny and insignificant"
-
-**P (Proven) - Correct Answer:**
-- Matches definition supported by context clues
-- Can be proven with evidence from sentence
-
-**Examples:**
-- "afflicted" → "suffering from" (proven by "heart trouble" and "great care")
-
-### Example (Complete):
-```
-"Knowing that Mrs. Mallard was afflicted with a heart trouble, great care was taken to break to her as gently as possible the news of her husband's death." (¶1)
-
-What does afflicted mean as used in this sentence?
+What does afflicted most likely mean?
 A) Cured of [O - Opposite]
 B) Suffering from [P - PROVEN]
 C) Ignoring [S - Silly, doesn't match context]
 D) Celebrating [T - Tricky, positive emotion doesn't fit]
 ```
+
+### Format B: Word Parts / Morphology Questions (standalone sentences)
+
+**Stem:** "What is the meaning of the bold word?"
+**Source:** Standalone sentences NOT tied to a specific passage — real-world contexts
+**Answer choices:** Two sub-formats:
+
+**Type 1 — Sentence completion:** Sentence ends with colon; choices complete it.
+Each completion is plausible, but only one aligns with the bold word's meaning.
+
+```
+What is the meaning of the bold word?
+The new software update aims to enable users to:
+A) Fix bugs and glitches in the system.
+B) Customize their interface with different themes.
+C) Access advanced features previously unavailable.
+D) Share files securely across multiple devices.
+```
+
+**Type 2 — Direct definition:** Sentence is complete; choices are single-word/short-phrase definitions.
+
+```
+What is the meaning of the bold word?
+The witness's testimony seemed to contradict the evidence
+presented by the prosecution, causing confusion in the courtroom.
+a) Support
+b) Confirm
+c) Oppose
+d) Clarify
+```
+
+**Key design principle for morphology items:** All target words in a set share the same prefix/suffix/root. Students should be able to use morphological breakdown as one strategy alongside context clues and STOP elimination.
+
+### STOP Answer Choices (Both Formats)
+
+**Choice Order**: Randomize S/T/O/P (don't always put P as choice D)
+
+**S (Silly) - Obviously Wrong:**
+- Unrelated definition, wrong part of speech, absurd meaning
+- Examples: "afflicted" → "ignoring" | "contradict" → "clarify"
+
+**T (Tricky) - Partially Correct:**
+- Synonym that sounds right but doesn't fit context, misses key nuance
+- Examples: "elusive" → "colorful" | "counterpart" → "opponent"
+
+**O (Opposite) - Reverse Meaning:**
+- Antonym of correct answer
+- Examples: "afflicted" → "cured of" | "contradict" → "support"
+
+**P (Proven) - Correct Answer:**
+- Matches definition supported by context clues and/or morphological analysis
+- Examples: "afflicted" → "suffering from" | "contradict" → "oppose"
 
 ---
 
@@ -376,10 +386,11 @@ Before finalizing MC questions, verify:
 ## INTEGRATION WITH UNIT BUILDING
 
 ### When Building Bellringers (Every Day):
-1. Select 5 Tier 2 words from text with strong context clues
-2. Use Protocol 1 (Context Clue Questions)
+1. Select 3 words per day (18 total across 6 days) — see bellringer-builder skill
+2. Use Protocol 1 Format A (Context Clue) for passage-based words or Format B (Morphology) for word-parts sets
 3. Generate 4 STOP choices per word
-4. Total output: 5 MC questions per day × 6 days = 30 questions per unit
+4. Total output: 3 MC questions per day × 6 days = 18 questions per unit (Context Clue mode)
+5. For standalone Morphology sets: 4-6 MC questions per prefix/suffix/root set
 
 ### When Building Day 1-2 Independent Comprehension:
 1. Review district margin questions (triage: keep/revise/skip)

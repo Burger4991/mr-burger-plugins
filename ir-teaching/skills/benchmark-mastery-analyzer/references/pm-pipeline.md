@@ -1,6 +1,8 @@
 ---
 name: benchmark-mastery-analyzer
 description: Calculate student strengths/weaknesses and benchmark mastery matrix
+tags:
+  - ir-data-pipeline
 ---
 
 ## Purpose
