@@ -7,9 +7,9 @@ description: MUST USE this skill whenever the user asks "which skill should I us
 
 **For:** 10th Grade Intensive Reading Teacher
 **Plugin:** ir-teaching
-**Active Skills:** 33
+**Active Skills:** 37
 **Active Agents:** 9 (unit-planner, lesson-plan-coordinator, student-packet-builder, unit-reviser, unit-reviewer, sub-plan-generator, esol-adapter, assessment-builder, quality-reviewer)
-**Last Updated:** 2026-03-09
+**Last Updated:** 2026-03-17
 
 ---
 
@@ -28,6 +28,8 @@ description: MUST USE this skill whenever the user asks "which skill should I us
 | Create a graphic organizer | `organizer-design` | → `benchmarks` (template options) | Benchmark selected |
 | Write teacher scripts for gradual release | `gradual-release-scripts` | → `ir-framework` (I Do/We Do structure) | Benchmark + organizer |
 | Teach/embed the STOP strategy | `stop-strategy` | → `cubes-annotation` (full workflow) + `assessment-design` (MC items) | — |
+| Build a test prep / cold read unit | `test-prep-unit` | → `attack-the-passage` (protocol) + `stop-strategy` + `assessment-design` | 4 texts (2 fiction, 2 nonfiction) |
+| Teach Attack the Passage protocol | `attack-the-passage` | → `stop-strategy` (Phase 3) + `cubes-annotation` (Phases 1-2) + `cer-writing-guide` / `race-strategy` (Phase 4) | — |
 | Teach/embed the RACE/ACE strategy | `race-strategy` | → `cer-writing-guide` (CER alternative) + `assessment-design` (CR format) | — |
 | Build CER/ACE writing scaffolds | `cer-writing-guide` | → `assessment-design` (student format) | — |
 | Design an assessment | `assessment-design` | → `assessment-builder` agent (produces .docx files) | Benchmark + text |
@@ -46,6 +48,8 @@ description: MUST USE this skill whenever the user asks "which skill should I us
 | Resume an interrupted build | `session-continuity` | → `unit-builder-protocol` (from last batch) | _build-state.json |
 | Get a fresh-eyes unit review | `unit-reviewer` agent | Independent cold review of deliverables | Completed unit folder |
 | Adapt materials for ESOL | `esol-adapter` agent | Transforms materials for specific proficiency levels | Completed materials |
+| Teach question stem analysis / categorization | `question-stem-analysis` | → `attack-the-passage` (Phase 1) + `benchmarks` (stem map) | MC questions from text |
+| Track and analyze student error patterns | `error-analysis-tracker` | → `stop-strategy` (S/T/O reteach) + `unit-troubleshooter` (diagnosis) | Scored MC data |
 | Teach annotation strategies | `cubes-annotation` | → `stop-strategy` (STOP detail) | — |
 | Set up feedback system | `feedback-system` | → `feedback-checkpoint-builder` | — |
 | Read district files | `district-files-reader` | → `benchmarks` (for alignment) | District PDF/doc files |
@@ -54,7 +58,7 @@ description: MUST USE this skill whenever the user asks "which skill should I us
 
 ---
 
-## All Skills (23)
+## All Skills (37)
 
 ### Unit Building & Orchestration
 
@@ -91,6 +95,13 @@ description: MUST USE this skill whenever the user asks "which skill should I us
 - **`assessment-design`** — STOP protocol, RACE/CER constructed response design, assessment item design
 - **`assessment-rubrics`** — Rubrics aligned to Florida BEST ELA achievement level descriptors (Levels 2-5)
 - **`cubes-annotation`** — CUBES annotation protocol for BOTH text passages AND questions. Passages: 3-step layered approach (close reading → question-driven rereading → synthesis). Questions: 3-step approach (CUBES → find key details → STOP strategy for answer elimination). Adaptable by benchmark focus. Embeddable annotation boxes for student packets.
+
+### Test Prep & Cold Read
+
+- **`attack-the-passage`** — 4-phase test-taking protocol: Phase 1 (Attack the Questions — C-U-B annotation), Phase 2 (Attack the Passage — evidence gathering), Phase 3 (Attack the Answers — STOP elimination), Phase 4 (Attack the Justification — CER/RACE proof). Includes teacher implementation scripts, student quick reference card, error analysis tracker, review games, ticket system, benchmark-specific hunt guides, and ESOL modifications. The PROTOCOL skill.
+- **`test-prep-unit`** — 16-day unit framework for Q3-Q4 test prep: 4 texts (2 fiction, 2 nonfiction) × 4 days each. Each 4-day cycle: Day 1 cold read + MC, Day 2 question stem analysis, Day 3 STOP elimination + CER/RACE, Day 4 review game + extended response. Includes ticket system, tracker system, benchmark alignment, calendar templates, materials checklists, differentiation, and ESOL strategies. The UNIT skill.
+- **`question-stem-analysis`** — Day 2 instructional skill for teaching students to categorize MC questions by type (Literal/Inference/Analysis/Evaluation) and benchmark, write hunt predictions, and connect C-U-B annotations to evidence strategy. Includes benchmark-to-stem map, teaching sequence (I Do/We Do/You Do), student worksheet template, signal word decoder, common errors, and ESOL modifications.
+- **`error-analysis-tracker`** — Complete system for tracking, aggregating, and acting on MC error patterns (S/T/O/MR/R/V/NE codes). Includes per-text student tracker, unit progress tracker, class error audit, per-question breakdown, unit trend analysis, chronic error identification, error-to-reteach map, and small group pull schedule. Connects error data to instructional response.
 
 ### Student Support
 
@@ -152,6 +163,29 @@ menu-mode-planner (HARD GATE — all tabs must complete before building)
 ```
 
 **Output:** All files in ONE flat folder per unit. Core deliverables are .docx; optional teacher slides are .pptx.
+
+## Workflow: Build a Test Prep / Cold Read Unit (Q3-Q4)
+
+```
+test-prep-unit (FRAMEWORK — 16 days, 4 texts × 4 days)
+→ attack-the-passage (PROTOCOL — 4-phase strategy for each text)
+→ brand-identity (read FIRST)
+→ benchmarks (select 2-3 benchmarks per text)
+→ assessment-design (10 MC per text, 80/20 benchmark/vocab split, S/T/O/P distractor design)
+→ stop-strategy (Phase 3 — elimination teaching)
+→ cer-writing-guide / race-strategy (Phase 4 — justification framework per genre)
+→ question-stem-analysis (Day 2 — stem categorization, benchmark mapping, hunt predictions)
+→ error-analysis-tracker (Days 3-4 — error coding, class audit, reteach routing)
+→ bellringer-builder (vocabulary bellringers, 3 words/day)
+→ esol-core (integrated ESOL strategies)
+For each text (4-day cycle):
+    ├─ Student Packet: passage + 10 MC + C-U-B boxes + tracker + justification templates
+    ├─ Teacher Lesson Plan: 4-day cycle with scripts per phase
+    ├─ Answer Key: S/T/O/P labels + CER/RACE exemplars for all MC
+    └─ Review game materials (Day 4)
+```
+
+**Output:** Per-text packets + unit tracker + reference cards. All .docx files.
 
 **Superpowers Integration (v2.0):** Unit building uses 5 patterns from `superpowers-cowork`: Hard Gate (no building without menu completion), Bite-Sized Tasks (2-5 min per task in TodoWrite), Two-Stage Review (spec compliance then quality via quality-reviewer agent), Verification Iron Law (evidence before "unit complete"), and Parallel Dispatch (independent deliverables build simultaneously).
 
