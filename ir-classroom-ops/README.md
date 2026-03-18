@@ -6,22 +6,23 @@ Day-to-day classroom logistics for 10th grade Intensive Reading.
 
 ## Install
 
-### Claude Code (via marketplace)
+### Claude Code
 
-```bash
-claude plugin install ir-classroom-ops --marketplace mr-burger-plugins
 ```
-
-### Claude Code (via symlinks)
-
-```bash
-cd /path/to/mr-burger-plugins
-./scripts/setup.sh
+/plugin marketplace add Burger4991/mr-burger-plugins
+/plugin install ir-classroom-ops@mr-burger-plugins
 ```
 
 ### Cowork
 
-Install `packages/ir-classroom-ops.plugin` through the Cowork plugin manager.
+1. Download `ir-classroom-ops.plugin` from [Releases](https://github.com/Burger4991/mr-burger-plugins/tree/main/packages)
+2. Open Cowork settings → Plugins → Install from file
+
+### Development (local symlinks)
+
+```bash
+cd mr-burger-plugins && ./scripts/setup.sh
+```
 
 ## What's included
 
@@ -33,4 +34,5 @@ Install `packages/ir-classroom-ops.plugin` through the Cowork plugin manager.
 - **unit-distribution** — "Ship it" workflow after quality gate passes (print, upload, archive, share)
 
 ## Version
-1.2.0 — .md deliverable migration.
+
+1.2.0

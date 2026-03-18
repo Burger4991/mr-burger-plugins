@@ -6,44 +6,34 @@ Complete 10th grade Intensive Reading teaching system for Florida BEST ELA bench
 
 ## Install
 
-### Claude Code (via marketplace)
+### Claude Code
 
-```bash
-claude plugin install ir-teaching --marketplace mr-burger-plugins
+Add the marketplace, then install:
+
 ```
-
-Or if using the local directory marketplace, add to `~/.claude/plugins/known_marketplaces.json`:
-
-```json
-{
-  "mr-burger-plugins": {
-    "source": { "source": "directory", "path": "/path/to/mr-burger-plugins" },
-    "autoUpdate": true
-  }
-}
+/plugin marketplace add Burger4991/mr-burger-plugins
+/plugin install ir-teaching@mr-burger-plugins
 ```
-
-Then: `claude plugin install ir-teaching`
-
-### Claude Code (via symlinks — for development)
-
-```bash
-cd /path/to/mr-burger-plugins
-./scripts/setup.sh
-```
-
-This symlinks all skills into `~/.claude/skills/` and agents into `~/.claude/agents/`. Edits to source files are picked up immediately.
 
 ### Cowork
 
 Install the `.plugin` file through the Cowork plugin manager:
 
-1. Open Cowork settings
-2. Go to Plugins
+1. Download `ir-teaching.plugin` from [Releases](https://github.com/Burger4991/mr-burger-plugins/tree/main/packages)
+2. Open Cowork settings → Plugins
 3. Click "Install from file"
-4. Select `packages/ir-teaching.plugin`
+4. Select `ir-teaching.plugin`
 
-Or rebuild from source: `./scripts/package.sh ir-teaching`
+### Development (local symlinks)
+
+If you've cloned the repo locally and want live-editing:
+
+```bash
+cd mr-burger-plugins
+./scripts/setup.sh
+```
+
+This symlinks all skills into `~/.claude/skills/` and agents into `~/.claude/agents/`. Edits to source files are picked up immediately.
 
 ## What's included
 
@@ -63,4 +53,5 @@ Or rebuild from source: `./scripts/package.sh ir-teaching`
 - **unit-reviser** — Handles text swaps, benchmark changes, mid-cycle adjustments
 
 ## Version
-3.0.0 — UNIX philosophy overhaul: .md deliverables, `_unit-spec.md` handoff pattern, context refresh protocol, trigger keyword deduplication.
+
+3.0.0

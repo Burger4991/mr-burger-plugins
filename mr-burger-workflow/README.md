@@ -6,22 +6,23 @@ Personal productivity and second brain system with Notion integration.
 
 ## Install
 
-### Claude Code (via marketplace)
+### Claude Code
 
-```bash
-claude plugin install mr-burger-workflow --marketplace mr-burger-plugins
 ```
-
-### Claude Code (via symlinks)
-
-```bash
-cd /path/to/mr-burger-plugins
-./scripts/setup.sh
+/plugin marketplace add Burger4991/mr-burger-plugins
+/plugin install mr-burger-workflow@mr-burger-plugins
 ```
 
 ### Cowork
 
-Install `packages/mr-burger-workflow.plugin` through the Cowork plugin manager.
+1. Download `mr-burger-workflow.plugin` from [Releases](https://github.com/Burger4991/mr-burger-plugins/tree/main/packages)
+2. Open Cowork settings → Plugins → Install from file
+
+### Development (local symlinks)
+
+```bash
+cd mr-burger-plugins && ./scripts/setup.sh
+```
 
 ## What's included
 
@@ -44,4 +45,5 @@ Install `packages/mr-burger-workflow.plugin` through the Cowork plugin manager.
 - **UserPromptSubmit** — Auto-detects capture-worthy content in user messages
 
 ## Version
-1.2.0 — Sync command updated for .md deliverables.
+
+1.2.0

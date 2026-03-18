@@ -6,22 +6,23 @@ Student assessment data processing and analysis for 10th grade Intensive Reading
 
 ## Install
 
-### Claude Code (via marketplace)
+### Claude Code
 
-```bash
-claude plugin install ir-data-pipeline --marketplace mr-burger-plugins
 ```
-
-### Claude Code (via symlinks)
-
-```bash
-cd /path/to/mr-burger-plugins
-./scripts/setup.sh
+/plugin marketplace add Burger4991/mr-burger-plugins
+/plugin install ir-data-pipeline@mr-burger-plugins
 ```
 
 ### Cowork
 
-Install `packages/ir-data-pipeline.plugin` through the Cowork plugin manager.
+1. Download `ir-data-pipeline.plugin` from [Releases](https://github.com/Burger4991/mr-burger-plugins/tree/main/packages)
+2. Open Cowork settings → Plugins → Install from file
+
+### Development (local symlinks)
+
+```bash
+cd mr-burger-plugins && ./scripts/setup.sh
+```
 
 ## What's included
 
@@ -42,4 +43,5 @@ Install `packages/ir-data-pipeline.plugin` through the Cowork plugin manager.
 - **parent-reporter** — Generates parent-facing progress letters and conference prep
 
 ## Version
-1.2.0 — .md deliverable migration.
+
+1.2.0

@@ -47,62 +47,40 @@ mr-burger-plugins/              <- Single source of truth
 
 ## Installation
 
-### Claude Code (symlink method — recommended for development)
+### Claude Code (from GitHub — for anyone)
 
-```bash
-cd ~/Documents/Tech/mr-burger-plugins
-./scripts/setup.sh
+Add the marketplace and install plugins:
+
+```
+/plugin marketplace add Burger4991/mr-burger-plugins
+/plugin install ir-teaching@mr-burger-plugins
+/plugin install ir-data-pipeline@mr-burger-plugins
+/plugin install ir-classroom-ops@mr-burger-plugins
+/plugin install mr-burger-workflow@mr-burger-plugins
 ```
 
-This creates symlinks from `~/.claude/skills/` and `~/.claude/agents/` to this repo. Changes are live immediately.
-
-### Claude Code (marketplace method)
-
-Register the marketplace (one-time setup):
-
-```bash
-claude marketplace add mr-burger-plugins --source directory --path ~/Documents/Tech/mr-burger-plugins
-```
-
-Or manually add to `~/.claude/plugins/known_marketplaces.json`:
-
-```json
-{
-  "mr-burger-plugins": {
-    "source": {
-      "source": "directory",
-      "path": "~/Documents/Tech/mr-burger-plugins"
-    },
-    "autoUpdate": true
-  }
-}
-```
-
-Then install individual plugins:
-
-```bash
-claude plugin install ir-teaching
-claude plugin install ir-data-pipeline
-claude plugin install ir-classroom-ops
-claude plugin install mr-burger-workflow
-```
+You only need to add the marketplace once. After that, install whichever plugins you need.
 
 ### Cowork
 
-Build the `.plugin` packages:
-
-```bash
-cd ~/Documents/Tech/mr-burger-plugins
-./scripts/package.sh
-```
-
-Then install through the Cowork plugin manager:
+Download `.plugin` files from [`packages/`](https://github.com/Burger4991/mr-burger-plugins/tree/main/packages), then:
 
 1. Open Cowork settings → Plugins
 2. Click "Install from file"
-3. Select each `.plugin` file from `packages/`
+3. Select each `.plugin` file
 
 Available packages: `ir-teaching.plugin`, `ir-data-pipeline.plugin`, `ir-classroom-ops.plugin`, `mr-burger-workflow.plugin`
+
+### Development (local symlinks — for contributors)
+
+If you've cloned the repo and want live-editing:
+
+```bash
+cd mr-burger-plugins
+./scripts/setup.sh
+```
+
+This symlinks all skills into `~/.claude/skills/` and agents into `~/.claude/agents/`. Edits are picked up immediately — no rebuild needed for Claude Code. For Cowork, run `./scripts/package.sh` to rebuild packages after changes.
 
 ## Development workflow
 
