@@ -42,13 +42,13 @@ Run each item in order. Report PASS or FAIL with specifics for each.
 
 ### 2. Deliverables Exist (all 4 required)
 
-- [ ] `[Text]_TeacherPlan_[MM-DD].docx` exists
-- [ ] `[Text]_StudentPacket_[MM-DD].docx` exists
-- [ ] `[Text]_AnswerKey_[MM-DD].docx` exists
-- [ ] `[Text]_FeedbackForm_[MM-DD].docx` exists
+- [ ] `[Text]_TeacherPlan_[MM-DD].md` exists
+- [ ] `[Text]_StudentPacket_[MM-DD].md` exists
+- [ ] `[Text]_AnswerKey_[MM-DD].md` exists
+- [ ] `[Text]_FeedbackForm_[MM-DD].md` exists
 - [ ] `_ChangeLog.txt` exists
 
-**FAIL condition:** Any of the 4 core .docx files is missing.
+**FAIL condition:** Any of the 4 core .md files is missing.
 
 ### 3. File Synchronization
 

@@ -542,7 +542,7 @@ When creating a rubric, **pull exact language from the benchmark's achievement l
 Rubrics are typically generated as part of a larger unit document, but can also be standalone resources:
 
 ### File Format
-- **.docx** (Word document) for printing and digital sharing
+- **.md** (Markdown format) for printing and digital sharing
 - **Google Docs** (shareable link) for collaborative rubrics
 - **PDF** (finalized rubrics shared with students)
 
@@ -553,9 +553,9 @@ Rubrics are typically generated as part of a larger unit document, but can also 
 - **Page breaks**: Rubric on one page when possible; multi-page rubrics should have header repeated
 
 ### Naming Convention
-- Format: `[UnitName]_[BenchmarkCode]_[AssessmentType]_Rubric_YYYYMMDD.docx`
-- **Example**: `Unit3_ELA10R12_ACE_Rubric_20250222.docx`
-- **Example**: `Unit1_ELA10R31_GraphicOrganizer_Rubric_20250115.docx`
+- Format: `[UnitName]_[BenchmarkCode]_[AssessmentType]_Rubric_YYYYMMDD.md`
+- **Example**: `Unit3_ELA10R12_ACE_Rubric_20250222.md`
+- **Example**: `Unit1_ELA10R31_GraphicOrganizer_Rubric_20250115.md`
 
 ### Content Checklist
 - [ ] Benchmark code and title at top

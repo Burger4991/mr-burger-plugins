@@ -10,21 +10,77 @@ description: Step-by-step protocol for building complete 6-day IR units with qua
 Generate all core deliverables plug-and-play (minimal revision needed):
 
 **REQUIRED (Must be synchronized):**
-1. **Teacher Lesson Plan (.docx)** - 6-day detailed plans with bellringer answer keys
-2. **Student Packet (.docx)** - Day-by-day format with bellringers, Teacher-Led, Independent sections
+1. **Teacher Lesson Plan (.md)** - 6-day detailed plans with bellringer answer keys
+2. **Student Packet (.md)** - Day-by-day format with bellringers, Teacher-Led, Independent sections
 3. **Slide Deck (.pptx)** - Visual support for instruction including bellringer slides
 
 **ADDITIONAL:**
-4. **Answer Key & Exemplars (.docx)** - Complete responses with text evidence
-5. **Feedback Forms (.docx)** - IR-Feedback-Form for practice→feedback→revise workflow
-6. **Exit Tickets (.docx)** - Optional daily formative assessments
-7. **Cover Pages (.docx)** - Optional unit overview
+4. **Answer Key & Exemplars (.md)** - Complete responses with text evidence
+5. **Feedback Forms (.md)** - IR-Feedback-Form for practice→feedback→revise workflow
+6. **Exit Tickets (.md)** - Optional daily formative assessments
+7. **Cover Pages (.md)** - Optional unit overview
 
 **CRITICAL:** Files 1-3 must be synchronized (same vocabulary, same examples, same day structure)
+
+## Context Management Protocol
+
+<HARD-GATE>
+Before starting any phase, verify that `_unit-spec.md` exists in the unit folder.
+If it does not exist, STOP and invoke `menu-mode-planner` first. Never build from
+conversational memory alone.
+</HARD-GATE>
+
+### Context Refresh Rule
+At the start of EVERY phase, re-read `_unit-spec.md` from the unit folder. This is
+non-negotiable. The spec file is the source of truth — not your memory of what
+the user said 30 messages ago.
+
+### Build State Tracking
+After completing each phase, update `_build-state.json` in the unit folder with:
+- Phase name and completion status
+- Files created (paths)
+- Key decisions made (e.g., vocabulary words selected, organizer type chosen)
+- Any deviations from the spec (with rationale)
+
+Format:
+```json
+{
+  "unit": "Theme_TheNecklace",
+  "spec_file": "_unit-spec.md",
+  "phases": {
+    "phase_1_gather": {
+      "status": "complete",
+      "files": [],
+      "decisions": ["18 vocabulary words selected", "text chunked into 4 sections"],
+      "completed_at": "2025-01-04T10:30:00"
+    },
+    "phase_2_plan": { "status": "pending" }
+  }
+}
+```
+
+### Curated Agent Briefings
+When launching a sub-agent (student-packet-builder, assessment-builder, answer-key-builder, etc.),
+construct a briefing from files — NOT from conversational context. The briefing must include:
+
+1. The relevant sections of `_unit-spec.md` (not all of it — only what the agent needs)
+2. The build state showing what previous phases produced
+3. The specific skill content the agent needs (e.g., benchmark details, brand identity tokens)
+
+**Anti-pattern:** "Build the student packet based on what we discussed."
+**Correct pattern:** "Build the student packet. Here is the unit spec [paste relevant sections]. Here are the vocabulary words [from _unit-spec.md]. Here is the organizer structure [from Phase 2 output]. Follow student-packet-design-guide and brand-identity."
+
+This ensures each agent starts with complete, accurate context regardless of how much
+conversational context has decayed.
 
 ## Build Sequence
 
 ### Phase 1: Gather & Analyze
+0. **Read the unit spec:**
+   - Read `_unit-spec.md` from the unit folder
+   - Verify benchmark, text source, and class context match expectations
+   - If spec is missing, STOP and run menu-mode-planner
+
 1. **Get materials from user:**
    - Target benchmark (e.g., ELA.10.R.1.2 - Theme)
    - Unit text (title, file, or upload)
@@ -44,6 +100,10 @@ Generate all core deliverables plug-and-play (minimal revision needed):
    - Identify assessment limits
 
 ### Phase 2: Plan Structure
+0. **Context refresh:**
+   - Re-read `_unit-spec.md` (refresh context)
+   - Read `_build-state.json` for Phase 1 outputs
+
 1. **Select vocabulary for bellringers:**
    - Choose 30 words total from unit text (5 per day × 6 days)
    - Must be Tier 2 academic or domain-specific words
@@ -67,7 +127,12 @@ Generate all core deliverables plug-and-play (minimal revision needed):
    - Word banks for vocabulary
    - Oral administration options
 
-### Phase 3: Build Lesson Plan (.docx format)
+### Phase 3: Build Lesson Plan (.md format)
+0. **Context refresh:**
+   - Re-read `_unit-spec.md` (refresh context)
+   - Read `_build-state.json` for Phase 1-2 outputs
+   - Construct agent briefing if using lesson-plan-coordinator agent
+
 1. **Create bellringer answer keys (each day):**
    - Word, definition, context clues, acceptable variations
    - How to review with students
@@ -94,12 +159,17 @@ Generate all core deliverables plug-and-play (minimal revision needed):
    - You Do: Monitoring checklist
 
 5. **Output format:**
-   - Generate as .docx file (use python-docx)
-   - NOT markdown format
+   - Generate as .md file (Markdown format)
+   - Use Markdown heading and table structures
 
-### Phase 4: Build Student Packet (.docx format)
+### Phase 4: Build Student Packet (.md format)
 
 **CRITICAL: Student packet MUST be organized DAY-BY-DAY, not activity-by-activity**
+
+0. **Context refresh:**
+   - Re-read `_unit-spec.md` (refresh context)
+   - Read `_build-state.json` for Phase 1-3 outputs
+   - Construct agent briefing: spec sections + vocabulary + organizer + brand identity
 
 1. **For each day, create in this order:**
    - **Context Clues Bellringer** (5-10 min) - 5 vocabulary words from unit text
@@ -144,11 +214,16 @@ Generate all core deliverables plug-and-play (minimal revision needed):
    **Example:** For Theme unit (ELA.10.R.1.2), read feedback checkpoints from `benchmarks` skill (see standards/theme.md) and embed in student packet.
 
 6. **Output format:**
-   - Generate as .docx file (use python-docx)
+   - Generate as Markdown (.md)
    - NOT activity-by-activity structure
    - Each day = one section with all 3 components
 
-### Phase 5: Create Answer Key (.docx format)
+### Phase 5: Create Answer Key (.md format)
+0. **Context refresh:**
+   - Re-read `_unit-spec.md` (refresh context)
+   - Read `_build-state.json` for Phase 1-4 outputs
+   - Construct agent briefing: spec + lesson plan + student packet content
+
 1. **Provide complete answers:**
    - Bellringer answer keys (word, definition, context clues, acceptable variations)
    - All MC questions with correct answer + STOP justifications
@@ -162,7 +237,7 @@ Generate all core deliverables plug-and-play (minimal revision needed):
    - Show reasoning for why other choices are incorrect
 
 3. **Output format:**
-   - Generate as .docx file (use python-docx)
+   - Generate as Markdown (.md)
    - Organize by day for easy reference
 
 ### Phase 6: Design Support Materials
@@ -177,19 +252,19 @@ Generate all core deliverables plug-and-play (minimal revision needed):
    - Use python-pptx to generate
    - Must align with lesson plan and student packet content
 
-2. **Feedback forms (.docx format):**
+2. **Feedback forms (.md format):**
    - Use `feedback-system` skill for structure
-   - IR-Feedback-Form.docx (print-ready)
+   - IR-Feedback-Form.md (print-ready)
    - Includes Days 1-2, 3-4, 5-6 checklists
    - Verbal feedback sections (students transcribe)
    - Student Action Plan section
    - Note in student packet: "This is PRACTICE. You will receive feedback and revise before submitting online."
 
-3. **Exit tickets (.docx format):**
+3. **Exit tickets (.md format):**
    - 1-2 questions per day aligned to daily objective
    - Quick formative checks (2-3 minutes max)
 
-4. **Cover pages (.docx format):**
+4. **Cover pages (.md format):**
    - List of embedded routines
    - Benchmark numbers + clarifications
    - Materials overview
@@ -240,7 +315,7 @@ Generate all core deliverables plug-and-play (minimal revision needed):
 - Word banks where appropriate
 - "Need Help?" section
 - White space and readability (12pt+ font)
-- **Format: .docx** (use python-docx)
+- **Format: .md (Markdown)** (use python-docx)
 
 ### Organizer Must Include:
 - Alignment to benchmark card steps
@@ -293,8 +368,8 @@ Generate all core deliverables plug-and-play (minimal revision needed):
 ### File Naming:
 - Format: `[UnitName]_[Days]_[Type]_YYYYMMDD`
 - Examples:
-  - `Theme_D1-6_TeacherPlan_20250104.docx`
-  - `Theme_D1-6_StudentPacket_20250104.docx`
+  - `Theme_D1-6_TeacherPlan_20250104.md`
+  - `Theme_D1-6_StudentPacket_20250104.md`
 
 ### Document Format:
 - Editable: DOCX or PPTX (not PDF)
@@ -306,12 +381,12 @@ Generate all core deliverables plug-and-play (minimal revision needed):
 ## Version Control Protocol
 
 ### When Building New Unit:
-1. Create with today's date: `UnitName_D1-6_Type_20250104.docx`
+1. Create with today's date: `UnitName_D1-6_Type_20250104.md`
 2. Save all 6 deliverables in unit folder
 3. Create change log: `_ChangeLog.txt`
 
 ### When Updating Existing Unit:
-1. Create new version with new date: `UnitName_D1-6_Type_20250110.docx`
+1. Create new version with new date: `UnitName_D1-6_Type_20250110.md`
 2. Move old version to `_archive/` subfolder
 3. Update change log with what changed
 4. Use `sync-coordinator` to check alignment across deliverables
@@ -328,10 +403,10 @@ Generate all core deliverables plug-and-play (minimal revision needed):
 
 Before reporting "unit complete," verify:
 - [ ] All deliverables created (6 core + feedback form)
-- [ ] Files named with today's date and proper extensions (.docx, .pptx)
+- [ ] Files named with today's date and proper extensions (.md, .pptx)
 - [ ] **Student packet organized day-by-day** (NOT activity-by-activity)
 - [ ] **Each day includes bellringer** (5 vocabulary words from unit text)
-- [ ] **Three files synchronized:** lesson plan (.docx), student packet (.docx), slides (.pptx)
+- [ ] **Three files synchronized:** lesson plan (.md), student packet (.md), slides (.pptx)
 - [ ] Vocabulary matches across all 3 files
 - [ ] Organizer content matches across all 3 files
 - [ ] Examples match across all 3 files
@@ -345,7 +420,7 @@ Before reporting "unit complete," verify:
 - [ ] Student tasks are self-running
 - [ ] "Pulled from:" sources cited in lesson plan
 - [ ] Bellringer answer keys in lesson plan
-- [ ] **Feedback form generated** (IR-Feedback-Form.docx)
+- [ ] **Feedback form generated** (IR-Feedback-Form.md)
 - [ ] **Student packet includes practice note:** "This is PRACTICE work - you will receive feedback and revise before submitting online"
 - [ ] **Lesson plan includes feedback timing** for Days 1-2, 3-4, 5-6
 - [ ] **Feedback checkpoints embedded** from appropriate benchmark skill

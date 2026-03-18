@@ -379,16 +379,16 @@ Mr. Burger
 ## Step 6: Output Formats
 
 **Letters (Progress Reports, Intervention Notification, Growth):**
-- Format: .docx document
+- Format: .md (Markdown) document
 - Length: 1 page, single-spaced
 - Tone: Warm but professional
-- Filename: `Parent_ProgressLetter_[StudentLastName]_[YYYYMMDD].docx`
+- Filename: `Parent_ProgressLetter_[StudentLastName]_[YYYYMMDD].md`
 
 **Conference Prep Sheets:**
-- Format: .docx document
+- Format: .md (Markdown) document
 - Length: 1 page per student, fill-in-the-blank sections
 - Tone: Notes for you (can use shorthand)
-- Filename: `ConferencePrep_[StudentLastName]_[YYYYMMDD].docx`
+- Filename: `ConferencePrep_[StudentLastName]_[YYYYMMDD].md`
 
 **Emails:**
 - Format: Plain text (paste directly into email)

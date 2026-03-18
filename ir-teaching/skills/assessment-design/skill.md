@@ -4,11 +4,10 @@ description: >
   MUST USE this skill whenever the user needs to create, build, write, or design ANY assessment,
   test, quiz, exit ticket, or MC questions for 10th grade Intensive Reading. Trigger on: "create an
   assessment", "write MC questions", "make a test", "build a quiz", "design exit tickets", "I need
-  assessment items", "STOP format questions", "Planning Card question stems", "Part A / Part B
+  assessment items", "Planning Card question stems", "Part A / Part B
   questions", "DOK 2-3 questions", "formative assessment", "mini-assessment for Days 5-6", "practice
-  test", or ANY request for multiple choice, constructed response, or assessment content. Also covers
-  ACE/RACE/CER written response prompts and scoring guides. Uses STOP protocol (Silly/Tricky/
-  Opposite/Proven) for MC distractor design and official Florida BEST Planning Card question stems.
+  test", or ANY request for multiple choice, constructed response, or assessment content. Covers assessment
+  creation including MC questions and constructed response options. Uses Planning Card question stems.
   Aligned to all 10 ELA.10.R benchmarks.
 version: 0.1.0
 ---
@@ -368,7 +367,7 @@ Score: _____ / 4 points
 Assessment design produces assessments in the following formats and structures:
 
 ### Assessment Document Format
-- **File type**: .docx (Word document) for print/digital delivery
+- **File type**: .md (Markdown format) for print/digital delivery
 - **Components**:
   1. **Header** (standard/benchmark code, unit name, date, class period)
   2. **Instructions** (purpose, time limit, format overview)
@@ -378,7 +377,7 @@ Assessment design produces assessments in the following formats and structures:
   6. **Answer key** (for teacher records)
 
 ### Question Bank Organization
-- **Format**: CSV or Excel workbook
+- **Format**: CSV or Markdown table
 - **Columns**: Benchmark code, question type (MC/CR), question stem, correct answer, distractor options, difficulty level, date created
 - **Purpose**: Reusable question bank for assessment assembly
 
@@ -386,7 +385,7 @@ Assessment design produces assessments in the following formats and structures:
 - **Format**: Detailed rubric with descriptors for each performance level
 - **Rows**: Performance levels (Exceeds/Meets/Approaching/Below/Incomplete)
 - **Columns**: Point value, indicator criteria, exemplars/non-examples
-- **File type**: Shareable via Google Docs or .docx
+- **File type**: Shareable as Markdown (.md)
 
 ## Integration with Data Pipeline
 

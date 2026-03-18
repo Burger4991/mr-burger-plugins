@@ -49,10 +49,10 @@ Ask the user to clarify what's being updated:
 Ask the user to provide or help you find existing unit materials.
 
 **Files you'll need:**
-- Teacher Lesson Plan (.docx)
-- Student Packet (.docx)
+- Teacher Lesson Plan (.md)
+- Student Packet (.md)
 - Slide Deck (.pptx)
-- Answer Key & Exemplars (.docx)
+- Answer Key & Exemplars (.md)
 - (Optional) Feedback Forms, Exit Tickets
 
 **Process:**
@@ -214,18 +214,18 @@ Manually check:
 Follow `file-management` skill guidelines.
 
 **File naming:**
-- Keep original name format: `[UnitName]_[Days]_[Type]_YYYYMMDD.docx`
+- Keep original name format: `[UnitName]_[Days]_[Type]_YYYYMMDD.md`
 - Use today's date in file name
-- Example: `Theme_D1-6_TeacherPlan_20250122.docx`
+- Example: `Theme_D1-6_TeacherPlan_20250122.md`
 
 **Archive old versions:**
 ```
 Before update:
-Theme_D1-6_TeacherPlan_20250104.docx
+Theme_D1-6_TeacherPlan_20250104.md
 
 After update:
-Theme_D1-6_TeacherPlan_20250122.docx  ← new version
-_archive/Theme_D1-6_TeacherPlan_20250104.docx  ← archived old version
+Theme_D1-6_TeacherPlan_20250122.md  ← new version
+_archive/Theme_D1-6_TeacherPlan_20250104.md  ← archived old version
 ```
 
 **Update Change Log:**
@@ -244,9 +244,9 @@ Changes:
 - Revised organizer examples with new text evidence
 
 Files affected:
-✓ Theme_D1-6_StudentPacket_20250122.docx (NEW)
-✓ Theme_D1-6_TeacherPlan_20250122.docx (NEW - bellringer answers, examples)
-✓ Theme_D1-6_AnswerKey_20250122.docx (NEW - text citations updated)
+✓ Theme_D1-6_StudentPacket_20250122.md (NEW)
+✓ Theme_D1-6_TeacherPlan_20250122.md (NEW - bellringer answers, examples)
+✓ Theme_D1-6_AnswerKey_20250122.md (NEW - text citations updated)
 ✓ Theme_D1-6_Slides_20250122.pptx (NEW - vocabulary and examples updated)
 ○ Feedback form (NO CHANGE)
 
@@ -259,7 +259,7 @@ CREATED: Initial unit build
 - List all files created/updated with new dates
 - Summarize what changed (before → after)
 - Confirm change log has been documented
-- Example: "✓ Unit revised and saved. Theme_D1-6_TeacherPlan_20250122.docx and 3 other files updated. Change log documented."
+- Example: "✓ Unit revised and saved. Theme_D1-6_TeacherPlan_20250122.md and 3 other files updated. Change log documented."
 
 ---
 
@@ -320,7 +320,7 @@ Verify:
 - [ ] Old versions archived in `_archive/` folder
 - [ ] Change log updated with details of what changed
 - [ ] Sync check passed (vocabulary, organizers, examples, day structure all aligned)
-- [ ] Files are in .docx or .pptx format (editable, not PDF)
+- [ ] Files are in .md or .pptx format (editable, not PDF)
 - [ ] No markdown or unconverted formatting
 - [ ] Benchmark number still cited in all documents
 - [ ] Text evidence citations preserved or updated

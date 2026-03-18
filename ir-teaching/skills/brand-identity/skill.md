@@ -71,7 +71,7 @@ ACCENT COLOR (slides only)
 1. **No colored text** in any printed material — black only. Use bold, italic, or shading for emphasis.
 2. **No color-dependent meaning** — every shaded element must also have a text label (e.g., "I DO" label + gray fill, never just gray fill alone).
 3. **Maximum 2 fill shades per page** in print materials (the day header gray + one component gray).
-4. **Accent color appears only on slides** — never in .docx files.
+4. **Accent color appears only on slides** — never in .md files.
 
 ---
 
@@ -298,28 +298,28 @@ If any answer is "no," add visual landmarks or improve section separation.
 
 ## Deliverable-Specific Brand Applications
 
-### Student Packet (.docx)
+### Student Packet (.md)
 - Full brand system applies (all design tokens, all 8 components, all typography levels)
-- Grayscale only
-- 1 front/back page per day budget
+- Grayscale formatting
+- 1 front/back page per day budget when printed
 - Must pass all 5 self-critique checks
 - See `teaching-templates` for complete component specifications
 - See `student-packet-design-guide` for detailed layout patterns
 
-### Lesson Plan (.docx)
-- Teacher-facing typography scale (slightly smaller — 11pt body vs 12pt)
+### Lesson Plan (.md)
+- Teacher-facing typography scale (clear hierarchy)
 - Clean section breaks between days
-- Calibri OR Arial (teacher preference)
+- Arial-equivalent formatting
 - Bold key timing and activity names for quick scanning
 - No decorative elements
-- Include Mr. Burger footer on every page
+- Include Mr. Burger footer metadata
 
-### Answer Key (.docx)
+### Answer Key (.md)
 - Mirror student packet structure exactly (day-by-day)
-- "ANSWER KEY" header in bold on every page to prevent mix-ups
+- "ANSWER KEY" header in bold at top to prevent mix-ups
 - Correct answers in **bold** for quick teacher scanning
 - Use same organizer tables as student packet with exemplar responses filled in
-- Gray fill on all exemplar rows (matching I DO row shade)
+- Visual distinction for exemplar rows
 
 ### Teacher Slides (.pptx)
 - White background, black text
@@ -330,16 +330,16 @@ If any answer is "no," add visual landmarks or improve section separation.
 - Content matches lesson plan and student packet word-for-word
 - Footer on every slide
 
-### Exit Tickets (.docx)
+### Exit Tickets (.md)
 - Half-page format (2 exit tickets per printed page)
-- Same typography as student packet (Arial, same type scale)
+- Same typography as student packet (Arial-equivalent, same type scale)
 - Include name/date/period line
 - Bordered box around entire ticket
 - 1-2 questions aligned to daily objective
 - Match student packet visual style
 
-### Cover Pages (.docx)
-- Unit title: Arial Bold, 24pt, centered
+### Cover Pages (.md)
+- Unit title: Bold, 24pt-equivalent, centered
 - Benchmark focus in student-friendly language
 - Days 1-6 label
 - Student name/date/period fields
@@ -351,74 +351,7 @@ If any answer is "no," add visual landmarks or improve section separation.
 
 ## Implementation Notes for Document Generators
 
-When generating .docx files programmatically (via docx-js or python-docx), these brand values translate to specific code parameters:
-
-### docx-js Key Values
-```
-Page setup:
-  width: 12240 DXA (8.5")
-  height: 15840 DXA (11")
-  margins: 1440 DXA each side (1")
-  content width: 9360 DXA (6.5")
-
-Font sizes (docx-js uses half-points):
-  16pt = size: 32
-  14pt = size: 28
-  12pt = size: 24
-  11pt = size: 22
-  10pt = size: 20
-
-Spacing (docx-js uses twips, 1pt = 20 twips):
-  18pt = 360 twips
-  12pt = 240 twips
-  6pt  = 120 twips
-
-Shading fills (use ShadingType.CLEAR, never SOLID):
-  #E6E6E6 → fill: "E6E6E6"
-  #F0F0F0 → fill: "F0F0F0"
-  #F7F7F7 → fill: "F7F7F7"
-  #F2F2F2 → fill: "F2F2F2"
-
-Border specs:
-  1pt = size: 1, style: BorderStyle.SINGLE
-  1.5pt = size: 2, style: BorderStyle.SINGLE (closest approximation)
-  0.5pt = size: 1, style: BorderStyle.SINGLE, color: "CCCCCC"
-```
-
-### python-docx Key Values
-```python
-from docx.shared import Pt, Inches, Cm, Emu, RGBColor
-from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.oxml.ns import qn
-
-# Page setup
-section.page_width = Inches(8.5)
-section.page_height = Inches(11)
-section.top_margin = Inches(1)
-section.bottom_margin = Inches(1)
-section.left_margin = Inches(1)
-section.right_margin = Inches(1)
-
-# Font sizes
-run.font.size = Pt(16)  # Day header
-run.font.size = Pt(14)  # Section label
-run.font.size = Pt(12)  # Body text
-run.font.size = Pt(11)  # Table text
-run.font.size = Pt(10)  # Footer
-
-# Line spacing
-paragraph_format.line_spacing = 1.15  # Body
-paragraph_format.line_spacing = 1.0   # Tables
-
-# Paragraph spacing
-paragraph_format.space_before = Pt(18)  # Between sections
-paragraph_format.space_after = Pt(6)    # Between items
-
-# Shading (via XML)
-shading = OxmlElement('w:shd')
-shading.set(qn('w:fill'), 'E6E6E6')
-shading.set(qn('w:val'), 'clear')
-```
+When generating Markdown (.md) files, these brand values translate to specific formatting parameters. This design system is applied through consistent Markdown formatting and optional CSS styling when the files are converted to PDF or other formats.
 
 ---
 

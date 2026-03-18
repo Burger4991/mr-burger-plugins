@@ -263,23 +263,23 @@ If students ask for help:
 
 Create a **sub plan document** with these specs:
 
-**Format:** Microsoft Word (.docx)
-**Font sizes:**
-- Headers: 16pt bold
-- Body text: 12pt
-- Timeline sections: 14pt bold
-- Answer keys: 12pt
+**Format:** Markdown (.md)
+**Formatting:**
+- Use markdown headers for section organization
+- Use bold and italic for emphasis
+- Use numbered lists and bullet points for clarity
+- Use code blocks for key information/answers
 
-**Page structure:**
-- **Page 1:** Class Overview + Timeline + your script (the sub reads this in the first 2 minutes)
-- **Page 2+:** Detailed activity instructions per section
-- **Last page:** Answer keys
-- **Final page:** Backup activities (so subs can grab them without searching)
+**Structure:**
+- **Section 1:** Class Overview + Timeline + your script (the sub reads this first)
+- **Section 2+:** Detailed activity instructions per section
+- **Final section:** Answer keys
+- **Last section:** Backup activities (so subs can grab them without searching)
 
 **Filename format:**
 ```
-Sub_Plan_[UNIT NAME]_Day[X]_[DATE].docx
-Example: Sub_Plan_Theme_Day3_20260222.docx
+Sub_Plan_[UNIT NAME]_Day[X]_[DATE].md
+Example: Sub_Plan_Theme_Day3_20260222.md
 ```
 
 **Tone throughout:**

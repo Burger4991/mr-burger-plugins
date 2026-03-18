@@ -1,6 +1,6 @@
 ---
 name: mc-question-generation
-description: "Systematic protocol for generating MC questions using benchmark question stems, STOP-formatted answer choices, and alignment to DOK levels. Use when building bellringers, comprehension checks, or assessments. Includes vocabulary MC patterns for context clue items and morphology/word-parts items."
+description: "Systematic protocol for generating MC questions using benchmark question stems, answer choice design with proper distractors, and alignment to DOK levels. Use when building comprehension checks or assessments. Includes vocabulary MC patterns for context clue items and morphology/word-parts items with distractor design."
 ---
 
 # Multiple Choice Question Generation Protocol

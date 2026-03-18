@@ -2,15 +2,12 @@
 name: question-stem-analysis
 description: >
   MUST USE this skill whenever the user needs to teach question stem analysis,
-  categorize MC questions by benchmark, identify question types, or plan Day 2
-  of a test prep cycle. Trigger on: "question stem analysis", "categorize questions
+  categorize MC questions by benchmark, or identify question types. Trigger on: "question stem analysis", "categorize questions
   by benchmark", "what type of question is this", "question stem worksheet",
-  "Day 2 test prep", "teach students to read questions", "identify what the question
-  is asking", "hunt predictions", "question type categories", "match questions to
-  benchmarks", or ANY request for analyzing, categorizing, or teaching about
-  MC question stems in Intensive Reading. Works with attack-the-passage (Phase 1
-  C-U-B on questions), stop-strategy (Phase 3 elimination), assessment-design
-  (question construction), and test-prep-unit (Day 2 of 4-day cycle).
+  "teach students to read questions", "identify what the question
+  is asking", "question type categories", "match questions to
+  benchmarks", or requests for analyzing and teaching about
+  MC question stems in Intensive Reading. Focuses on categorizing questions by type and benchmark alignment, with the question stem worksheet as the primary student-facing tool.
 ---
 
 # Question Stem Analysis — 10th Grade Intensive Reading

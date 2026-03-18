@@ -20,7 +20,7 @@ District files should be in: `Teaching/Units/[UnitName]/05-District-Files/`
 
 **Step 2: Identify File Types**
 - **PDFs**: Use Read tool to extract text and images
-- **Word docs (.docx)**: Convert to text or read directly
+- **Word docs (.md)**: Convert to text or read directly
 - **Text files (.txt, .md)**: Read directly with Read tool
 - **Images (.png, .jpg)**: Read tool can view images directly
 
@@ -147,7 +147,7 @@ The extraction produces structured sections that other skills consume:
 - If Word doc has formatting issues: "Document contains formatting that prevents clean text extraction. I can read sections but may need manual verification of structure."
 
 **Wrong File Format**:
-- If user uploads unsupported format (video, audio, spreadsheet): "This skill works with PDFs, Word docs (.docx), and text files. Please upload a district material in one of these formats."
+- If user uploads unsupported format (video, audio, spreadsheet): "This skill works with PDFs, Word docs (.md), and text files. Please upload a district material in one of these formats."
 
 **No Extractable Content**:
 - If file is blank or has no readable content: "This file appears empty or contains only images/graphics with no readable text. Please verify the file is the correct unit material."

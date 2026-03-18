@@ -64,8 +64,8 @@ Options:
 Copy files from archive back to unit folder:
 
 ```bash
-cp ~/Documents/Teaching/Units/[UnitFolderName]/_archive/[snapshot-name]/[file].docx \
-   ~/Documents/Teaching/Units/[UnitFolderName]/[file].docx
+cp ~/Documents/Teaching/Units/[UnitFolderName]/_archive/[snapshot-name]/[file].md \
+   ~/Documents/Teaching/Units/[UnitFolderName]/[file].md
 ```
 
 ## Step 5: Log the Recovery

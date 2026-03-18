@@ -334,13 +334,13 @@ Before finalizing adaptations, verify:
 
 **File Naming Convention:**
 ```
-[OriginalFileName]_ESOL_L[Level]_[YYYYMMDD].docx
+[OriginalFileName]_ESOL_L[Level]_[YYYYMMDD].md
 ```
 
 Examples:
-- `Theme_StudentPacket_ESOL_L1_20260222.docx`
-- `Unit_Assessment_ESOL_L2_L3_20260222.docx`
-- `LessonPlan_ESOL_L4_20260222.docx`
+- `Theme_StudentPacket_ESOL_L1_20260222.md`
+- `Unit_Assessment_ESOL_L2_L3_20260222.md`
+- `LessonPlan_ESOL_L4_20260222.md`
 
 **Documentation:**
 Create a 1-page "ESOL Adaptation Summary" that includes:

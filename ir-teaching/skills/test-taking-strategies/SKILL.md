@@ -1,7 +1,15 @@
 ---
 name: test-taking-strategies
-description: Comprehensive test-taking strategies for IR including STOP protocol (MC), CER/RACE (CR), time management, and prompt analysis. Includes year-long progression and daily integration. Use when planning Days 5-6 or designing assessments.
+description: >
+  DEPRECATED — This skill's content has been absorbed into attack-the-passage (v2.0).
+  Use attack-the-passage for all test-taking strategy needs including STOP, CER/RACE,
+  year-long progression, time management, and prompt analysis. This skill remains as
+  a redirect only.
 ---
+
+> **DEPRECATED:** This skill's content has been merged into `attack-the-passage` (v2.0).
+> For all test-taking strategy needs, use `attack-the-passage` instead.
+> This file is kept as a redirect to avoid broken references.
 
 # Test-Taking Strategies for Intensive Reading
 

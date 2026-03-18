@@ -1,6 +1,6 @@
 ---
 name: bellringer-builder
-description: "MUST USE this skill whenever the user needs to create, build, write, or design bellringers for 10th grade Intensive Reading. Trigger on: \"create bellringers\", \"build bellringers\", \"make bellringers for Days 1-6\", \"vocabulary bellringers\", \"word parts bellringers\", \"morphology bellringers\", \"prefix bellringers\", \"suffix bellringers\", \"root word bellringers\", \"context clue bellringers\", \"benchmark vocab bellringers\", \"bellringer format\", \"18 vocabulary words\", \"design bellringers\"... Supports 3 bellringer modes: (1) Context Clue — words from unit passage, all-MC, \"What does [word] most likely mean?\"; (2) Word Parts/Morphology — prefix/suffix/root-focused, standalone sentences, all-MC, includes title page + strategies reference; (3) Benchmark Vocab — academic terms tied to the benchmark being taught. All modes use STOP distractor design and produce complete answer keys. Creates student-facing .docx bellringer sets with answer keys."
+description: "MUST USE this skill whenever the user needs to create, build, write, or design bellringers for 10th grade Intensive Reading. Trigger on: \"create bellringers\", \"build bellringers\", \"vocabulary bellringers\", \"word parts bellringers\", \"context clue bellringers\", \"bellringer format\", or requests for bellringer design. Supports 3 bellringer modes: (1) Context Clue — words from unit passage, all-MC; (2) Word Parts/Morphology — prefix/suffix/root-focused, standalone sentences, includes title page + strategies reference; (3) Benchmark Vocab — academic terms tied to the benchmark being taught. All modes include proper distractor design and complete answer keys."
 ---
 
 # Bellringer Builder Skill
@@ -665,14 +665,14 @@ HOW TO REVIEW:
 - 6 daily bellringer pages (integrated into student packet)
 - 3 MC items per day × 6 days = 18 total items
 - Teacher answer key per day (in lesson plan)
-- File: integrated into `[UnitName]_StudentPacket.docx` and `[UnitName]_LessonPlan.docx`
+- File: integrated into `[UnitName]_StudentPacket.md` and `[UnitName]_LessonPlan.md`
 
 **Mode 2 — Morphology Bellringer Sets:**
 - Title page (prefix/suffix/root + examples + table)
 - Strategies reference page
 - 4-6 MC items (one per page for projection, or 2 per page for print)
 - Teacher answer key
-- File: `[Prefix]_WordParts_Bellringers.docx`
+- File: `[Prefix]_WordParts_Bellringers.md`
 
 **Mode 3 — Benchmark Vocab Bellringers:**
 - 4-6 MC items distributed across Days 1-4
@@ -682,8 +682,8 @@ HOW TO REVIEW:
 
 ### File Naming
 
-- Context Clue (in unit): `[UnitName]_D1-6_StudentPacket_YYYYMMDD.docx`
-- Morphology (standalone): `[Prefix]_WordParts_Bellringers_YYYYMMDD.docx`
+- Context Clue (in unit): `[UnitName]_D1-6_StudentPacket_YYYYMMDD.md`
+- Morphology (standalone): `[Prefix]_WordParts_Bellringers_YYYYMMDD.md`
 - Benchmark Vocab (in unit): integrated into unit packet
 
 ---

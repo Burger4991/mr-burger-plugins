@@ -412,8 +412,8 @@ DIRECTIONS:
 
 ## Color and Visual Coding
 
-### When Creating in .docx
-Since student packets are .docx files, use these visual coding methods:
+### When Creating in .md
+Since student packets are .md files, use these visual coding methods:
 
 - **Section headers:** Bold, 14pt, with a horizontal rule above
 - **Frame boxes:** 1pt solid border, optional light fill

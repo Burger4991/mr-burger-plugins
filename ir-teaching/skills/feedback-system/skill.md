@@ -11,7 +11,7 @@ description: MUST USE this skill whenever the user needs to plan feedback, creat
 
 **Core Principle:** Students practice all work in class (not graded), receive formative feedback using structured forms, then revise and submit online for summative grading.
 
-**Tool:** IR-Feedback-Form.docx (printable checklist + verbal feedback sections)
+**Tool:** IR-Feedback-Form.md (printable checklist + verbal feedback sections)
 
 ---
 
@@ -81,7 +81,7 @@ description: MUST USE this skill whenever the user needs to plan feedback, creat
 
 ## Feedback Form Components
 
-**Location:** Desktop/IR-Feedback-Form.docx (print and attach to student work)
+**Location:** Desktop/IR-Feedback-Form.md (print and attach to student work)
 
 ### Three Stage Checklists:
 

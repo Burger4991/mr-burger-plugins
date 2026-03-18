@@ -11,7 +11,7 @@ Sync recently completed work across the plugin ecosystem into the Second Brain s
 
 ### Step 1: Detect Recent Work (Last 24 Hours)
 1. Run: `find ~/Documents/Teaching/ -name "*.md" -mtime -1 2>/dev/null`
-2. Run: `find ~/Documents/Teaching/ -name "*.docx" -mtime -1 2>/dev/null`
+2. Run: `find ~/Documents/Teaching/ -name "*.pptx" -mtime -1 2>/dev/null`
 3. Run: `find ~/Desktop/SecondBrain/ -type f -mtime -1 2>/dev/null`
 4. Collect all file paths returned. If no files found, stop here and report "No recent work detected in the last 24 hours."
 

@@ -1,19 +1,14 @@
 ---
 name: test-prep-unit
 description: >
-  MUST USE this skill whenever the user wants to build, plan, or create a test prep unit,
-  cold read unit, or "attack the passage" unit for 10th grade Intensive Reading. Trigger on:
-  "build a test prep unit", "create a cold read unit", "attack the passage unit", "Q3-Q4
-  test prep", "4 texts unit", "16-day unit", "test-taking stamina unit", or any request
-  for a multi-text unit built around the Attack the Passage protocol. This skill defines
-  the COMPLETE 16-day (4 texts x 4 days each) test prep unit framework for Quarters 3-4,
-  including: unit structure, 4-day cycle per text, rotation model, ticket system, benchmark
-  alignment, CER/RACE justification model, STOP strategy integration, review games,
-  tracker system, ESOL strategies, differentiation, materials checklists, and calendar
-  templates. Works with attack-the-passage (the protocol itself), stop-strategy (Phase 3),
-  cer-writing-guide and race-strategy (Phase 4), assessment-design (MC item construction),
-  and menu-mode-planner (can be entry point for test prep units). This is the UNIT-LEVEL
-  framework; attack-the-passage is the PROTOCOL-LEVEL strategy.
+  MUST USE this skill whenever the user wants to build, plan, or create a test prep unit
+  for 10th grade Intensive Reading. Trigger on: "build a test prep unit", "create a cold read unit",
+  "test prep unit", "Q3-Q4 test prep", "4 texts unit", "16-day unit", or requests
+  for a multi-text unit framework. This skill defines the complete 16-day (4 texts x 4 days each)
+  test prep unit framework for Quarters 3-4, including: unit structure, 4-day cycle per text, rotation model,
+  ticket system, benchmark alignment, writing justification models, review games, tracker system,
+  ESOL strategies, differentiation, materials checklists, and calendar templates. Unit-level framework
+  for test-taking stamina development.
 ---
 
 # Test Prep Unit Plan — Intensive Reading | Quarter 3-4 Framework

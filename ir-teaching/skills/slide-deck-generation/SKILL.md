@@ -966,11 +966,11 @@ Before finalizing slide deck, verify:
 
 ### Phase 2: Lesson Plan Building (lesson-plan-builder-v2 agent)
 - Creates detailed lesson plans with scripts, timing, procedures
-- Outputs: Teacher Lesson Plan (.docx)
+- Outputs: Teacher Lesson Plan (.md)
 
 ### Phase 3: Student Packet Building (student-packet-builder-v2 agent)
 - Creates student-facing materials day-by-day
-- Outputs: Student Packet (.docx)
+- Outputs: Student Packet (.md)
 
 ### **Phase 4: Slide Deck Generation ← YOU ARE HERE**
 - Takes lesson plan + student packet
@@ -979,7 +979,7 @@ Before finalizing slide deck, verify:
 
 ### Phase 5: Answer Key Building
 - Creates answer keys with STOP analysis and exemplars
-- Outputs: Answer Key (.docx)
+- Outputs: Answer Key (.md)
 
 ### Phase 6: Synchronization Check (sync-coordinator agent)
 - Verifies all files match (vocabulary, examples, prompts)

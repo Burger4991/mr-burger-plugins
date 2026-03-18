@@ -1,6 +1,6 @@
 ---
 name: cubes-annotation
-description: MUST USE this skill whenever the user needs to teach annotation, embed CUBES instructions in packets, or reference the annotation strategy. Trigger on: "teach annotation", "CUBES strategy", "close reading", "how do I annotate passages", "annotate questions", "create annotation box", "embedding CUBES"... Complete 3-step annotation framework for passages (close reading → question-driven rereading → synthesis) and questions (CUBES → find details → STOP) with benchmark-specific adaptations and embedding templates.
+description: MUST USE this skill whenever the user needs to teach annotation or embed CUBES instructions in packets. Trigger on: "teach annotation", "CUBES strategy", "close reading", "how do I annotate passages", "annotate questions", "annotation guide", or requests for annotation strategy. Complete 3-step annotation framework for passages (close reading → question-driven rereading → synthesis) and questions with benchmark-specific adaptations and embedding templates for student packets.
 ---
 
 # CUBES Annotation Protocol — 10th Grade Intensive Reading

@@ -15,7 +15,7 @@ description: File naming conventions, version control, and archive procedures fo
 - **Days**: Day range covered (D1-6, D1-2, D3-4, D5-6, or single day D1)
 - **Type**: Deliverable type (see below)
 - **YYYYMMDD**: Date created (year-month-day for proper sorting)
-- **extension**: .docx, .pptx, .pdf, etc.
+- **extension**: .md, .pptx, .pdf, etc.
 
 ### Deliverable Type Codes
 
@@ -32,22 +32,22 @@ description: File naming conventions, version control, and archive procedures fo
 
 **Full Units:**
 ```
-ThemeAnalysis_D1-6_TeacherPlan_20250104.docx
-ThemeAnalysis_D1-6_StudentPacket_20250104.docx
-ThemeAnalysis_D1-6_AnswerKey_20250104.docx
+ThemeAnalysis_D1-6_TeacherPlan_20250104.md
+ThemeAnalysis_D1-6_StudentPacket_20250104.md
+ThemeAnalysis_D1-6_AnswerKey_20250104.md
 ThemeAnalysis_D1-6_Slides_20250104.pptx
 ```
 
 **Partial/Daily Materials:**
 ```
-ThemeAnalysis_D1_ExitTicket_20250104.docx
-ThemeAnalysis_D3-4_Organizer_20250104.docx
-ThemeAnalysis_D5-6_Assessment_20250104.docx
+ThemeAnalysis_D1_ExitTicket_20250104.md
+ThemeAnalysis_D3-4_Organizer_20250104.md
+ThemeAnalysis_D5-6_Assessment_20250104.md
 ```
 
 **Special Materials:**
 ```
-ThemeAnalysis_VocabList_20250104.docx
+ThemeAnalysis_VocabList_20250104.md
 ThemeAnalysis_BenchmarkCard_Reference.pdf
 ThemeAnalysis_DistrictText_Original.pdf
 ```
@@ -61,14 +61,14 @@ Teaching/
 ├── Units/
 │   ├── Theme_StoryOfAnHour/
 │   │   ├── 01-LessonPlans/
-│   │   │   ├── StoryOfAnHour_D1-6_TeacherPlan_20250104.docx
+│   │   │   ├── StoryOfAnHour_D1-6_TeacherPlan_20250104.md
 │   │   │   └── _archive/
-│   │   │       └── StoryOfAnHour_D1-6_TeacherPlan_20241215.docx
+│   │   │       └── StoryOfAnHour_D1-6_TeacherPlan_20241215.md
 │   │   ├── 02-StudentPackets/
-│   │   │   ├── StoryOfAnHour_D1-6_StudentPacket_20250104.docx
+│   │   │   ├── StoryOfAnHour_D1-6_StudentPacket_20250104.md
 │   │   │   └── _archive/
 │   │   ├── 03-AnswerKeys/
-│   │   │   └── StoryOfAnHour_D1-6_AnswerKey_20250104.docx
+│   │   │   └── StoryOfAnHour_D1-6_AnswerKey_20250104.md
 │   │   ├── 04-SlideDecks/
 │   │   │   └── StoryOfAnHour_D1-6_Slides_20250104.pptx
 │   │   ├── 05-District-Files/
@@ -115,11 +115,11 @@ When updating any deliverable:
 **Example:**
 ```
 # Starting point
-StoryOfAnHour_D1-6_StudentPacket_20250104.docx
+StoryOfAnHour_D1-6_StudentPacket_20250104.md
 
 # After making edits on Jan 10
-StoryOfAnHour_D1-6_StudentPacket_20250110.docx  ← new version
-_archive/StoryOfAnHour_D1-6_StudentPacket_20250104.docx  ← archived
+StoryOfAnHour_D1-6_StudentPacket_20250110.md  ← new version
+_archive/StoryOfAnHour_D1-6_StudentPacket_20250104.md  ← archived
 ```
 
 ### Change Log Format
@@ -137,9 +137,9 @@ Changes:
 - Expanded vocabulary practice with sentence writing
 
 Files affected:
-✓ StoryOfAnHour_D1-6_StudentPacket_20250110.docx (NEW)
-✓ StoryOfAnHour_D1-6_TeacherPlan_20250110.docx (UPDATED - Day 4 procedures)
-✓ StoryOfAnHour_D1-6_AnswerKey_20250110.docx (UPDATED - added exemplar for row 5)
+✓ StoryOfAnHour_D1-6_StudentPacket_20250110.md (NEW)
+✓ StoryOfAnHour_D1-6_TeacherPlan_20250110.md (UPDATED - Day 4 procedures)
+✓ StoryOfAnHour_D1-6_AnswerKey_20250110.md (UPDATED - added exemplar for row 5)
 ○ StoryOfAnHour_D1-6_Slides_20250104.pptx (NO CHANGE)
 ○ District files (NO CHANGE)
 
@@ -172,17 +172,17 @@ Text: "The Story of an Hour" by Kate Chopin
 **Example archive:**
 ```
 02-StudentPackets/
-├── StoryOfAnHour_D1-6_StudentPacket_20250110.docx  ← CURRENT
+├── StoryOfAnHour_D1-6_StudentPacket_20250110.md  ← CURRENT
 └── _archive/
-    ├── StoryOfAnHour_D1-6_StudentPacket_20250104.docx  ← keep (most recent old)
-    └── StoryOfAnHour_D1-6_StudentPacket_20241220.docx  ← keep (2nd most recent)
+    ├── StoryOfAnHour_D1-6_StudentPacket_20250104.md  ← keep (most recent old)
+    └── StoryOfAnHour_D1-6_StudentPacket_20241220.md  ← keep (2nd most recent)
     [DELETE older versions unless needed for reference]
 ```
 
 ## File Format Standards
 
 ### Editable Formats (Preferred)
-- **Word documents:** .docx (NOT .doc or .pdf)
+- **Teaching documents:** .md (Markdown format)
 - **PowerPoint slides:** .pptx (NOT .ppt or .pdf)
 - **Excel trackers:** .xlsx (NOT .xls)
 
@@ -191,8 +191,8 @@ Text: "The Story of an Hour" by Kate Chopin
 - **Final published versions:** Export to .pdf after completing edits
 
 ### Avoid
-- **Google Docs links** - Download as .docx instead
-- **Pages/Keynote** - Export to .docx/.pptx for compatibility
+- **Google Docs links** - Download as .md instead
+- **Pages/Keynote** - Export to .md/.pptx for compatibility
 - **Scanned images** - Convert to editable text when possible
 
 ## Syncing and Alignment
@@ -219,7 +219,7 @@ If you update ONE deliverable, check if others need updates:
 ### Manual Synchronization Verification
 
 After making updates, manually verify alignment across deliverables:
-1. Check that vocabulary, organizer content, and examples match across lesson plan (.docx), student packet (.docx), and slides (.pptx)
+1. Check that vocabulary, organizer content, and examples match across lesson plan (.md), student packet (.md), and slides (.pptx)
 2. Ensure all files have consistent dates (same day or same update date)
 3. Review lesson plan procedures to confirm they match student packet activities
 4. Verify answer keys reflect any changes made to student organizers or questions

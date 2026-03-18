@@ -94,7 +94,7 @@ When the user is planning a 10th Grade IR unit, integrate the following:
 
 **Feedback System Integration:**
 - Use practice → feedback → revise → submit workflow (see `feedback-system` skill)
-- Include IR-Feedback-Form.docx as a deliverable
+- Include IR-Feedback-Form.md as a deliverable
 - Days 1-2: Spot-check feedback during Independent rotation (5-8 students, 2-3 min each)
 - Days 3-4: Collect organizers end of Day 4, return with feedback Day 5
 - Days 5-6: Return practice assessments with feedback, students complete Action Plan before leaving
@@ -108,13 +108,13 @@ When the user is planning a 10th Grade IR unit, integrate the following:
 - Include achievement level descriptors for scaffolding decisions
 
 **Core Deliverables for IR Units:**
-1. Teacher Lesson Plan (.docx) - includes bellringer answer keys + feedback timing notes
-2. Student Packet (.docx) - day-by-day format with "This is PRACTICE work" note
+1. Teacher Lesson Plan (.md) - includes bellringer answer keys + feedback timing notes
+2. Student Packet (.md) - day-by-day format with "This is PRACTICE work" note
 3. Slide Deck (.pptx) - visual support for Teacher-Led instruction
-4. Answer Key & Exemplars (.docx)
-5. Feedback Forms (.docx) - IR-Feedback-Form
-6. Exit Tickets (.docx) - optional
-7. Cover Pages (.docx) - optional
+4. Answer Key & Exemplars (.md)
+5. Feedback Forms (.md) - IR-Feedback-Form
+6. Exit Tickets (.md) - optional
+7. Cover Pages (.md) - optional
 
 **When building IR units, always:**
 - Ask about target benchmark, unit text, and district materials

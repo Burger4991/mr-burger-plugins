@@ -29,7 +29,7 @@ Before reviewing any deliverable, invoke these skills via the Skill tool:
 | Reviewing student packets | `brand-identity` + `student-packet-design-guide` + `teaching-templates` |
 | Reviewing lesson plans | `ir-framework` + `feedback-system` |
 | Reviewing assessments | `assessment-design` + `assessment-rubrics` |
-| Reviewing any .docx | `brand-identity` (for design self-critique checklist) |
+| Reviewing any document | `brand-identity` (for design self-critique checklist) |
 | Any IR deliverable | `benchmarks` (for the target benchmark) |
 
 **Do NOT just "reference" skills — actually invoke them via the Skill tool so their full instructions load.**

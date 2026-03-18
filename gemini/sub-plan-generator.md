@@ -263,7 +263,7 @@ If students ask for help:
 
 Create a **sub plan document** with these specs:
 
-**Format:** Microsoft Word (.docx)
+**Format:** Microsoft Word (.md)
 **Font sizes:**
 - Headers: 16pt bold
 - Body text: 12pt
@@ -278,8 +278,8 @@ Create a **sub plan document** with these specs:
 
 **Filename format:**
 ```
-Sub_Plan_[UNIT NAME]_Day[X]_[DATE].docx
-Example: Sub_Plan_Theme_Day3_20260222.docx
+Sub_Plan_[UNIT NAME]_Day[X]_[DATE].md
+Example: Sub_Plan_Theme_Day3_20260222.md
 ```
 
 **Tone throughout:**

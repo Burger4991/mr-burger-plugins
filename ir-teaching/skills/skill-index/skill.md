@@ -32,8 +32,8 @@ description: MUST USE this skill whenever the user asks "which skill should I us
 | Teach Attack the Passage protocol | `attack-the-passage` | → `stop-strategy` (Phase 3) + `cubes-annotation` (Phases 1-2) + `cer-writing-guide` / `race-strategy` (Phase 4) | — |
 | Teach/embed the RACE/ACE strategy | `race-strategy` | → `cer-writing-guide` (CER alternative) + `assessment-design` (CR format) | — |
 | Build CER/ACE writing scaffolds | `cer-writing-guide` | → `assessment-design` (student format) | — |
-| Design an assessment | `assessment-design` | → `assessment-builder` agent (produces .docx files) | Benchmark + text |
-| Build assessment .docx files | `assessment-builder` agent | → `assessment-rubrics` (scoring) | Benchmark + text + unit config |
+| Design an assessment | `assessment-design` | → `assessment-builder` agent (produces .md files) | Benchmark + text |
+| Build assessment .md files | `assessment-builder` agent | → `assessment-rubrics` (scoring) | Benchmark + text + unit config |
 | Review completed deliverables | `quality-reviewer` agent | Two-stage: spec compliance → quality review | Completed deliverable(s) |
 | Create bellringers | `bellringer-builder` | → `vocabulary-instruction` (word selection) | 18 vocabulary words |
 | Build rubrics | `assessment-rubrics` | → `benchmarks` (achievement levels) | Benchmark selected |
@@ -63,7 +63,7 @@ description: MUST USE this skill whenever the user asks "which skill should I us
 ### Unit Building & Orchestration
 
 - **`menu-mode-planner`** — Entry point for unit planning, collects all preferences upfront
-- **`unit-builder-protocol`** — Full 6-day IR unit generation (ORCHESTRATOR). Outputs: Teacher Plan (.docx), Student Packet (.docx), Answer Key (.docx), Feedback Forms (.docx), optional Teacher Slides (.pptx). All files in ONE flat folder per unit.
+- **`unit-builder-protocol`** — Full 6-day IR unit generation (ORCHESTRATOR). Outputs: Teacher Plan (.md), Student Packet (.md), Answer Key (.md), Feedback Forms (.md), optional Teacher Slides (.pptx). All files in ONE flat folder per unit.
 - **`ir-framework`** — 6-day cycle structure, daily rotations (Bellringer → TL → IND), gradual release
 - **`teaching-templates`** — Reusable lesson structures, naming conventions, formats, 8 visual components with design tokens and docx-js implementation code
 - **`brand-identity`** — **Single source of truth** for all visual design decisions. Design philosophy ("Structured Clarity"), grayscale color system, 5-level typography scale, spacing system, terminology standards, document header/footer specs, 5-point design self-critique checklist, and implementation notes for docx-js/python-docx. Read before generating ANY deliverable.
@@ -125,16 +125,16 @@ description: MUST USE this skill whenever the user asks "which skill should I us
 | Agent | Scope | When to Use | Primary Output |
 |---|---|---|---|
 | **`unit-planner`** | Multi-week unit design (any subject) | General UbD framework planning. IR units → routes to menu-mode-planner (hard gate) | Unit outline, pacing guide |
-| **`lesson-plan-coordinator`** | Single lesson planning | One-off lessons not part of IR cycle | Single lesson plan (.docx) |
-| **`student-packet-builder`** | Student-facing materials | Standalone worksheets, non-IR packets | Worksheet packet (.docx) |
-| **`assessment-builder`** | Assessment .docx files | MC items + CR prompts + answer keys + rubrics. Phase 6 of unit builds. | Assessment (.docx) + Answer Key (.docx) |
+| **`lesson-plan-coordinator`** | Single lesson planning | One-off lessons not part of IR cycle | Single lesson plan (.md) |
+| **`student-packet-builder`** | Student-facing materials | Standalone worksheets, non-IR packets | Worksheet packet (.md) |
+| **`assessment-builder`** | Assessment .md files | MC items + CR prompts + answer keys + rubrics. Phase 6 of unit builds. | Assessment (.md) + Answer Key (.md) |
 | **`quality-reviewer`** | Two-stage deliverable review | Auto-runs after each Phase in unit builds. On-demand for standalone work. | Review report (PASS/FAIL per check) |
 | **`unit-reviewer`** | Fresh-eyes independent review | Cold review of completed unit — no build context. Finds sync issues, missing elements, benchmark misalignment. | Structured review report |
 | **`unit-reviser`** | Update existing units | Text swaps, benchmark changes, data-driven revisions | Updated deliverables |
-| **`sub-plan-generator`** | Substitute teacher plans | When you'll be absent | Simplified sub plan (.docx) |
+| **`sub-plan-generator`** | Substitute teacher plans | When you'll be absent | Simplified sub plan (.md) |
 | **`esol-adapter`** | Material adaptation | Adapt materials for ESOL levels 1-5 | Modified packets with scaffolds |
 
-**v2.0 Upgrade (all agents):** Every agent now has (1) Required Skill Invocations (calls skills via Skill tool, not just "references" them), (2) Verification Gate with Iron Law (must state evidence before claiming done), (3) Brand enforcement for .docx-producing agents.
+**v2.0 Upgrade (all agents):** Every agent now has (1) Required Skill Invocations (calls skills via Skill tool, not just "references" them), (2) Verification Gate with Iron Law (must state evidence before claiming done), (3) Brand enforcement for .md-producing agents.
 
 ---
 
@@ -151,18 +151,18 @@ menu-mode-planner (HARD GATE — all tabs must complete before building)
 → organizer-design (create graphic organizer)
 → cubes-annotation (embed annotation boxes)
 → unit-builder-protocol (ORCHESTRATOR - generates all deliverables)
-    ├─ Phase 3: Teacher Lesson Plan (.docx) → quality-reviewer (auto)
-    ├─ Phase 4: Student Packet (.docx) → quality-reviewer (auto)
-    ├─ Phase 5: Answer Key (.docx) → quality-reviewer (auto + cross-file sync)
-    ├─ Phase 6: assessment-builder agent → Assessment (.docx) → quality-reviewer (auto)
-    ├─ Feedback Forms (.docx)
+    ├─ Phase 3: Teacher Lesson Plan (.md) → quality-reviewer (auto)
+    ├─ Phase 4: Student Packet (.md) → quality-reviewer (auto)
+    ├─ Phase 5: Answer Key (.md) → quality-reviewer (auto + cross-file sync)
+    ├─ Phase 6: assessment-builder agent → Assessment (.md) → quality-reviewer (auto)
+    ├─ Feedback Forms (.md)
     ├─ Teacher Slides (.pptx) — optional
     └─ Interactive Lesson (.html) — optional (replaces slides, Phase 5C)
 → quality-reviewer: Final cross-file sync across ALL deliverables
 → file-management (organize and version)
 ```
 
-**Output:** All files in ONE flat folder per unit. Core deliverables are .docx; optional teacher slides are .pptx.
+**Output:** All files in ONE flat folder per unit. Core deliverables are .md; optional teacher slides are .pptx.
 
 ## Workflow: Build a Test Prep / Cold Read Unit (Q3-Q4)
 
@@ -185,11 +185,11 @@ For each text (4-day cycle):
     └─ Review game materials (Day 4)
 ```
 
-**Output:** Per-text packets + unit tracker + reference cards. All .docx files.
+**Output:** Per-text packets + unit tracker + reference cards. All .md files.
 
 **Superpowers Integration (v2.0):** Unit building uses 5 patterns from `superpowers-cowork`: Hard Gate (no building without menu completion), Bite-Sized Tasks (2-5 min per task in TodoWrite), Two-Stage Review (spec compliance then quality via quality-reviewer agent), Verification Iron Law (evidence before "unit complete"), and Parallel Dispatch (independent deliverables build simultaneously).
 
-**Agent Upgrades (v2.0):** All 8 agents now have Required Skill Invocations (must call skills via Skill tool), Verification Gates (must state evidence), and Brand Enforcement (for .docx producers). New agents: assessment-builder (builds MC + CR .docx files) and quality-reviewer (auto-runs after each build Phase).
+**Agent Upgrades (v2.0):** All 8 agents now have Required Skill Invocations (must call skills via Skill tool), Verification Gates (must state evidence), and Brand Enforcement (for .md producers). New agents: assessment-builder (builds MC + CR .md files) and quality-reviewer (auto-runs after each build Phase).
 
 ---
 

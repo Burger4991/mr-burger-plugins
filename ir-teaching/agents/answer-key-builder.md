@@ -245,7 +245,7 @@ INTERVENTION NOTES:
 
 ## Output Format
 
-**File name:** `[UnitName]_D1-6_AnswerKey_YYYYMMDD.docx`
+**File name:** `[UnitName]_D1-6_AnswerKey_YYYYMMDD.md`
 
 **Structure:**
 1. Cover page with unit info
@@ -256,7 +256,7 @@ INTERVENTION NOTES:
 6. Scoring Rubrics
 7. Teacher Notes
 
-**Use python-docx to generate the .docx file.**
+**Generate as Markdown (.md)**
 
 ## Critical Quality Checks
 
@@ -268,7 +268,7 @@ Before reporting complete:
 - [ ] Paragraph citations included for all evidence
 - [ ] Scoring rubrics provided for major assignments
 - [ ] Common errors noted for teacher awareness
-- [ ] File generated as .docx (not markdown)
+- [ ] File generated as .md format
 
 ## What You DON'T Do
 

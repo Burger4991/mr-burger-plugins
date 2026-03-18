@@ -426,6 +426,80 @@ Phase 4 Extended:
 
 ---
 
+## Year-Long Progression
+
+### September-October (Units 1-2): Build Foundations
+- Bellringers use STOP-formatted answer choices daily (exposure, no formal instruction)
+- Introduce CR framework (model + guided practice)
+- Focus on content mastery — test-taking strategy is implicit
+- Goal: Students recognize S/T/O/P patterns without being taught yet
+
+### November-December (Units 3-4): Explicit Strategy Instruction
+- Day 5 each unit: 15-minute STOP lesson (explicit instruction + practice)
+- Days 3-4: CR with sentence frames (scaffolded)
+- Day 5: Timed writing practice (build stamina)
+- Goal: Students learn the protocol with full support
+
+### January-March (Units 5-7): Independent Application
+- Day 5: STOP review (quick reminder, not full lesson)
+- Days 3-4: CR without sentence frames (remove scaffolds)
+- Days 5-6: Timed practice under test conditions
+- Goal: Students use the protocol independently
+
+### April-May (Units 8-9 + Test Prep): Assessment Conditions
+- Full practice tests: 90 minutes, authentic format
+- Data analysis: Which strategies are students using? Which need reteaching?
+- Small group intervention: Pull students struggling with specific phases
+- Goal: Stamina, confidence, automatic strategy application
+
+---
+
+## Time Management Strategies
+
+### The Test-Taking Clock (90-Minute Assessment)
+- Multiple Choice (20-25 questions): 30-40 minutes (~1.5 min per question)
+- Constructed Response (2-3 questions): 30-40 minutes (10-15 min per question)
+- Review & Check: 10-15 minutes
+
+### Teach Students
+- Look at total questions first, calculate time per question
+- Skip hard questions, return later (mark with a star)
+- Save time for review
+- "Good enough is better than incomplete"
+
+### Pacing Practice (Day 5 Independent Rotation)
+- Round 1: MC Sprint — 7 questions in 10 minutes (goal: 1.5 min/question)
+- Round 2: CR Timed Write — one CER/RACE paragraph in 10 minutes
+- Round 3: Review — 5 minutes to check and fix
+- Debrief: "Did you finish? What slowed you down? What changes next time?"
+
+---
+
+## Prompt Analysis
+
+### The Prompt Surgery Protocol
+Before answering ANY constructed response, dissect the prompt:
+
+1. **Underline the verb** — What is the question asking you to DO? (analyze, explain, compare, evaluate)
+2. **Circle the focus** — What specifically should you write about? (must address ALL circled elements)
+3. **Box text references** — Which part of the text? (whole passage, specific paragraphs, lines)
+4. **Check requirements** — How many examples? What format? How long?
+
+### Common Prompt Verbs and What They Mean
+| Verb | What to Do |
+|------|-----------|
+| **Analyze** | Explain HOW something works or its effect |
+| **Explain** | Make clear WHY something happens or matters |
+| **Compare** | Show similarities AND differences |
+| **Evaluate** | Judge the quality or effectiveness with evidence |
+| **Identify** | Name or point to a specific element |
+| **Support** | Prove with text evidence |
+
+### Integration with Phase 1
+Prompt analysis is essentially Phase 1 (Attack the Questions) applied to constructed response prompts. The C-U-B method works for CR prompts just as it does for MC questions.
+
+---
+
 ## Integration with Other Skills
 
 **Primary connections (do not duplicate content from these):**
@@ -466,5 +540,5 @@ Attack the Passage's C-U-B (Circle-Underline-Box) is a simplified, test-focused 
 
 ---
 
-*Last Updated: 2026-03-17*
-*Version: 1.0*
+*Last Updated: 2026-03-18*
+*Version: 2.0 — Absorbed year-long progression, time management, and prompt analysis from test-taking-strategies*

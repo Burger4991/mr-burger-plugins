@@ -9,16 +9,16 @@ description: 10th grade Intensive Reading unit planning templates and naming con
 Format: `[UnitName]_[Days]_[Type]_YYYYMMDD.[extension]`
 
 Examples:
-- `StoryOfAnHour_D1-6_LessonPlan_20251105.docx`
-- `StoryOfAnHour_D1-6_StudentPacket_20251105.docx`
+- `StoryOfAnHour_D1-6_LessonPlan_20251105.md`
+- `StoryOfAnHour_D1-6_StudentPacket_20251105.md`
 - `StoryOfAnHour_D1-6_Slides_20251105.pptx`
-- `StoryOfAnHour_D1-6_AnswerKey_20251105.docx`
+- `StoryOfAnHour_D1-6_AnswerKey_20251105.md`
 
 **IMPORTANT:** All deliverables must use proper file extensions:
-- Teacher Lesson Plans: `.docx` (NOT .md)
-- Student Packets: `.docx` (NOT .md)
+- Teacher Lesson Plans: `.md` (Markdown format)
+- Student Packets: `.md` (Markdown format)
 - Slide Decks: `.pptx` (NOT .md)
-- Answer Keys: `.docx` (NOT .md)
+- Answer Keys: `.md` (Markdown format)
 
 ## Folder Structure
 ```
@@ -67,15 +67,15 @@ Each unit follows this pattern:
 ## Core Deliverables (In Order)
 
 **Three synchronized files** (must match across all three):
-1. **Teacher Lesson Plan (.docx)** - Teacher-facing, includes bellringer answer keys
-2. **Student Packet (.docx)** - Student-facing, day-by-day format with bellringers
+1. **Teacher Lesson Plan (.md)** - Teacher-facing, includes bellringer answer keys
+2. **Student Packet (.md)** - Student-facing, day-by-day format with bellringers
 3. **Slide Deck (.pptx)** - For projection during Teacher-Led instruction
 
 **Additional files:**
-4. Answer Key & Exemplars (.docx) - Separate from student packet
-5. **Feedback Forms (.docx)** - IR-Feedback-Form for practice→feedback→revise workflow (see `feedback-system` skill)
-6. Exit Tickets (.docx) - Optional
-7. Cover Pages (.docx) - Optional
+4. Answer Key & Exemplars (.md) - Separate from student packet
+5. **Feedback Forms (.md)** - IR-Feedback-Form for practice→feedback→revise workflow (see `feedback-system` skill)
+6. Exit Tickets (.md) - Optional
+7. Cover Pages (.md) - Optional
 
 ## Key Protocols to Embed
 - **STOP**: Silly, Tricky, Opposite, Proven (for MC)
@@ -92,9 +92,9 @@ Each unit follows this pattern:
 
 ## Detailed Deliverable Specifications
 
-### 1. Teacher Lesson Plan (`[Unit]_D1-6_LessonPlan_YYYYMMDD.docx`)
+### 1. Teacher Lesson Plan (`[Unit]_D1-6_LessonPlan_YYYYMMDD.md`)
 
-**FORMAT:** Microsoft Word (.docx)
+**FORMAT:** Markdown (.md)
 
 **STRUCTURE:** Day-by-day breakdown (6 days total)
 
@@ -159,9 +159,9 @@ Each unit follows this pattern:
 
 ---
 
-### 2. Student Packet (`[Unit]_D1-6_StudentPacket_YYYYMMDD.docx`)
+### 2. Student Packet (`[Unit]_D1-6_StudentPacket_YYYYMMDD.md`)
 
-**FORMAT:** Microsoft Word (.docx)
+**FORMAT:** Microsoft Word (.md)
 
 **STRUCTURE:** Day-by-day (NOT activity-by-activity)
 
@@ -326,9 +326,9 @@ Directions: Read each sentence from "[Text Title]." Use context clues to determi
 
 ---
 
-### 4. Answer Key & Exemplars (`[Unit]_D1-6_AnswerKey_YYYYMMDD.docx`)
+### 4. Answer Key & Exemplars (`[Unit]_D1-6_AnswerKey_YYYYMMDD.md`)
 
-**FORMAT:** Microsoft Word (.docx)
+**FORMAT:** Microsoft Word (.md)
 
 **STRUCTURE:** Mirrors student packet day-by-day
 
@@ -513,8 +513,8 @@ HOW TO REVIEW:
 ## Three-File Synchronization Requirements
 
 **CRITICAL:** The following 3 files must be synchronized:
-1. Teacher Lesson Plan (.docx)
-2. Student Packet (.docx)
+1. Teacher Lesson Plan (.md)
+2. Student Packet (.md)
 3. Slide Deck (.pptx)
 
 ### What Must Match Across All Three Files:
@@ -597,10 +597,10 @@ Before finalizing deliverables, verify:
 
 ### File Format & Naming
 - [ ] All files use correct naming convention
-- [ ] Lesson plan is .docx (NOT .md)
-- [ ] Student packet is .docx (NOT .md)
+- [ ] Lesson plan is .md (NOT .md)
+- [ ] Student packet is .md (NOT .md)
 - [ ] Slides are .pptx (NOT .md)
-- [ ] Answer key is .docx (NOT .md)
+- [ ] Answer key is .md (NOT .md)
 
 ### Content Alignment
 - [ ] Bellringer vocabulary matches across all 3 files

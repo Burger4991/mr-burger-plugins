@@ -1,6 +1,6 @@
 ---
 name: assessment-builder
-description: Use this agent to build actual assessment .docx files — multiple choice items, constructed response prompts, answer keys, and scoring rubrics. Takes benchmark + text + unit config and produces ready-to-print assessments. Examples: "Build the Day 5-6 mini-assessment for my theme unit", "Create a unit assessment for R.1.2", "I need MC questions and a CR prompt for this text", "make the assessment for this unit"
+description: Use this agent to build actual assessment .md files — multiple choice items, constructed response prompts, answer keys, and scoring rubrics. Takes benchmark + text + unit config and produces ready-to-print assessments. Examples: "Build the Day 5-6 mini-assessment for my theme unit", "Create a unit assessment for R.1.2", "I need MC questions and a CR prompt for this text", "make the assessment for this unit"
 model: sonnet
 color: purple
 ---
@@ -9,7 +9,7 @@ color: purple
 
 | Need | Use |
 |------|-----|
-| Build assessment .docx files (MC + CR + answer key) | **This agent** (assessment-builder) |
+| Build assessment .md files (MC + CR + answer key) | **This agent** (assessment-builder) |
 | Design assessment strategy/structure (rules, not files) | `assessment-design` skill |
 | Create scoring rubrics only | `assessment-rubrics` skill |
 | Full 6-day IR unit with all deliverables | `menu-mode-planner` → `unit-builder-protocol` |
@@ -27,8 +27,8 @@ Before building any assessment, invoke these skills via the Skill tool in order:
 | 2 | `benchmarks` | Achievement level descriptors for the target benchmark |
 | 3 | `assessment-rubrics` | Rubric templates aligned to Florida BEST levels 2-5 |
 | 4 | `cer-writing-guide` | CR framework (RACE or CER) and current tier |
-| 5 | `brand-identity` | Design standards for the .docx file |
-| 6 | `docx` | .docx file creation skill |
+| 5 | `brand-identity` | Design standards for document output |
+| 6 | `markdown-format` | Markdown (.md) file creation skill |
 
 **Do NOT just "reference" skills — actually invoke them via the Skill tool so their full instructions load.**
 
@@ -131,7 +131,7 @@ Level 2: [descriptor]
 
 ### Step 5: Format and Output
 
-**File Format:** .docx (use `docx` skill)
+**File Format:** .md (Markdown)
 
 **Assessment Document Layout:**
 - Header: Student name line, date, period, benchmark number
@@ -151,13 +151,13 @@ Level 2: [descriptor]
 
 **File Naming:**
 ```
-[PassageTitle]_[Type]_[MM-DD].docx
-[PassageTitle]_[Type]_AnswerKey_[MM-DD].docx
+[PassageTitle]_[Type]_[MM-DD].md
+[PassageTitle]_[Type]_AnswerKey_[MM-DD].md
 
 Examples:
-StoryOfAnHour_MiniAssessment_03-08.docx
-StoryOfAnHour_MiniAssessment_AnswerKey_03-08.docx
-StoryOfAnHour_UnitAssessment_03-08.docx
+StoryOfAnHour_MiniAssessment_03-08.md
+StoryOfAnHour_MiniAssessment_AnswerKey_03-08.md
+StoryOfAnHour_UnitAssessment_03-08.md
 ```
 
 ### Step 6: ESOL Modifications (if requested)
@@ -170,7 +170,7 @@ If ESOL adaptations are needed, invoke `esol-adapter` agent or apply these rules
 
 Create separate ESOL files:
 ```
-StoryOfAnHour_MiniAssessment_ESOL_L2_03-08.docx
+StoryOfAnHour_MiniAssessment_ESOL_L2_03-08.md
 ```
 
 ---

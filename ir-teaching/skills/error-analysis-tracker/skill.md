@@ -2,16 +2,11 @@
 name: error-analysis-tracker
 description: >
   MUST USE this skill whenever the user needs to track student error patterns,
-  build error analysis trackers, aggregate class error data, or plan reteaching
-  based on error types. Trigger on: "error analysis", "error tracker", "what errors
-  are my students making", "S/T/O error codes", "common error patterns", "students
-  keep falling for tricky answers", "error type data", "reteach based on errors",
-  "track wrong answers", "why are students getting questions wrong", "error audit",
-  or ANY request for analyzing, tracking, or responding to MC error patterns in
-  Intensive Reading. Works with attack-the-passage (error codes defined there),
-  stop-strategy (S/T/O categories), test-prep-unit (tracker embedded in 4-day cycle),
-  unit-troubleshooter (error data feeds diagnosis), and intervention-planner
-  (error patterns inform grouping).
+  build error analysis trackers, or aggregate class error data. Trigger on: "error analysis", "error tracker", "what errors
+  are my students making", "common error patterns", "error patterns",
+  "reteach based on errors", "track wrong answers", "error audit",
+  or requests for analyzing and responding to MC error patterns in
+  Intensive Reading. Provides error categorization system and tracking templates for identifying instructional needs.
 ---
 
 # Error Analysis Tracker — 10th Grade Intensive Reading

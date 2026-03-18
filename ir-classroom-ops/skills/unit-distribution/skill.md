@@ -32,7 +32,7 @@ Present these options using AskUserQuestion (multiSelect: true — can pick more
 
 **Option B: Upload to OneDrive**
 - Target folder: `OneDrive > MDCPS > Teaching > Units > [Unit Folder Name]`
-- Upload all 4 core .docx files
+- Upload all 4 core .md files
 - Naming convention: already correct if unit-builder-protocol was used
 
 **Option C: Adapt for ESOL**
@@ -43,7 +43,7 @@ Present these options using AskUserQuestion (multiSelect: true — can pick more
 **Option D: Archive as Template**
 - Copy unit folder to: `~/Documents/Teaching/Templates/`
 - Rename files: remove date suffix, add `_TEMPLATE`
-  - Example: `StoryOfAnHour_StudentPacket_TEMPLATE.docx`
+  - Example: `StoryOfAnHour_StudentPacket_TEMPLATE.md`
 - Add entry to `~/Documents/Teaching/Templates/_index.txt`:
   ```
   [Date] [Unit Name] — [Benchmark] — [Text Title]
@@ -52,7 +52,7 @@ Present these options using AskUserQuestion (multiSelect: true — can pick more
   ```
 
 **Option E: Share with Department**
-- Export as PDF for sharing (keep .docx for yourself)
+- Export as PDF for sharing (keep .md for yourself)
 - Files to share: StudentPacket + AnswerKey (not TeacherPlan — keep internal)
 - Save PDFs to: `~/Documents/Teaching/Shared/`
 
