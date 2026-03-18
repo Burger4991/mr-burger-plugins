@@ -448,15 +448,17 @@ Class Average: 217.6 (School Avg: 220.5)
 - `class-comparison-generator`: Visualizes class comparisons
 - `intervention-planner`: Creates grouping visualizations
 
-## File Paths Reference
+## File Locations
 
-**Input**:
-- NWEA Master Tracker: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/NWEA_Master_Tracker_2025-2026.xlsx`
-- FAST PM Data: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/`
+> **Path Discovery:** Do not assume a fixed path. At the start of each session, ask the user where their student data folder is located, or check if a path was provided in the conversation context. Common locations include the user's Desktop, Documents/Teaching, or a mounted folder.
 
-**Output**:
-- Visualizations: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/Reports/Visualizations/`
-- Dashboards: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/Reports/Dashboards/`
+**Expected inputs:**
+- NWEA Master Tracker (`.xlsx`)
+- FAST PM score files (`.xlsx`)
+
+**Expected outputs (saved to the same student data folder):**
+- Visualizations saved to `Reports/Visualizations/` subfolder
+- Dashboards saved to `Reports/Dashboards/` subfolder
 
 ## Technical Implementation
 

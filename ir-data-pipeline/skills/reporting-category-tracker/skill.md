@@ -382,10 +382,12 @@ All outputs include:
 - `intervention-planner`: Provides category-specific groupings
 - `benchmark-mastery-analyzer`: Links FAST benchmarks to NWEA categories
 
-## File Paths Reference
+## File Locations
 
-**Input**:
-- NWEA Master Tracker: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/NWEA_Master_Tracker_2025-2026.xlsx`
+> **Path Discovery:** Do not assume a fixed path. At the start of each session, ask the user where their student data folder is located, or check if a path was provided in the conversation context. Common locations include the user's Desktop, Documents/Teaching, or a mounted folder.
 
-**Output**:
-- Category analysis reports: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/Reports/Category_Analysis/`
+**Expected inputs:**
+- NWEA Master Tracker (`.xlsx`)
+
+**Expected outputs (saved to the same student data folder):**
+- Category analysis reports saved to `Reports/Category_Analysis/` subfolder

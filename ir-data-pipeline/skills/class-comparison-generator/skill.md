@@ -391,15 +391,17 @@ NEXT STEPS:
 - `reporting-category-tracker`: Uses category-level analysis
 - `intervention-planner`: Identifies classes needing support
 
-## File Paths Reference
+## File Locations
 
-**Input**:
-- NWEA Master Tracker: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/NWEA_Master_Tracker_2025-2026.xlsx`
-- Student Data Table: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/Student Data Table ELA-2.xlsx`
+> **Path Discovery:** Do not assume a fixed path. At the start of each session, ask the user where their student data folder is located, or check if a path was provided in the conversation context. Common locations include the user's Desktop, Documents/Teaching, or a mounted folder.
 
-**Output**:
-- Class comparison reports: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/Reports/Class_Comparisons/`
-- Admin summary reports: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/Reports/Admin_Reports/`
+**Expected inputs:**
+- NWEA Master Tracker (`.xlsx`)
+- Student Data Table / roster (`.xlsx`)
+
+**Expected outputs (saved to the same student data folder):**
+- Class comparison reports saved to `Reports/Class_Comparisons/` subfolder
+- Admin summary reports saved to `Reports/Admin_Reports/` subfolder
 
 ## Dependencies
 

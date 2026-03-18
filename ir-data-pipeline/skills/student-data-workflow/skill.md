@@ -462,16 +462,11 @@ This is the master workflow guide that orchestrates all student data analysis sk
 
 ### Recommended Directory Structure
 ```
-Student Data 2025-2026/
-├── Raw_Data/
-│   ├── NWEA/
-│   │   ├── AP1/ (class CSV files)
-│   │   ├── AP2/
-│   │   └── AP3/
-│   └── FAST/
-│       ├── PM1/
-│       ├── PM2/
-│       └── PM3/
+Student Data Folder (user-provided location)/
+├── AP1/ (class CSV files)
+├── AP2/
+├── AP3/
+├── FAST_PM_Files/ (or PM1/, PM2/, PM3/ subfolders)
 ├── Master_Trackers/
 │   ├── NWEA_Master_Tracker_2025-2026.xlsx
 │   ├── FAST_Master_Tracker_2025-2026.xlsx
@@ -483,12 +478,12 @@ Student Data 2025-2026/
 │   ├── Category_Analysis/
 │   ├── Class_Comparisons/
 │   ├── Benchmark_Analysis/
-│   └── Visualizations/
-└── Grouping/
-    ├── Period_01/
-    ├── Period_02/
-    └── [etc.]
+│   ├── Visualizations/
+│   └── Grouping/
+└── Student Data Table/ (or individual roster files)
 ```
+
+**Important**: At the start of each session, ask the user for the path to their student data folder. All files will be saved relative to this location.
 
 ---
 

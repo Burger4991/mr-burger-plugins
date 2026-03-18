@@ -626,16 +626,18 @@ Student has RIT 222 but only 40% FAST mastery on reading informational. This sug
 - **Station B**: Collaborative (Group 2 - guided practice)
 - **Station C**: Independent/Extension (Group 1 - mastery)
 
-## File Paths Reference
+## File Locations
 
-**Input**:
-- NWEA Master Tracker: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/NWEA_Master_Tracker_2025-2026.xlsx`
-- FAST PM Data: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/AP1 PM1 scores 2025.xlsx`
-- Student Data Table: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/Student Data Table ELA-2.xlsx`
+> **Path Discovery:** Do not assume a fixed path. At the start of each session, ask the user where their student data folder is located, or check if a path was provided in the conversation context. Common locations include the user's Desktop, Documents/Teaching, or a mounted folder.
 
-**Output**:
-- Grouping rosters: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/Reports/Grouping/`
-- Intervention plans: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/Reports/Intervention/`
+**Expected inputs:**
+- NWEA Master Tracker (`.xlsx`)
+- FAST PM score files (`.xlsx`)
+- Student Data Table / roster (`.xlsx`)
+
+**Expected outputs (saved to the same student data folder):**
+- Grouping rosters saved to `Reports/Grouping/` subfolder
+- Intervention plans saved to `Reports/Intervention/` subfolder
 
 ## Dependencies
 

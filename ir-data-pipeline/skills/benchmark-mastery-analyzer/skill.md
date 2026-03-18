@@ -396,14 +396,16 @@ Rotate focus benchmarks every 2 weeks while spiraling previously taught benchmar
 - **Day 5**: Spiral previous benchmarks with new texts
 - **Day 6**: Formative assessment of target benchmark
 
-## File Paths Reference
+## File Locations
 
-**Input**:
-- FAST PM data: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/AP1 PM1 scores 2025.xlsx`
-- NWEA Master Tracker: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/NWEA_Master_Tracker_2025-2026.xlsx`
+> **Path Discovery:** Do not assume a fixed path. At the start of each session, ask the user where their student data folder is located, or check if a path was provided in the conversation context. Common locations include the user's Desktop, Documents/Teaching, or a mounted folder.
 
-**Output**:
-- Benchmark reports: `/Users/alexanderburger/Desktop/2025-2026/Student Data 2025-2026/Reports/Benchmark_Analysis/`
+**Expected inputs:**
+- FAST PM score files (`.xlsx`)
+- NWEA Master Tracker (`.xlsx`)
+
+**Expected outputs (saved to the same student data folder):**
+- Benchmark reports saved to `Reports/Benchmark_Analysis/` subfolder
 
 ## Dependencies
 
