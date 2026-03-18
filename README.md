@@ -16,9 +16,6 @@ Day-to-day classroom logistics. 6 skills for behavior tracking, parent contact l
 ### mr-burger-workflow
 Personal productivity and second brain system. 5 skills for task capture, Notion sync, work logging, area context, and plugin coordination. 6 slash commands for daily briefings, weekly planning, reviews, status checks, capture, and cross-plugin sync.
 
-### ui-ux-pro-max
-UI/UX design intelligence with 67 styles, 96 palettes, 57 font pairings, and 13 tech stacks. Used for building interactive lesson websites and visual artifacts.
-
 ## Architecture
 
 ```
@@ -35,8 +32,6 @@ mr-burger-plugins/              <- Single source of truth
     skills/
     commands/
     hooks/
-  ui-ux-pro-max/
-    skills/
   packages/                     <- Built .plugin + .zip files for Cowork
   scripts/
     setup.sh                    <- Symlinks everything into Claude Code
