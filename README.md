@@ -58,7 +58,13 @@ This creates symlinks from `~/.claude/skills/` and `~/.claude/agents/` to this r
 
 ### Claude Code (marketplace method)
 
-Add to `~/.claude/plugins/known_marketplaces.json`:
+Register the marketplace (one-time setup):
+
+```bash
+claude marketplace add mr-burger-plugins --source directory --path ~/Documents/Tech/mr-burger-plugins
+```
+
+Or manually add to `~/.claude/plugins/known_marketplaces.json`:
 
 ```json
 {
@@ -66,23 +72,37 @@ Add to `~/.claude/plugins/known_marketplaces.json`:
     "source": {
       "source": "directory",
       "path": "~/Documents/Tech/mr-burger-plugins"
-    }
+    },
+    "autoUpdate": true
   }
 }
 ```
 
+Then install individual plugins:
+
+```bash
+claude plugin install ir-teaching
+claude plugin install ir-data-pipeline
+claude plugin install ir-classroom-ops
+claude plugin install mr-burger-workflow
+```
+
 ### Cowork
+
+Build the `.plugin` packages:
 
 ```bash
 cd ~/Documents/Tech/mr-burger-plugins
-./scripts/package.sh           # Build .plugin files
+./scripts/package.sh
 ```
 
-Then install the `.plugin` files through the Cowork plugin manager, or run:
+Then install through the Cowork plugin manager:
 
-```bash
-./packages/install-plugins.sh
-```
+1. Open Cowork settings → Plugins
+2. Click "Install from file"
+3. Select each `.plugin` file from `packages/`
+
+Available packages: `ir-teaching.plugin`, `ir-data-pipeline.plugin`, `ir-classroom-ops.plugin`, `mr-burger-workflow.plugin`
 
 ## Development workflow
 
