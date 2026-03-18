@@ -94,7 +94,7 @@ link_agents() {
   done
 }
 
-for plugin in ir-teaching ir-data-pipeline ir-classroom-ops mr-burger-workflow; do
+for plugin in ir-teaching ir-data-pipeline ir-classroom-ops mr-burger-workflow superpowers; do
   link_skills "$plugin"
   link_agents "$plugin"
 done

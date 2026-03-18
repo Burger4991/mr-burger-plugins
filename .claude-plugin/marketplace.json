@@ -35,6 +35,13 @@
       "source": "./mr-burger-workflow",
       "category": "productivity",
       "version": "1.2.0"
+    },
+    {
+      "name": "superpowers",
+      "description": "Agentic workflow discipline — brainstorming, planning, verification, parallel dispatch, and quality-driven execution. From obra/superpowers.",
+      "source": "./superpowers",
+      "category": "development",
+      "version": "5.0.5"
     }
   ]
 }

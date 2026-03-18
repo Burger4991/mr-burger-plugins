@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Superpowers skills loaded. Use /brainstorm, /write-plan, or /execute-plan to get started.'",
+            "async": false
+          }
+        ]
+      }
+    ]
+  }
+}

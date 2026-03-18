@@ -20,7 +20,7 @@ ALL_PLUGINS=(
   "ir-classroom-ops"
   "ir-data-pipeline"
   "mr-burger-workflow"
-  # "ui-ux-pro-max" — removed
+  "superpowers"
 )
 
 if [ $# -gt 0 ]; then
