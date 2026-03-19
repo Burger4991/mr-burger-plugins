@@ -7,193 +7,242 @@ description: File naming conventions, version control, and archive procedures fo
 
 ## Naming Conventions
 
-### Standard Format
-`[UnitName]_[Days]_[Type]_YYYYMMDD.extension`
+### Unit Folder Names
+
+Format: `[TextName]-[Benchmark]`
+
+Use the text's short name and the benchmark topic, joined by a hyphen.
+
+**Examples:**
+```
+Necklace-Theme
+Daedalus-LiteraryElements
+ObamaEducation-PurposePerspective
+NixonCheckers-Rhetoric
+SchoolStartTimes-Argument
+Orpheus-FigurativeLanguage
+AliCogia-LiteraryElements
+```
+
+**Rules:**
+- No spaces in folder names — use PascalCase for multi-word names
+- Benchmark topic should match the standard terminology (Theme, LiteraryElements, FigurativeLanguage, CentralIdea, TextStructure, PurposePerspective, Argument, Rhetoric, Poetry)
+- If a text is reused for a different benchmark, create a separate folder
+
+### File Names
+
+Format: `[TextName]-[Type]-[MMDDYY]-v[#].[ext]`
 
 **Components:**
-- **UnitName**: Short descriptor, no spaces (use camelCase or underscores)
-- **Days**: Day range covered (D1-6, D1-2, D3-4, D5-6, or single day D1)
-- **Type**: Deliverable type (see below)
-- **YYYYMMDD**: Date created (year-month-day for proper sorting)
-- **extension**: .md, .pptx, .pdf, etc.
+- **TextName**: Short descriptor matching the folder name (e.g., `AliCogia`, `Necklace`)
+- **Type**: Deliverable type (see codes below)
+- **MMDDYY**: Date created (month-day-year, 6 digits)
+- **v[#]**: Version number starting at v1, incremented on each revision
+- **ext**: File extension (.md, .docx, .pptx, .html, .pdf)
 
 ### Deliverable Type Codes
 
-- **TeacherPlan** - Complete lesson plans
-- **StudentPacket** - Student activity packet
-- **AnswerKey** - Answer key with exemplars
-- **Slides** - PowerPoint slide deck
-- **ExitTicket** - Daily exit tickets (specify day: D1, D2, etc.)
-- **CoverPage** - Unit overview cover page
-- **Assessment** - Mini-assessment (for end-of-unit)
-- **Rubric** - Scoring rubric or checklist
+- **LessonPlan** — Complete teacher lesson plan
+- **StudentPacket** — Student activity packet
+- **AnswerKey** — Answer key with exemplars
+- **Slides** — PowerPoint slide deck
+- **InteractiveLesson** — HTML interactive lesson for Promethean board
+- **ExitTickets** — Exit ticket set
+- **CoverPage** — Unit overview cover page
+- **Assessment** — Mini-assessment or end-of-unit test
+- **FeedbackForm** — Student feedback form
+- **BenchmarkLesson** — Standalone benchmark lesson HTML
+- **AnchorCharts** — Visual reference materials
+- **TestPrep-StudentPacket** — 4-day test prep student packet
+- **TestPrep-TeacherPlan** — 4-day test prep teacher plan
+- **TestPrep-AnswerKey** — 4-day test prep answer key
+- **SubPlan** — Substitute teacher plan
 
 ### Examples
 
-**Full Units:**
+**Core unit deliverables:**
 ```
-ThemeAnalysis_D1-6_TeacherPlan_20250104.md
-ThemeAnalysis_D1-6_StudentPacket_20250104.md
-ThemeAnalysis_D1-6_AnswerKey_20250104.md
-ThemeAnalysis_D1-6_Slides_20250104.pptx
-```
-
-**Partial/Daily Materials:**
-```
-ThemeAnalysis_D1_ExitTicket_20250104.md
-ThemeAnalysis_D3-4_Organizer_20250104.md
-ThemeAnalysis_D5-6_Assessment_20250104.md
+AliCogia-LessonPlan-030826-v1.docx
+AliCogia-StudentPacket-030826-v1.docx
+AliCogia-AnswerKey-030826-v1.docx
+AliCogia-Slides-030826-v1.pptx
+AliCogia-InteractiveLesson-030826-v1.html
+AliCogia-ExitTickets-030826-v1.docx
+AliCogia-CoverPage-030826-v1.docx
+AliCogia-FeedbackForm-030826-v1.docx
 ```
 
-**Special Materials:**
+**Revised versions:**
 ```
-ThemeAnalysis_VocabList_20250104.md
-ThemeAnalysis_BenchmarkCard_Reference.pdf
-ThemeAnalysis_DistrictText_Original.pdf
+AliCogia-StudentPacket-030826-v2.docx    ← revised after Day 2 feedback
+AliCogia-InteractiveLesson-030926-v3.html ← third iteration
+```
+
+**Test prep materials:**
+```
+AliCogia-TestPrep-StudentPacket-031526-v1.md
+AliCogia-TestPrep-TeacherPlan-031526-v1.md
+AliCogia-TestPrep-AnswerKey-031526-v1.md
+```
+
+**Sub plans:**
+```
+BlueJeans-SubPlan-D3-011026-v1.md
+BlueJeans-SubPlan-D3D4-011026-v1.md
 ```
 
 ## Folder Structure
 
-### Recommended Organization
+### Unit Folder Layout (Flat)
+
+All deliverables live directly in the unit folder. Only district source files and archived versions go in subfolders.
 
 ```
 Teaching/
 ├── Units/
-│   ├── Theme_StoryOfAnHour/
-│   │   ├── 01-LessonPlans/
-│   │   │   ├── StoryOfAnHour_D1-6_TeacherPlan_20250104.md
-│   │   │   └── _archive/
-│   │   │       └── StoryOfAnHour_D1-6_TeacherPlan_20241215.md
-│   │   ├── 02-StudentPackets/
-│   │   │   ├── StoryOfAnHour_D1-6_StudentPacket_20250104.md
-│   │   │   └── _archive/
-│   │   ├── 03-AnswerKeys/
-│   │   │   └── StoryOfAnHour_D1-6_AnswerKey_20250104.md
-│   │   ├── 04-SlideDecks/
-│   │   │   └── StoryOfAnHour_D1-6_Slides_20250104.pptx
-│   │   ├── 05-District-Files/
-│   │   │   ├── original_text.pdf
-│   │   │   └── district_organizer.pdf
+│   ├── AliCogia-LiteraryElements/
+│   │   ├── AliCogia-LessonPlan-030826-v1.docx
+│   │   ├── AliCogia-StudentPacket-030826-v1.docx
+│   │   ├── AliCogia-AnswerKey-030826-v1.docx
+│   │   ├── AliCogia-Slides-030826-v1.pptx
+│   │   ├── AliCogia-InteractiveLesson-030826-v1.html
+│   │   ├── AliCogia-ExitTickets-030826-v1.docx
+│   │   ├── AliCogia-CoverPage-030826-v1.docx
+│   │   ├── AliCogia-FeedbackForm-030826-v1.docx
+│   │   ├── AliCogia-TestPrep-StudentPacket-031526-v1.md
+│   │   ├── AliCogia-TestPrep-TeacherPlan-031526-v1.md
+│   │   ├── AliCogia-TestPrep-AnswerKey-031526-v1.md
+│   │   ├── _district/
+│   │   │   └── Ali_Cogia-student_copy.pdf
+│   │   ├── _archive/
+│   │   │   └── AliCogia-StudentPacket-030826-v1.docx
 │   │   └── _ChangeLog.txt
 │   │
-│   ├── CentralIdea_SpeechAnalysis/
-│   │   └── [same structure]
+│   ├── Necklace-Theme/
+│   │   └── [same flat structure]
 │   │
-│   └── Argument_DebateTexts/
-│       └── [same structure]
+│   ├── _Archive_PreReorganization/
+│   │   └── [old units from before this system]
+│   │
+│   └── _Assessments/
+│       └── [standalone assessments not tied to a specific unit]
 │
+├── Student-Data/
+│   └── 2025-2026/
 ├── Resources/
-│   ├── Standards/
-│   ├── BenchmarkCards/
-│   └── KnowledgeBase/
-│
-└── _ToOrganize/
-    └── [temporary holding area for new materials]
+├── Curriculum-Guides/
+├── Programs/
+└── Professional/
 ```
 
-### Folder Purposes
+### Subfolder Purposes
 
-- **01-LessonPlans** - All teacher-facing lesson plan documents
-- **02-StudentPackets** - All student-facing packets and worksheets
-- **03-AnswerKeys** - Answer keys, exemplars, rubrics
-- **04-SlideDecks** - PowerPoint/Google Slides presentations
-- **05-District-Files** - Original materials from district (read-only reference)
-- **_archive/** - Old versions of files (one archive folder per deliverable type)
-- **_ChangeLog.txt** - Record of all updates to unit
+- **`_district/`** — Original materials from the district (PDFs, teacher copies). Read-only reference. Never edit these.
+- **`_archive/`** — Old versions of files after revision. Only keep the 2 most recent old versions.
+- **`_ChangeLog.txt`** — Record of all updates to the unit (see format below).
+
+### Top-Level Teaching Folders
+
+| Folder | Purpose |
+|--------|---------|
+| `Units/` | All IR units (current and working) |
+| `Student-Data/` | FAST, PM, NWEA data organized by school year |
+| `Resources/` | Shared teaching resources (anchor charts, strategy references) |
+| `Curriculum-Guides/` | District curriculum documents |
+| `Programs/` | Program-specific materials |
+| `Professional/` | PD, observations, professional docs |
+| `Data-Archive/` | Historical data archives |
 
 ## Version Control
 
 ### Creating New Versions
 
-When updating any deliverable:
+When revising any deliverable:
 
-1. **Create new file** with today's date
-2. **Keep old file** - don't delete
-3. **Move old file to _archive/** subfolder
-4. **Update _ChangeLog.txt** with what changed
+1. **Increment the version number** in the filename (v1 → v2)
+2. **Move the old version** to `_archive/`
+3. **Update `_ChangeLog.txt`** with what changed and why
 
 **Example:**
 ```
-# Starting point
-StoryOfAnHour_D1-6_StudentPacket_20250104.md
+# Original
+AliCogia-StudentPacket-030826-v1.docx
 
-# After making edits on Jan 10
-StoryOfAnHour_D1-6_StudentPacket_20250110.md  ← new version
-_archive/StoryOfAnHour_D1-6_StudentPacket_20250104.md  ← archived
+# After revision
+AliCogia-StudentPacket-030826-v2.docx            ← current version
+_archive/AliCogia-StudentPacket-030826-v1.docx    ← archived
+```
+
+**If revising on a different date** (e.g., making changes a week later), use the new date:
+```
+AliCogia-StudentPacket-031526-v1.docx             ← fresh version with new date
+_archive/AliCogia-StudentPacket-030826-v2.docx    ← archived
 ```
 
 ### Change Log Format
 
-**File:** `_ChangeLog.txt` in root of unit folder
+**File:** `_ChangeLog.txt` in the root of each unit folder.
 
-**Format:**
 ```
 [Unit Name] - Change Log
 
-=== 2025-01-10 ===
-UPDATED: Student Packet
+=== 03-15-26 ===
+UPDATED: Student Packet (v1 → v2)
 Changes:
 - Added 5th row to theme organizer (You Do independent)
 - Expanded vocabulary practice with sentence writing
 
 Files affected:
-✓ StoryOfAnHour_D1-6_StudentPacket_20250110.md (NEW)
-✓ StoryOfAnHour_D1-6_TeacherPlan_20250110.md (UPDATED - Day 4 procedures)
-✓ StoryOfAnHour_D1-6_AnswerKey_20250110.md (UPDATED - added exemplar for row 5)
-○ StoryOfAnHour_D1-6_Slides_20250104.pptx (NO CHANGE)
+✓ AliCogia-StudentPacket-030826-v2.docx (NEW VERSION)
+✓ AliCogia-LessonPlan-030826-v2.docx (UPDATED - Day 4 procedures)
+✓ AliCogia-AnswerKey-030826-v2.docx (UPDATED - added exemplar for row 5)
+○ AliCogia-Slides-030826-v1.pptx (NO CHANGE)
 ○ District files (NO CHANGE)
 
-=== 2025-01-04 ===
+=== 03-08-26 ===
 CREATED: Initial unit build
 Files created:
-- Teacher Plan (6 days)
+- Lesson Plan (6 days)
 - Student Packet (6 days)
 - Answer Key with exemplars
-- Slide deck (Days 1-5)
+- Slide deck (Days 1-6)
+- Interactive Lesson (HTML)
 - Exit tickets (Days 1-6)
 - Cover page
+- Feedback form
 
-Benchmark: ELA.10.R.1.2 - Theme
-Text: "The Story of an Hour" by Kate Chopin
+Benchmark: ELA.10.R.1.1 - Literary Elements
+Text: "Ali Cogia" (adapted myth)
 ```
 
 ### Archive Management
 
-**When to archive:**
-- After creating updated version of existing file
-- At end of school year (archive entire unit folder)
-- When major revisions are made (keep old version as reference)
-
-**Archive folder rules:**
-- One `_archive/` folder per deliverable type subfolder
-- Keep only the 2 most recent old versions (delete older)
-- If file hasn't changed in 1+ years, consider deleting
-
-**Example archive:**
-```
-02-StudentPackets/
-├── StoryOfAnHour_D1-6_StudentPacket_20250110.md  ← CURRENT
-└── _archive/
-    ├── StoryOfAnHour_D1-6_StudentPacket_20250104.md  ← keep (most recent old)
-    └── StoryOfAnHour_D1-6_StudentPacket_20241220.md  ← keep (2nd most recent)
-    [DELETE older versions unless needed for reference]
-```
+**Archive rules:**
+- Keep only the **2 most recent old versions** in `_archive/`
+- Delete older versions unless they represent a fundamentally different approach
+- At end of school year, consider archiving entire unit folders to `_Archive_PreReorganization/`
 
 ## File Format Standards
 
-### Editable Formats (Preferred)
-- **Teaching documents:** .md (Markdown format)
-- **PowerPoint slides:** .pptx (NOT .ppt or .pdf)
-- **Excel trackers:** .xlsx (NOT .xls)
+### Preferred Formats
 
-### Read-Only Formats
-- **District materials:** Keep as received (often .pdf)
-- **Final published versions:** Export to .pdf after completing edits
+| Material | Format | Notes |
+|----------|--------|-------|
+| Lesson plans | .docx | Primary delivery format |
+| Student packets | .docx | For printing and distribution |
+| Answer keys | .docx | Matches student packet format |
+| Slides | .pptx | Never .ppt or .pdf |
+| Interactive lessons | .html | Self-contained, single file |
+| Test prep materials | .md | Markdown for quick iteration |
+| Sub plans | .md | Markdown for quick creation |
+| District originals | .pdf | Keep as received, never edit |
 
-### Avoid
-- **Google Docs links** - Download as .md instead
-- **Pages/Keynote** - Export to .md/.pptx for compatibility
-- **Scanned images** - Convert to editable text when possible
+### Format Notes
+
+- **.docx is the standard** for final print-ready deliverables (student packets, lesson plans, answer keys)
+- **.md is for drafts and quick-turnaround materials** (test prep, sub plans, working documents)
+- **.html is for interactive content** (Promethean board lessons, anchor charts)
+- **.gdoc files** may appear as Google Doc download artifacts — these are not primary deliverables
 
 ## Syncing and Alignment
 
@@ -201,53 +250,44 @@ Text: "The Story of an Hour" by Kate Chopin
 
 If you update ONE deliverable, check if others need updates:
 
-**Student Packet updated** → Check:
-- Lesson Plan (Independent rotation procedures)
-- Answer Key (new questions/tasks need answers)
-- Slides (student tasks shown on slides?)
+**Student Packet updated →** Check: Lesson Plan (procedures), Answer Key (new questions need answers), Slides (student tasks shown on slides)
 
-**Lesson Plan updated** → Check:
-- Student Packet (activities match what lesson plan says?)
-- Answer Key (teacher script examples need answers?)
+**Lesson Plan updated →** Check: Student Packet (activities match what lesson plan says), Answer Key (teacher script examples)
 
-**Organizer structure changed** → Update:
-- Lesson Plan (I Do/We Do/You Do scripts)
-- Student Packet (organizer with scaffolds)
-- Answer Key (completed exemplar organizer)
-- Slides (organizer structure shown)
+**Organizer structure changed →** Update ALL: Lesson Plan (I Do/We Do/You Do scripts), Student Packet (organizer with scaffolds), Answer Key (completed exemplar organizer), Slides (organizer structure shown)
 
-### Manual Synchronization Verification
+### Verification After Updates
 
-After making updates, manually verify alignment across deliverables:
-1. Check that vocabulary, organizer content, and examples match across lesson plan (.md), student packet (.md), and slides (.pptx)
-2. Ensure all files have consistent dates (same day or same update date)
-3. Review lesson plan procedures to confirm they match student packet activities
-4. Verify answer keys reflect any changes made to student organizers or questions
+After making updates, verify alignment:
+1. Vocabulary, organizer content, and examples match across lesson plan, student packet, and slides
+2. All updated files share the same version number or update date
+3. Lesson plan procedures match student packet activities
+4. Answer keys reflect any changes to student organizers or questions
 
 ## Sharing and Printing
 
 ### For Printing
-- **Student packets:** Print 1 per student, stapled
-- **Lesson plans:** Print or keep digital on teaching laptop
-- **Answer keys:** Print 1 for teacher reference
-- **Slides:** Present digitally, don't print
+- Student packets: Print 1 per student, stapled
+- Lesson plans: Keep digital on teaching laptop
+- Answer keys: Print 1 for teacher reference
+- Slides/interactive lessons: Present digitally, don't print
 
 ### For Sharing (with other teachers)
-- Share entire unit folder (zip file)
-- Include `_ChangeLog.txt` so they know version history
-- Include district files in `05-District-Files/` for reference
-- Don't share individual files without context
+- Share the entire unit folder (zip file)
+- Include `_ChangeLog.txt` for version context
+- Include `_district/` files for reference
+- Don't share `_archive/` contents
 
 ### For Submission (to admin/district)
-- Create .pdf versions of final deliverables
-- Name: `[UnitName]_[Type]_FINAL_YYYYMMDD.pdf`
-- Don't share archived versions or change log
+- Export final versions to .pdf if requested
+- Name: `[TextName]-[Type]-FINAL.[pdf]`
+- Don't share archived versions or change logs
 
 ## Critical Rules
 
-1. **NEVER delete old versions** without moving to archive first
-2. **ALWAYS update _ChangeLog.txt** when making changes
-3. **ALWAYS create dated versions** (never overwrite existing files)
-4. **ALWAYS verify alignment** before reporting "complete"
-5. **NEVER rename files** after creation (breaks file tracking)
-6. **ALWAYS use consistent naming** (follow format exactly)
+1. **NEVER delete files** without moving to `_archive/` first
+2. **ALWAYS update `_ChangeLog.txt`** when making changes
+3. **ALWAYS increment version numbers** when revising (never overwrite)
+4. **ALWAYS verify alignment** across deliverables before reporting "complete"
+5. **ALWAYS keep district originals untouched** in `_district/`
+6. **ONE flat folder per unit** — no nested subfolders except `_district/` and `_archive/`

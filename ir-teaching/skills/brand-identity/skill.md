@@ -55,15 +55,38 @@ BORDERS
 
 **Rule:** Every gray shade has a distinct purpose. Never use a shade for two different meanings. Never introduce a new gray — if a component needs visual distinction, use borders or typography weight, not a new fill color.
 
-### Digital Materials (Slides, Projected Content)
+### Digital Materials (Slides, Projected Content, Interactive Lessons)
 
-Slides and projected content may use **one accent color** in addition to the grayscale palette. This accent is used sparingly — timer tags, day numbers, and key callouts only.
+Digital materials use one of **two selectable color themes** in addition to the grayscale base. Choose a theme at the start of each unit or presentation. Both themes share the same usage rules — only the colors differ.
 
 ```
-ACCENT COLOR (slides only)
-  Primary accent:     #2B5797 (navy blue — serious, readable on projector)
-  Accent use:         Day numbers on separator slides, timer icons, key callouts
-  Never use for:      Body text, backgrounds, borders, or anything students need to read on paper
+=====================================================
+  THEME A: "SCHOOL SPIRIT" — Navy + Red
+=====================================================
+
+  Primary accent:     #1B3A5C (deep navy — headers, day numbers, key callouts)
+  Secondary accent:   #B22234 (strong red — highlights, important tags, timer icons)
+  Light tint:         #E8EDF3 (navy tint — subtle background panels, callout boxes)
+  Text on accent:     #FFFFFF (white text on navy/red backgrounds)
+
+  WHEN TO USE
+    Navy:  Day number badges, slide titles, section dividers, primary callouts
+    Red:   Timer tags, "important" flags, key vocabulary highlights, action prompts
+    Tint:  Slide background panels for callout boxes, sentence frame backgrounds
+
+=====================================================
+  THEME B: "ED-TECH MODERN" — Muted Periwinkle
+=====================================================
+
+  Primary accent:     #6272A4 (muted periwinkle — headers, day numbers, key callouts)
+  Secondary accent:   #8B7EC8 (soft lavender — highlights, important tags, timer icons)
+  Light tint:         #EEEDF5 (lavender tint — subtle background panels, callout boxes)
+  Text on accent:     #FFFFFF (white text on periwinkle/lavender backgrounds)
+
+  WHEN TO USE
+    Periwinkle: Day number badges, slide titles, section dividers, primary callouts
+    Lavender:   Timer tags, "important" flags, key vocabulary highlights, action prompts
+    Tint:       Slide background panels for callout boxes, sentence frame backgrounds
 ```
 
 ### Color Rules
@@ -71,7 +94,9 @@ ACCENT COLOR (slides only)
 1. **No colored text** in any printed material — black only. Use bold, italic, or shading for emphasis.
 2. **No color-dependent meaning** — every shaded element must also have a text label (e.g., "I DO" label + gray fill, never just gray fill alone).
 3. **Maximum 2 fill shades per page** in print materials (the day header gray + one component gray).
-4. **Accent color appears only on slides** — never in .md files.
+4. **Accent colors appear only in digital materials** — never in printed .md or .docx files intended for grayscale output.
+5. **One theme per unit/presentation** — do not mix School Spirit and Ed-Tech Modern within a single deliverable.
+6. **Secondary accent is used sparingly** — max 2-3 instances per slide. The primary accent does the heavy lifting.
 
 ---
 
@@ -79,11 +104,21 @@ ACCENT COLOR (slides only)
 
 ### Font Family
 
-**Arial** is the only font used across all deliverables. No exceptions.
+**Source Sans 3** is the primary font across all deliverables. **Arial** is the universal fallback.
 
-- Arial is universally installed on all systems (Windows, Mac, Chromebook, Google Docs)
-- Arial renders cleanly at small sizes and on projectors
-- Arial has a complete weight family (Regular, Bold, Italic, Bold Italic)
+- Source Sans 3 (formerly Source Sans Pro) is Adobe's open-source sans-serif, free via Google Fonts
+- Excellent readability at all sizes — designed specifically for user interfaces and long-form reading
+- Complete weight range: ExtraLight, Light, Regular, SemiBold, Bold, Black (plus matching italics)
+- Slightly warmer and more refined than Arial while remaining fully professional
+- Arial is used as fallback when Source Sans 3 is unavailable (e.g., some Chromebook default apps, older systems)
+
+**Font stack:** `'Source Sans 3', Arial, sans-serif`
+
+**When generating .pptx slides:** Use Source Sans 3 if available on the system; otherwise default to Arial. Slides should be designed so they look correct with either font.
+
+**When generating .md files:** Specify Source Sans 3 in any CSS/styling metadata. Content will render in the reader's default sans-serif if Source Sans 3 isn't installed.
+
+**When generating .docx files:** Use Source Sans 3 if the template supports it; otherwise use Arial. Both are acceptable for teacher-facing materials.
 
 **Never use:** Times New Roman, Calibri, Comic Sans, Helvetica, Poppins, Lora, or any decorative/serif font.
 
@@ -91,23 +126,23 @@ ACCENT COLOR (slides only)
 
 ```
 STUDENT-FACING MATERIALS (Packets, Exit Tickets, Assessments)
-  Level 1 — Day Header:      Arial Bold, 16pt
-  Level 2 — Section Label:   Arial Bold, 14pt, ALL CAPS
-  Level 3 — Body/Directions: Arial Regular, 12pt
-  Level 4 — Table Text:      Arial Regular, 11pt
-  Level 5 — Timer/Tag/Footer: Arial Italic, 10pt
+  Level 1 — Day Header:      Source Sans 3 Bold, 16pt
+  Level 2 — Section Label:   Source Sans 3 Bold, 14pt, ALL CAPS
+  Level 3 — Body/Directions: Source Sans 3 Regular, 12pt
+  Level 4 — Table Text:      Source Sans 3 Regular, 11pt
+  Level 5 — Timer/Tag/Footer: Source Sans 3 Italic, 10pt
 
 TEACHER-FACING MATERIALS (Lesson Plans, Answer Keys)
-  Level 1 — Day Header:      Arial Bold, 14pt (or Calibri Bold 14pt)
-  Level 2 — Section Label:   Arial Bold, 12pt
-  Level 3 — Body Text:       Arial Regular, 11pt (or Calibri 11pt)
-  Level 4 — Notes/Asides:    Arial Italic, 10pt
+  Level 1 — Day Header:      Source Sans 3 Bold, 14pt
+  Level 2 — Section Label:   Source Sans 3 Bold, 12pt
+  Level 3 — Body Text:       Source Sans 3 Regular, 11pt
+  Level 4 — Notes/Asides:    Source Sans 3 Italic, 10pt
 
 SLIDES (Projected)
-  Level 1 — Slide Title:     Arial Bold, 32pt+
-  Level 2 — Section Label:   Arial Bold, 24pt
-  Level 3 — Body Text:       Arial Regular, 20pt+
-  Level 4 — Caption/Timer:   Arial Italic, 16pt
+  Level 1 — Slide Title:     Source Sans 3 Bold, 32pt+
+  Level 2 — Section Label:   Source Sans 3 Bold, 24pt
+  Level 3 — Body Text:       Source Sans 3 Regular, 20pt+
+  Level 4 — Caption/Timer:   Source Sans 3 Italic, 16pt
 ```
 
 ### Typography Rules
@@ -118,6 +153,7 @@ SLIDES (Projected)
 4. **ALL CAPS is for section labels only** ("BELLRINGER", "TEACHER-LED", "INDEPENDENT"). Never ALL CAPS body text.
 5. **Underline is reserved for vocabulary target words** in bellringer sentences. Never underline for emphasis.
 6. **Maximum 75 characters per line** for readability. If a line runs longer, adjust column width or margins.
+7. **Fallback gracefully** — all designs must remain clean and readable if Arial renders instead of Source Sans 3.
 
 ---
 
@@ -127,7 +163,7 @@ Consistent spacing is what separates a professional document from a word process
 
 ```
 PAGE LAYOUT
-  Paper size:         US Letter (8.5" × 11")
+  Paper size:         US Letter (8.5" x 11")
   Margins:            1.0" all sides (minimum 0.75" if content is tight)
   Content width:      6.5" (at 1" margins)
 
@@ -137,7 +173,7 @@ LINE SPACING
   Slide body text:    1.5
 
 PARAGRAPH SPACING
-  Between sections (BR → TL → IND):  18pt minimum
+  Between sections (BR -> TL -> IND):  18pt minimum
   Between items within a section:     6pt
   After a section header:             6pt
   Before a section header:            12pt
@@ -162,9 +198,9 @@ Every unit uses the same reusable components. These are defined in `teaching-tem
 
 | # | Component | Used In | Brand Requirements |
 |---|-----------|---------|-------------------|
-| 1 | Day Header Block | Every day page | #E6E6E6 fill, 1pt border, 16pt bold day number, 12pt benchmark line, name/date/period fields |
-| 2 | Section Separator | Between BR/TL/IND | 1.5pt rule above, 14pt ALL CAPS bold label, 10pt italic timer right-aligned |
-| 3 | Bellringer Block | Every day | 3 items, consistent MC formatting, bold target words, ¶ references |
+| 1 | Day Header Block | Every day page | #E6E6E6 fill, 1pt border, Source Sans 3 Bold 16pt day number, 12pt benchmark line, name/date/period fields |
+| 2 | Section Separator | Between BR/TL/IND | 1.5pt rule above, Source Sans 3 Bold 14pt ALL CAPS label, Source Sans 3 Italic 10pt timer right-aligned |
+| 3 | Bellringer Block | Every day | 3 items, consistent MC formatting, bold target words, paragraph references |
 | 4 | Graphic Organizer Table | Days 3-4 TL/IND | Alternating row shading, row labels, 0.75" min height, 3-col max |
 | 5 | Writing Response Area | Days 3-6 | 1pt border, 0.4" ruled lines, 8+ lines for CR, 3+ for short answer |
 | 6 | Sentence Frame Box | Days 1-4 discussion, Days 3-6 CR | #F2F2F2 fill, 0.5pt border, "Language to..." or CR-step label |
@@ -219,33 +255,46 @@ The Day Header Block serves as the page header. No additional header needed.
 ```
 [Unit Text Title] — Day [#] | [Benchmark Code] | Page [#] of [#]
 ```
-- Arial 10pt, centered
+- Source Sans 3 10pt, centered
 - Consistent on every page
 
 ### Lesson Plan Header (Every Page)
 ```
 [Unit Text Title] — Teacher Lesson Plan | [Benchmark Code]
 ```
-- Calibri or Arial 10pt, left-aligned
+- Source Sans 3 10pt, left-aligned
 
 ### Lesson Plan Footer (Every Page)
 ```
-Mr. Burger | 10th Grade Intensive Reading | Page [#]
+Mr. Burger | 10th Grade IR | Page [#]
 ```
-- 10pt, right-aligned
+- Source Sans 3 10pt, right-aligned
 
 ### Answer Key Header (Every Page)
 ```
 ANSWER KEY — [Unit Text Title] | [Benchmark Code]
 ```
-- Arial Bold 10pt, left-aligned
+- Source Sans 3 Bold 10pt, left-aligned
 - "ANSWER KEY" in bold to distinguish from student packet
 
 ### Slides Footer (Every Slide)
 ```
 [Unit Text Title] — Day [#] | Mr. Burger | 10th Grade IR
 ```
-- Arial 12pt, bottom-left of every slide
+- Source Sans 3 12pt, bottom-left of every slide
+
+---
+
+## Theme Selection Guide
+
+When starting a new unit or presentation, choose your digital theme:
+
+| Theme | Best For | Feel |
+|-------|----------|------|
+| **School Spirit** (Navy + Red) | Parent nights, admin observations, school events, formal presentations | Institutional, polished, school-aligned |
+| **Ed-Tech Modern** (Muted Periwinkle) | Daily classroom slides, interactive lessons, student-facing digital content | Calm, modern, easy on the eyes |
+
+**How to specify:** When requesting slides, interactive lessons, or other digital materials, state the theme at the start: "Use School Spirit theme" or "Use Ed-Tech Modern theme." If no theme is specified, default to **Ed-Tech Modern** for daily classroom use.
 
 ---
 
@@ -309,7 +358,7 @@ If any answer is "no," add visual landmarks or improve section separation.
 ### Lesson Plan (.md)
 - Teacher-facing typography scale (clear hierarchy)
 - Clean section breaks between days
-- Arial-equivalent formatting
+- Source Sans 3 formatting (Arial fallback)
 - Bold key timing and activity names for quick scanning
 - No decorative elements
 - Include Mr. Burger footer metadata
@@ -323,23 +372,31 @@ If any answer is "no," add visual landmarks or improve section separation.
 
 ### Teacher Slides (.pptx)
 - White background, black text
-- Navy accent (#2B5797) for day numbers and key callouts only
-- Arial only — no system theme fonts
+- Choose **one theme** per unit: School Spirit (navy + red) or Ed-Tech Modern (muted periwinkle)
+- Primary accent for day numbers, slide titles, section dividers
+- Secondary accent for timer tags, important flags, action prompts (sparingly)
+- Source Sans 3 preferred, Arial fallback — no system theme fonts
 - No animations, no transitions, no busy backgrounds
 - One slide per activity segment
 - Content matches lesson plan and student packet word-for-word
 - Footer on every slide
 
+### Interactive HTML Lessons
+- Follow the selected digital theme for accent colors
+- Use the light tint for callout/panel backgrounds
+- Source Sans 3 via Google Fonts import (with sans-serif fallback in CSS)
+- Maintain the same visual hierarchy as slides
+
 ### Exit Tickets (.md)
 - Half-page format (2 exit tickets per printed page)
-- Same typography as student packet (Arial-equivalent, same type scale)
+- Same typography as student packet (Source Sans 3, same type scale)
 - Include name/date/period line
 - Bordered box around entire ticket
 - 1-2 questions aligned to daily objective
 - Match student packet visual style
 
 ### Cover Pages (.md)
-- Unit title: Bold, 24pt-equivalent, centered
+- Unit title: Source Sans 3 Bold, 24pt-equivalent, centered
 - Benchmark focus in student-friendly language
 - Days 1-6 label
 - Student name/date/period fields
@@ -353,9 +410,19 @@ If any answer is "no," add visual landmarks or improve section separation.
 
 When generating Markdown (.md) files, these brand values translate to specific formatting parameters. This design system is applied through consistent Markdown formatting and optional CSS styling when the files are converted to PDF or other formats.
 
+**Font loading for HTML/interactive content:**
+```html
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+```
+
+**CSS font stack:**
+```css
+font-family: 'Source Sans 3', Arial, sans-serif;
+```
+
 ---
 
 *This brand identity guide is the single source of truth for all visual design decisions in Mr. Burger's IR materials. When any other skill or agent references "brand guidelines" or "visual standards," they mean THIS document.*
 
-*Last Updated: 2026-03-08*
-*Version: 1.0*
+*Last Updated: 2026-03-18*
+*Version: 2.0*
