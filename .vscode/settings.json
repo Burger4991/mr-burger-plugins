@@ -1,0 +1,15 @@
+{
+    // Settings that only apply when this folder is open in VS Code
+
+    // Default new files to markdown
+    "files.defaultLanguage": "markdown",
+
+    // Soft ruler at 80 chars — keeps skill descriptions from getting too wide
+    "editor.rulers": [80],
+
+    // Don't rewrite TOC headers on save
+    "markdown.extension.toc.updateOnSave": false,
+
+    // Todo Tree scoped to this repo only
+    "todo-tree.general.rootFolder": "${workspaceFolder}"
+}
