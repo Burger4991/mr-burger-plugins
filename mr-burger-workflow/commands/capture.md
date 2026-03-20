@@ -31,7 +31,26 @@ Identify each item and classify it:
 | **Music/Dog/Personal** | Life area note | "Jazz vocabulary practice" |
 | **Unclear** | Can't route confidently | Ask one targeted question |
 
-### Step 2: File what you can
+### Step 2: Surface existing notes first
+
+Before filing anything, check what's already been captured in the relevant areas:
+
+```bash
+cat ~/Documents/Teaching/Resources/ideas.md 2>/dev/null | tail -10
+cat ~/Documents/Career/notes.md 2>/dev/null | tail -10
+# etc. for any area touched by this dump
+```
+
+Show the last 5-10 entries for each relevant area under a heading like:
+```
+📋 Already in Teaching Ideas:
+- 2026-03-15 Unit with current events angle
+- 2026-03-10 Short story sequence with ESOL scaffold
+```
+
+This lets you spot duplicates or related items before adding.
+
+### Step 3: File what you can
 
 **Teaching ideas** → Append to `~/Documents/Teaching/Resources/ideas.md`
 - Create the file if it doesn't exist with a `# Teaching Ideas` header
@@ -51,7 +70,7 @@ Identify each item and classify it:
 
 **Memory-worthy** → Write to the appropriate memory file at `~/.claude/projects/-Users-alexanderburger/memory/` following the memory format (user/feedback/project/reference). Ask before saving.
 
-### Step 3: Surface what needs manual action
+### Step 4: Surface what needs manual action
 
 Tasks and reminders can't be written to iPhone Reminders — output them as a clean list:
 
@@ -64,7 +83,7 @@ Tasks and reminders can't be written to iPhone Reminders — output them as a cl
 
 Keep it copy-paste friendly so it's fast to add.
 
-### Step 4: Confirm
+### Step 5: Confirm
 
 Output a brief summary:
 ```
