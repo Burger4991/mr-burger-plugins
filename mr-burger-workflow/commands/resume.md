@@ -15,17 +15,26 @@ Pick up where you left off. Reads `HANDOFF.md` in the current working directory 
 cat ./HANDOFF.md 2>/dev/null
 ```
 
-2. **If found** — read it and deliver a brief orientation:
+2. **Check active tasks**
+
+```bash
+grep -A 50 "## Active" ~/Documents/TASKS.md 2>/dev/null | grep -B 0 "## Waiting" | grep "^\- \[ \]" | head -5
+```
+
+3. **If HANDOFF.md found** — read it and deliver a brief orientation:
    - What we were working on
    - Where we left off
    - What's next (in order)
    - Any watch-outs to keep in mind
 
-   Keep it short — one paragraph max. The user knows the context; this is just a reset.
+   Then surface active tasks relevant to the current project context (skip unrelated ones).
 
-   End with: "Ready to continue. What would you like to start with?" or jump straight into step 1 of "What's next" if it's unambiguous.
+   Keep it short — one paragraph max. End with: "Ready to continue. What would you like to start with?"
 
-3. **If not found** — say so: "No HANDOFF.md found in [current directory]. Starting fresh." Then ask what they'd like to work on.
+4. **If no HANDOFF.md** — say so: "No HANDOFF.md found in [current directory]. Starting fresh."
+   Still show active tasks if any exist.
+
+5. **If no HANDOFF.md and no tasks** — just ask what they'd like to work on.
 
 ## Notes
 

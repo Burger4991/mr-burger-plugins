@@ -70,18 +70,21 @@ This lets you spot duplicates or related items before adding.
 
 **Memory-worthy** → Write to the appropriate memory file at `~/.claude/projects/-Users-alexanderburger/memory/` following the memory format (user/feedback/project/reference). Ask before saving.
 
-### Step 4: Surface what needs manual action
+### Step 4: Handle tasks
 
-Tasks and reminders can't be written to iPhone Reminders — output them as a clean list:
-
+Write tasks and action items to `~/Documents/TASKS.md` under `## Active`:
 ```
-📱 Add to iPhone Reminders:
 - [ ] Grade PM2 data (by Friday)
-- [ ] Check Olive sit-stay progress
 - [ ] Look into Amplify job posting
 ```
 
-Keep it copy-paste friendly so it's fast to add.
+For time-sensitive tasks, also output a copy-paste list for iPhone Reminders:
+```
+📱 Also add to iPhone Reminders (time-sensitive):
+- Grade PM2 data — by Friday
+```
+
+Only suggest iPhone Reminders for things with deadlines or that need a push notification. Everything else just goes in TASKS.md.
 
 ### Step 5: Confirm
 

@@ -34,9 +34,14 @@ End a session cleanly. Writes `HANDOFF.md` in the current working directory so y
 [Any gotchas, constraints, or things that tripped us up — only if non-obvious]
 ```
 
-3. **Check memory** — ask: did anything happen this session that future-me should know across all conversations? If yes, write it to the appropriate memory file at `~/.claude/projects/-Users-alexanderburger/memory/`. Use judgment — only save what's non-obvious and durable. Skip ephemeral task state.
+3. **Update TASKS.md** — scan the conversation for any tasks, action items, or follow-ups that came up. For each one:
+   - If it's new → append to `~/Documents/TASKS.md` under `## Active` as `- [ ] [task]`
+   - If something was completed → move it to `## Done` with `(completed [date])`
+   - If nothing changed → skip
 
-4. **Confirm** — tell the user: HANDOFF.md is written, memory is updated (or nothing worth saving), safe to `/clear`.
+4. **Check memory** — ask: did anything happen this session that future-me should know across all conversations? If yes, write it to the appropriate memory file at `~/.claude/projects/-Users-alexanderburger/memory/`. Use judgment — only save what's non-obvious and durable. Skip ephemeral task state.
+
+5. **Confirm** — tell the user: HANDOFF.md is written, tasks updated (or no changes), memory updated (or nothing worth saving), safe to `/clear`.
 
 ## Notes
 
