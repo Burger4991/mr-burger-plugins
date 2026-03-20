@@ -18,7 +18,7 @@ cat ./HANDOFF.md 2>/dev/null
 2. **Check active tasks**
 
 ```bash
-grep -A 50 "## Active" ~/Documents/TASKS.md 2>/dev/null | grep -B 0 "## Waiting" | grep "^\- \[ \]" | head -5
+awk '/^## Active/{found=1; next} /^## /{found=0} found && /^\- \[ \]/{print}' ~/Documents/TASKS.md 2>/dev/null | head -5
 ```
 
 3. **If HANDOFF.md found** — read it and deliver a brief orientation:
