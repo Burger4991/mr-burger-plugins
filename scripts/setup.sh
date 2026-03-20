@@ -44,8 +44,9 @@ fi
 # --- Claude Code: symlink skills and agents from all plugins ---
 CLAUDE_SKILLS="$HOME/.claude/skills"
 CLAUDE_AGENTS="$HOME/.claude/agents"
+CLAUDE_COMMANDS="$HOME/.claude/commands"
 
-mkdir -p "$CLAUDE_SKILLS" "$CLAUDE_AGENTS"
+mkdir -p "$CLAUDE_SKILLS" "$CLAUDE_AGENTS" "$CLAUDE_COMMANDS"
 
 link_skills() {
   local plugin="$1"
@@ -94,13 +95,34 @@ link_agents() {
   done
 }
 
+link_commands() {
+  local plugin="$1"
+  local commands_dir="$REPO/$plugin/commands"
+  if [ ! -d "$commands_dir" ]; then return; fi
+  for cmd in "$commands_dir"/*.md; do
+    [ -e "$cmd" ] || continue
+    local name="$(basename "$cmd")"
+    local target="$CLAUDE_COMMANDS/$name"
+    if [ -L "$target" ]; then
+      : # already linked
+    elif [ -e "$target" ]; then
+      echo "[claude-code] SKIP $name — already exists (not a symlink)"
+    else
+      ln -s "$cmd" "$target"
+      echo "[claude-code] Linked command: $name"
+    fi
+  done
+}
+
 for plugin in ir-teaching ir-data-pipeline ir-classroom-ops mr-burger-workflow superpowers; do
   link_skills "$plugin"
   link_agents "$plugin"
+  link_commands "$plugin"
 done
 
 echo "[claude-code] Skills: $(ls "$CLAUDE_SKILLS" | wc -l | tr -d ' ') linked"
 echo "[claude-code] Agents: $(ls "$CLAUDE_AGENTS" | wc -l | tr -d ' ') linked"
+echo "[claude-code] Commands: $(ls "$CLAUDE_COMMANDS" | wc -l | tr -d ' ') linked"
 
 echo ""
 echo "Done. Update Claude Code marketplace path in ~/.claude/settings.json if not already done."
