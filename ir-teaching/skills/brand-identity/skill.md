@@ -64,7 +64,7 @@ Digital materials use one of **two selectable color themes** in addition to the 
   THEME A: "SCHOOL SPIRIT" — Navy + Red
 =====================================================
 
-  Primary accent:     #1B3A5C (deep navy — headers, day numbers, key callouts)
+  Primary accent:     #0c2053ff (deep navy — headers, day numbers, key callouts)
   Secondary accent:   #B22234 (strong red — highlights, important tags, timer icons)
   Light tint:         #E8EDF3 (navy tint — subtle background panels, callout boxes)
   Text on accent:     #FFFFFF (white text on navy/red backgrounds)
@@ -78,9 +78,9 @@ Digital materials use one of **two selectable color themes** in addition to the 
   THEME B: "ED-TECH MODERN" — Muted Periwinkle
 =====================================================
 
-  Primary accent:     #6272A4 (muted periwinkle — headers, day numbers, key callouts)
-  Secondary accent:   #8B7EC8 (soft lavender — highlights, important tags, timer icons)
-  Light tint:         #EEEDF5 (lavender tint — subtle background panels, callout boxes)
+  Primary accent:     #7764c9ff (muted periwinkle — headers, day numbers, key callouts)
+  Secondary accent:   #493e7aff (soft lavender — highlights, important tags, timer icons)
+  Light tint:         #b6afe5ff (lavender tint — subtle background panels, callout boxes)
   Text on accent:     #FFFFFF (white text on periwinkle/lavender backgrounds)
 
   WHEN TO USE
