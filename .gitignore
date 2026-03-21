@@ -4,3 +4,5 @@ packages/zi*
 HANDOFF.md
 __pycache__/
 *.pyc
+.env
+.env.local

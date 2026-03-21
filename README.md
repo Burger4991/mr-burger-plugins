@@ -14,7 +14,7 @@ Student assessment data processing and analysis. 10 skills for ingesting FAST PM
 Day-to-day classroom logistics. 6 skills for behavior tracking, parent contact logging, observation prep, PD tracking, substitute folder building, and unit distribution workflows.
 
 ### mr-burger-workflow
-Personal productivity and second brain system. 5 skills for task capture, Notion sync, work logging, area context, and plugin coordination. 6 slash commands for daily briefings, weekly planning, reviews, status checks, capture, and cross-plugin sync.
+Personal productivity and second brain system. 5 skills for task capture, Notion sync, work logging, area context, and plugin coordination. 11 slash commands for daily briefings, weekly planning, reviews, status checks, capture, brain dumps, reflection, and cross-plugin sync.
 
 ## Architecture
 
