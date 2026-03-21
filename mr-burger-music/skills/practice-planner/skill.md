@@ -11,6 +11,14 @@ version: 1.0.0
 
 Generate a music practice session plan using the Linear Harmony System.
 
+## When to Use This vs music-coach
+
+| Use this skill | Use music-coach agent |
+|----------------|----------------------|
+| Quick plan, no history context needed | Want history-informed recommendations |
+| Mid-conversation plan request | Starting a full practice session |
+| Light overhead preferred | Want post-session logging too |
+
 ## Player Status
 
 - **Trumpet**: Comeback player, embouchure rebuilding, range C4–C5 (middle C to C in staff)

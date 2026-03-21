@@ -11,6 +11,14 @@ version: 1.0.0
 
 Format a practice session entry and append it to the Practice Log.
 
+## When to Use This vs music-coach
+
+| Use this skill | Use music-coach agent |
+|----------------|----------------------|
+| Already practiced, just logging | Want planning + logging in one session |
+| Quick brain dump only | Want history-informed next-session advice |
+| Mid-conversation log request | Starting a full coaching session |
+
 ## Log File
 
 `~/Documents/Music/Practice/Linear Harmony System/Journal/Practice-Log.md`
