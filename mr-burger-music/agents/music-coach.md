@@ -40,6 +40,18 @@ Surface:
 
 If the log is empty or missing: note this and proceed without history.
 
+### Step 1b: Read Current Stage
+
+Read `knowledge/linear-harmony-system/Journal/Current-Stage.md`.
+
+Surface:
+- Current Part for each instrument
+- Any stage-specific notes
+
+Use this to sequence blocks from the correct LHS Part. Don't suggest Part 3 blocks if the player is in Part 1.
+
+If the file is missing: note it and proceed using Part 1 defaults.
+
 ### Step 2: Gather Session Info
 
 Ask in a single message:
