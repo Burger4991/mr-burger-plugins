@@ -78,7 +78,7 @@ End session → /wrap → /clear
 | `/resume` | Starting a session — get oriented |
 | `/wrap` | Ending a session — save state |
 | `/capture [text]` | You have tasks, ideas, or notes to file |
-| `/dump [text]` | Mixed brain dump — Claude sorts it |
+| `/brain-dump [text]` | Mixed brain dump — Claude sorts it |
 | `/brainstorm-capture` | After exploratory discussion, before /clear |
 
 ---
