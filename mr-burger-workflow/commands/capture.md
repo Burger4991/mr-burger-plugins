@@ -82,9 +82,14 @@ For time-sensitive tasks, note them for iPhone Reminders:
 
 **Tasks** → Write to `~/Documents/TASKS.md` under `## Active`
 
-**Brainstorm** → Write to `docs/brainstorm/YYYY-MM-DD-[topic].md`
+**Brainstorm** → Use session state to determine the absolute path:
+- If in a project (PROJECT.md found): `[project-dir]/docs/brainstorm/YYYY-MM-DD-[topic].md`
+- If no project context: `~/Documents/Knowledge/brainstorm/YYYY-MM-DD-[topic].md`
+- Create the directory if it doesn't exist
 
-**Skill/agent fixes** → Note for `/skill-update` — don't edit skill files here, just surface them clearly
+**Skill/agent fixes** → Note for `/skill-update` — surface the exact file path:
+`~/Documents/Tech/mr-burger-plugins/[plugin]/skills/[skill-name]/skill.md`
+Don't edit skill files here, just identify clearly what needs to change and where
 
 **Memory-worthy** → Write to `~/.claude/projects/-Users-alexanderburger/memory/` — always ask before saving
 

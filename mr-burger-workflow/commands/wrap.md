@@ -100,7 +100,22 @@ Phase: [current phase] | Resume at: [exact next step or decision]
 
 6. **Check memory** — did anything happen this session that future-me should know across all conversations? If yes, write to `~/.claude/projects/-Users-alexanderburger/memory/`. Only what's non-obvious and durable — skip ephemeral task state.
 
-7. **Confirm** — tell the user: PROJECT.md updated, HANDOFF.md written, tasks updated (or no changes), memory updated (or nothing worth saving), safe to `/clear`.
+7. **Confirm** — tell the user what was saved and exactly how to resume:
+
+```
+✓ PROJECT.md updated
+✓ HANDOFF.md written
+✓ TASKS.md — [N new / no changes]
+✓ Memory — [saved / nothing to save]
+
+To resume this work:
+  cd [absolute path to PROJECT.md directory]
+  open Claude Code, then run /resume
+
+Safe to /clear.
+```
+
+The `cd` path comes from the directory where PROJECT.md lives — use the absolute path (e.g. `~/Desktop/gaby-portfolio`, `~/Documents/Tech/mr-burger-plugins`). If working from `~/` (no project), omit the cd line and say "open Claude Code from home directory, then /resume".
 
 ## Live update behavior
 

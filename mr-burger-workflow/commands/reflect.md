@@ -56,9 +56,18 @@ Write in first person from Mr. Burger's perspective — these are his notes abou
 
 If nothing meaningfully changed: "Nothing in this session warrants a knowledge update."
 
-### Step 4: Apply with approval
+### Step 4: Check project CLAUDE.md
 
-List proposed changes numbered. Apply only approved ones.
+If a project is active (PROJECT.md found), ask: does anything from this session belong in the **project's** CLAUDE.md rather than a general Knowledge file?
+
+- Knowledge files (`~/Documents/Knowledge/`) → patterns that apply across all projects (how you think, general workflows)
+- Project CLAUDE.md (e.g. `~/Desktop/gaby-portfolio/CLAUDE.md`) → conventions specific to that project (design rules, tech constraints, naming decisions)
+
+If yes: read the project CLAUDE.md, propose the addition, apply with approval. Keep it terse — CLAUDE.md is scanned at session start, not read deeply.
+
+### Step 5: Apply with approval
+
+List proposed changes numbered, grouped by file. Apply only approved ones.
 
 ## Notes
 
