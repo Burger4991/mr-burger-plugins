@@ -7,6 +7,10 @@ allowed-tools: Read, Write, Edit, Bash, Glob
 
 Review this session for anything that would improve a skill or agent file. Only propose changes based on real experience from this conversation — how the skill actually performed, what was missing, what caused friction.
 
+## Step 0: Call session-state-reader
+
+Confirm current project and plugin context before searching for skill files.
+
 ## Step 1: Identify skills and agents used
 
 Look at this session and identify which skills and agents were invoked. If the user passed an argument (e.g., `/skill-update bellringer-builder`), focus on that one.
@@ -16,6 +20,8 @@ Find the source file — always edit source, never symlinks:
 find ~/Documents/Tech/mr-burger-plugins -name "skill.md" -path "*[skill-name]*" 2>/dev/null
 find ~/Documents/Tech/mr-burger-plugins -name "[agent-name].md" -path "*/agents/*" 2>/dev/null
 ```
+
+If `find` returns nothing, confirm the skill name spelling before proceeding — a silent result does not mean the skill doesn't exist.
 
 Read the current file before proposing anything.
 
@@ -54,7 +60,7 @@ If no changes are warranted: "The skill(s) used this session performed as expect
 
 List proposed changes numbered. Apply only approved ones.
 
-After applying: remind the user to run `cd ~/Documents/Tech/mr-burger-plugins && git add -p && git commit` to save the changes to version control. Changes are live immediately via symlinks without any rebuild needed.
+After applying: remind the user to run `cd ~/Documents/Tech/mr-burger-plugins && git add -p && git commit` to save the changes to version control. (`-p` lets you review and stage changes chunk by chunk before committing — type `y` to stage a chunk, `n` to skip.) Changes are live immediately via symlinks without any rebuild needed.
 
 ## Notes
 

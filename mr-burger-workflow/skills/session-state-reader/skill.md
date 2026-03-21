@@ -4,7 +4,7 @@ description: Read current project state hierarchy — PROJECT.md, TASKS.md, HAND
 
 # Session State Reader
 
-A shared skill — not user-facing. Called internally by /resume, /capture, /wrap, and /dump before they do anything else.
+A shared skill — not user-facing. Called internally by all workflow commands before they act: /resume, /capture, /wrap, /plan, /brainstorm-capture, /reflect, /skill-update, /daily.
 
 ## What to do
 
@@ -49,6 +49,7 @@ Brainstorm doc: [path] | none
 
 ## Notes
 - If no PROJECT.md found anywhere: return all fields as "none"
+- If multiple PROJECT.md files are found walking up the directory tree, use the one closest to the current working directory
 - Never read HANDOFF.md — that's /resume's responsibility
 - Never read the plan file — just surface the path
 - This skill is fast — it reads metadata, not full file contents

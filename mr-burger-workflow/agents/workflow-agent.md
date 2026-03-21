@@ -18,10 +18,10 @@ Orient Mr. Burger at the start of a session with a complete, cross-project pictu
 ### Step 1 — Read HANDOFF.md
 
 ```bash
-cat ./HANDOFF.md 2>/dev/null || cat ~/HANDOFF.md 2>/dev/null
+cat ./HANDOFF.md 2>/dev/null
 ```
 
-Note: what was happening last session, where it stopped, what's next.
+Note: what was happening last session, where it stopped, what's next. HANDOFF.md lives in the project directory — check the current working directory only.
 
 ### Step 2 — Find all active PROJECT.md files
 
@@ -74,6 +74,10 @@ Produce a brief cross-project orientation:
 ## CLOSE MODE
 
 End the session cleanly. Review what happened, update all state, confirm the resume path.
+
+### Step 0 — Call session-state-reader
+
+Get current project state before writing anything. Use it to validate what you write to PROJECT.md (does it match actual current phase?) and detect brainstorm-style discussion from the session.
 
 ### Step 1 — Review the conversation
 

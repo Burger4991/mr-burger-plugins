@@ -15,10 +15,10 @@ Start planning a new phase of work. Invokes the brainstorming skill to design th
 ```bash
 ls [project-dir]/docs/plans/ 2>/dev/null | tail -5
 ```
-If a recent plan exists for the same topic, ask: continuing the existing plan or starting fresh?
+Substitute `[project-dir]` with the PROJECT.md directory path from session state. If a recent plan exists for the same topic, ask: continuing the existing plan or starting fresh?
 
 3. **Invoke brainstorming skill** — this is the primary path:
-   - Use the `superpowers:brainstorming` skill
+   - Use the Skill tool to invoke `superpowers:brainstorming`
    - Brainstorming handles: explore context → clarify → propose approaches → present design → write spec → invoke writing-plans
    - writing-plans produces the implementation plan file — no need to scaffold it manually
 
@@ -29,7 +29,7 @@ If a recent plan exists for the same topic, ask: continuing the existing plan or
 
 ## Fallback: design already clear
 
-If the scope is fully understood and design isn't needed (e.g. picking up mid-project, executing a known task list), skip brainstorming and scaffold the plan directly at `[project-dir]/docs/plans/YYYY-MM-DD-[topic-slug].md`:
+If the user is picking up mid-project (a plan file already exists and the next step is clear), or they explicitly say to skip brainstorming, skip brainstorming and scaffold the plan directly at `[project-dir]/docs/plans/YYYY-MM-DD-[topic-slug].md`:
 
 ```markdown
 # [Topic] Implementation Plan

@@ -11,9 +11,9 @@ Quick daily orientation. Surfaces what matters today across all projects without
 
 1. **Call session-state-reader** — get active project and phase
 
-2. **Read TASKS.md**
+2. **Read active tasks from TASKS.md**
 ```bash
-cat ~/Documents/TASKS.md
+awk '/^## Active/{found=1; next} /^## /{found=0} found && /^\- \[ \]/{print}' ~/Documents/TASKS.md 2>/dev/null
 ```
 
 3. **Scan for urgency signals** — flag any task that has:
@@ -49,7 +49,7 @@ cat ~/Documents/TASKS.md
 - Show max 3 tasks per project — most important first, not just top of list
 - Skip Done items entirely
 - If a project has no active tasks, omit it
-- Waiting/blocked items: only surface if they've been waiting a long time or the blocker may have resolved
+- Waiting/blocked items: only surface if they've been waiting more than a week (check date if tagged) or the blocker may have resolved
 
 5. **Suggest a start** — end with one line:
    > "Suggested start: [specific task] — [one reason why now]"

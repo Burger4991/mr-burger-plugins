@@ -1,6 +1,6 @@
 ---
 description: Update knowledge base with evolving patterns, approaches, and understanding
-allowed-tools: Read, Write, Edit, Glob
+allowed-tools: Read, Write, Edit, Bash, Glob
 ---
 
 # /reflect
@@ -17,6 +17,10 @@ Update the knowledge base at `~/Documents/Knowledge/` based on shifts in how you
 **Not for:** task notes, specific facts, or project status — those belong in TASKS.md, memory, or HANDOFF.md.
 
 ## What to do
+
+### Step 0: Call session-state-reader
+
+Get current project state. Use the result in Step 4 — if a project is active, the PROJECT.md directory gives you the path to the project's CLAUDE.md without re-searching.
 
 ### Step 1: Identify what changed
 
