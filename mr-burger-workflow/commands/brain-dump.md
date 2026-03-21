@@ -3,7 +3,7 @@ description: Universal brain dump — accepts anything, decides what to do with 
 allowed-tools: Read, Write, Edit, Bash, Glob
 ---
 
-# /dump
+# /brain-dump
 
 The smart brain dump. Throw anything at it — tasks, ideas, brainstorms, skill friction, half-formed thoughts. It reads the context, classifies everything, and routes to the right place or skill.
 
@@ -24,11 +24,16 @@ The smart brain dump. Throw anything at it — tasks, ideas, brainstorms, skill 
 | Needs a skill | Benchmark code, data keyword, unit topic | Route to relevant skill |
 | Mixed | Multiple types | Split and route each part |
 
-3. **For items that need a skill** — identify which skill applies and invoke it:
-   - Benchmark codes → benchmark skill
-   - Data keywords (PM, FAST, NWEA) → data pipeline skills
-   - Unit topics → ir-teaching skills
-   - Plugin friction → skill-update
+3. **For items that need a skill** — identify which skill applies, then actually invoke it using the Skill tool:
+   - Benchmark codes → appropriate benchmark skill (e.g. `ir-teaching:benchmark-central-idea`)
+   - Data keywords (PM, FAST, NWEA) → `ir-data-pipeline:student-data-processor`
+   - Unit topics → `ir-teaching:menu-mode-planner` or relevant skill
+   - Plugin friction → `skill-update`
+
+   **Invocation pattern — do not just describe, actually run it:**
+   1. Say: "Routing [item] to [skill-name] — it will [1-sentence preview of what it does]"
+   2. Get confirmation
+   3. Use the Skill tool: `skill: "[skill-name]"`
 
 4. **Present routing for all items in one message** — same confirm pattern as /capture:
 
@@ -57,6 +62,6 @@ Routes:
 → /brainstorm-capture: vocabulary skill gap question
 
 ## Notes
-- /dump is the entry point; /capture and /brainstorm-capture are its execution layer
+- /brain-dump is the entry point; /capture and /brainstorm-capture are its execution layer
 - If everything in the dump is clearly one type, just do it — don't over-route
-- For skill invocations: surface what the skill would do, get approval before running
+- For skill invocations: always use the Skill tool — never just describe what the skill would do
