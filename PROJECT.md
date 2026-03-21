@@ -1,25 +1,23 @@
 # mr-burger-plugins — Project State
-*Last updated: 2026-03-21*
+*Last updated: 2026-03-21 20:00*
 
 ## Phase
-maintenance — knowledge & workflow system complete; 3 local commits not yet pushed
+complete — workflow system shipped, eval + audit done, all pushed and clean
 
 ## Plan
 - **File:** `docs/plans/2026-03-21-knowledge-workflow-system.md`
-- **Current step:** complete — all 9 tasks shipped
-- **Decided:** session-state-reader first; hook second; commands in order; /brain-dump universal router above /capture; brainstorm docs in `docs/brainstorm/` per project
-- **Open:** None
+- **Current step:** complete
+- **Decided:** session-state-reader shared by all commands; two-agent eval pattern (audit + behavioral) for QA; plugin hygiene audit checklist added to knowledge; "done includes docs" as completion criteria
 
 ## Implementation
 - **Active:** None
-- **Done (this session):**
-  - All 9 knowledge & workflow system tasks complete
-  - session-state-reader shared skill
-  - /resume, /wrap, /capture, /reflect, /plan, /brain-dump, /daily commands
-  - workflow-agent (open/close modes)
-  - /dump renamed /brain-dump, /wrap vs /checkpoint clarified, dormant skills activated
-  - README audit, commit skill update, .gitignore audit, superpowers local copy removed
-  - 3 commits ahead of origin/main — needs push
+- **Done:**
+  - Workflow system: session-state-reader, 11 commands, workflow-agent — all shipped
+  - Eval session: 5 pass / 6 minor issues / 0 needs work → all 8 fixes applied and pushed
+  - Audit: 3 broken symlinks removed, stale benchmark-mastery-analyzer deleted, Cowork daily name collision resolved
+  - Cheat sheets: all 5 files updated (new commands + workflow-agent)
+  - IR platform: 1 pending commit pushed
+  - /reflect: tech-systems.md + workflows.md updated
 - **Blocked:** None
 
 ## Parked
@@ -27,13 +25,11 @@ maintenance — knowledge & workflow system complete; 3 local commits not yet pu
 
 ## Decisions Log
 - 2026-03-21 09:38: PROJECT.md layer added to persistence system
-- 2026-03-21 09:38: Git workflow system expanded to full knowledge & workflow system
 - 2026-03-21 09:38: /dump chosen as universal router above /capture
 - 2026-03-21 09:38: Brainstorm docs in `docs/brainstorm/` per project
 - 2026-03-21 09:38: Hook narrates git ops to build habits, not replace them
 - 2026-03-21 17:15: /plan invokes brainstorming first; describe vs invoke antipattern named
-- 2026-03-21: workflow-agent shipped (open/close modes)
-
-## Open Questions
-- Push 3 local commits to origin (workflow agent, README, superpowers removal)
-- workflow-agent not appearing in Claude Code agents list — symlink gap to investigate
+- 2026-03-21 17:16: workflow-agent shipped (open/close modes)
+- 2026-03-21 20:00: Two-agent eval pattern established (audit agent + behavioral eval agent in parallel)
+- 2026-03-21 20:00: "Done includes docs" — cheat sheets are part of completion, not afterthought
+- 2026-03-21 20:00: ir-data-pipeline/benchmark-mastery-analyzer removed — ir-teaching version is canonical
