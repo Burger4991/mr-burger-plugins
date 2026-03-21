@@ -1,5 +1,5 @@
 ---
-description: Save session state to HANDOFF.md and PROJECT.md before clearing context
+description: Standard session end — updates PROJECT.md (workflow state) + HANDOFF.md + TASKS.md. Use /checkpoint after for deep save (CLAUDE.md, skills, knowledge)
 allowed-tools: Read, Write, Edit, Glob
 ---
 

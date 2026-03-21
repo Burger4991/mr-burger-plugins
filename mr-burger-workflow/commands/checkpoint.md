@@ -1,5 +1,5 @@
 ---
-description: Full save before clearing context — HANDOFF, tasks, CLAUDE.md, skills, knowledge, memory in one pass
+description: Deep save for significant sessions — captures institutional knowledge (CLAUDE.md, skills, knowledge files, memory). Run after /wrap or standalone when patterns/conventions evolved
 allowed-tools: Read, Write, Edit, Bash, Glob
 ---
 

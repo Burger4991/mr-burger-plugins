@@ -20,9 +20,9 @@ Commands are user-facing. Skills are called by Claude (or by other commands). Ag
 | `/capture [text]` | Route a brain dump to TASKS.md, notes files, or brainstorm docs |
 | `/brain-dump [text]` | Smart router — classifies anything and routes to /capture, /brainstorm-capture, or a skill |
 | `/brainstorm-capture` | Lock in thinking from a brainstorm before /clear |
-| `/wrap` | End session cleanly — updates PROJECT.md + HANDOFF.md |
+| `/wrap` | Standard session end — PROJECT.md (workflow state) + HANDOFF.md + TASKS.md |
+| `/checkpoint` | Deep save — CLAUDE.md + skills + knowledge + memory. Run after /wrap when conventions or approaches evolved |
 | `/reflect` | Update knowledge files (workflows.md, teaching.md, etc.) |
-| `/checkpoint` | Mid-session save to PROJECT.md |
 
 **Shared skill all commands use:** `session-state-reader` (reads PROJECT.md → TASKS.md → HANDOFF.md, returns structured state)
 
@@ -74,8 +74,8 @@ Open Claude Code (from project dir) → SessionStart hook shows context block
 → /resume (get oriented)
 → do work
 → /capture or /brain-dump (capture ideas/tasks as you go)
-→ /checkpoint (optional mid-session save)
-→ /wrap → /clear
+→ /wrap → /clear (every session)
+→ /checkpoint (after /wrap, when conventions/patterns evolved — not every session)
 ```
 
 ---
