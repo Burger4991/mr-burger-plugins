@@ -74,22 +74,60 @@ python3 tools/add_enclosures.py
 
 **To adapt for a new worksheet:** update `INPUT` and `OUTPUT` paths at bottom of script.
 
-### Planned Transformations (not yet built)
+### Diatonic Enclosures (`tools/diatonic_enclosures.py`)
 
-- `transpose_pattern.py` — take a 1-key pattern and generate all 12 keys
-- `add_guide_tones.py` — add guide tone melody above existing outline
-- `diatonic_enclosures.py` — diatonic above + chromatic below variant
-- `rhythmic_variation.py` — apply triplet or displaced-rhythm version of outline
+Bebop-style enclosures: diatonic step above + chromatic half step below → target.
+More idiomatic than pure chromatic enclosures.
+
+**What it does:** Same phrase targets as chromatic version, but approach note above is
+the next scale degree (not chromatic) — gives a more bebop-authentic sound.
+
+**Key detection:** Infers major key from first ii chord root (root − minor 3rd = tonic).
+
+```python
+python3 tools/diatonic_enclosures.py
+```
+
+### Guide Tones (`tools/add_guide_tones.py`)
+
+Adds Voice 2 (stems down) showing the 3rd and 7th of each chord as half notes.
+Makes the classic 7→3 voice leading skeleton visible alongside the outline.
+
+**What it inserts per phrase:**
+- ii measure: ii_3rd (half) + ii_7th (half)
+- V measure: v_3rd (half) + v_7th (half)
+- I measure: i_3rd (whole)
+
+```python
+python3 tools/add_guide_tones.py
+```
+
+### 12-Key Transposer (`tools/transpose_pattern.py`)
+
+Takes any single-key pattern (any `.mscz`) and generates all 12 keys in
+cycle-of-fifths order. Keeps pitches in trumpet range (C4–C6) automatically.
+
+**Usage:**
+```python
+# Update INPUT/OUTPUT paths at bottom of script, then:
+python3 tools/transpose_pattern.py
+```
+
+### Planned
+
+- `rhythmic_variation.py` — triplet or displaced-rhythm version of outline
 
 ## Workflow for a New Transformation
 
-1. Read the source `.mscz`: `python3 -c "import zipfile; zipfile.ZipFile('file.mscz').extractall('tmp/')"`
-2. Inspect the XML structure to understand the phrase layout
-3. Write a Python script in `tools/` following the `add_enclosures.py` pattern:
-   - `gen_eid()` for new element IDs
-   - `make_chord(pitch, duration)` for notes
-   - `make_rest(duration, dotted=False)` for rests
-   - `pitch_to_tpc(midi_pitch)` for TPC values
+1. Import shared utilities from `tools/mscz_utils.py` — don't redefine helpers
+2. Write a Python script in `tools/` using:
+   - `open_mscz(path, work_dir)` → tree, mscx_path, names
+   - `save_mscz(tree, mscx_path, names, work_dir, output)` → repackages
+   - `get_measures(root)` → list of Measure elements
+   - `iter_phrases(measures)` → (idx, m_ii, m_v, m_i, m_rest) per phrase
+   - `make_chord(pitch, duration)`, `make_rest(duration, dotted)`, `gen_eid()`
+   - `pitch_to_tpc(midi_pitch)` → (tpc_concert, tpc_written)
+3. Write tests in `tools/tests/test_mscz_utils.py` before implementing
 4. Test: export PNG first (`-o output.png`), then PDF
 5. Add to this skill's "Available Transformations" section
 
