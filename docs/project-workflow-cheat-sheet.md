@@ -3,10 +3,10 @@
 ## The Habit Loop
 
 ```
-Start session → /resume
+Start session → /resume  (or: "use workflow-agent open")
 Work → update PROJECT.md live as things change
-Capture ideas/tasks → /capture or /dump
-End session → /wrap → /clear
+Capture ideas/tasks → /capture or /brain-dump
+End session → /wrap → /clear  (or: "use workflow-agent close")
 ```
 
 ---
@@ -75,11 +75,22 @@ End session → /wrap → /clear
 
 | Command | Use it when |
 |---------|------------|
-| `/resume` | Starting a session — get oriented |
+| `/resume` | Starting a session — get oriented (single project) |
 | `/wrap` | Ending a session — save state |
 | `/capture [text]` | You have tasks, ideas, or notes to file |
 | `/brain-dump [text]` | Mixed brain dump — Claude sorts it |
 | `/brainstorm-capture` | After exploratory discussion, before /clear |
+| `/plan` | Starting a new phase of work — brainstorm first, then write the plan |
+| `/daily` | Quick daily view — top tasks + urgent flags, no full context load |
+| `/reflect` | Something about your approach shifted — update knowledge files |
+| `/skill-update` | A skill had friction — flag and propose improvements |
+
+**workflow-agent** (type: "use workflow-agent open/close")
+
+| Mode | Use it when |
+|------|------------|
+| `open` | Cross-project orientation — reads ALL active PROJECT.md files, not just current dir |
+| `close` | Full session wrap — same as /wrap but as an autonomous agent |
 
 ---
 

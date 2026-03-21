@@ -17,12 +17,15 @@ Commands are user-facing. Skills are called by Claude (or by other commands). Ag
 | Command | What it does |
 |---------|-------------|
 | `/resume` | Orient for a new session — reads PROJECT.md → HANDOFF.md → plan file |
+| `/wrap` | Standard session end — PROJECT.md + HANDOFF.md + TASKS.md + flags for /reflect & /skill-update |
 | `/capture [text]` | Route a brain dump to TASKS.md, notes files, or brainstorm docs |
-| `/brain-dump [text]` | Smart router — classifies anything and routes to /capture, /brainstorm-capture, or a skill |
+| `/brain-dump [text]` | Smart router — classifies anything, routes to /capture, /brainstorm-capture, or a skill |
 | `/brainstorm-capture` | Lock in thinking from a brainstorm before /clear |
-| `/wrap` | Standard session end — PROJECT.md (workflow state) + HANDOFF.md + TASKS.md |
-| `/checkpoint` | Deep save — CLAUDE.md + skills + knowledge + memory. Run after /wrap when conventions or approaches evolved |
-| `/reflect` | Update knowledge files (workflows.md, teaching.md, etc.) |
+| `/plan` | Start a new phase of work — brainstorm first, then write the plan |
+| `/daily` | Quick daily view — top tasks + urgent flags across all projects |
+| `/reflect` | Something about your approach shifted — update knowledge files |
+| `/skill-update` | A skill had friction — reviews session and proposes improvements |
+| `/checkpoint` | Deep save — CLAUDE.md + skills + knowledge + memory. Run after /wrap when conventions evolved |
 
 **Shared skill all commands use:** `session-state-reader` (reads PROJECT.md → TASKS.md → HANDOFF.md, returns structured state)
 
@@ -61,6 +64,11 @@ Key agents: `music-coach`, `score-writer`
 **What:** Session management, capture, brainstorm, PROJECT.md/HANDOFF.md system
 
 Core skills (auto-invoked by commands): `session-state-reader`, `area-context`
+
+**Agent:** `workflow-agent` — say "use workflow-agent open" or "use workflow-agent close"
+- `open`: cross-project orientation — scans ALL active PROJECT.md files across Desktop, Tech, Career
+- `close`: full session wrap (same as /wrap but autonomous)
+- Use `open` when you have multiple projects active and want a full picture. Use /resume for single-project focus.
 
 **Supporting skills — invoke explicitly:**
 
