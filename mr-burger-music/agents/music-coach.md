@@ -100,6 +100,31 @@ If file missing: create it with the full journal template first, then append.
 ---
 ```
 
+### Step 5: Weekly Summary (optional, Fridays or on request)
+
+If today is Friday or the user asks for a weekly summary:
+
+Ask: "Want me to write a weekly practice summary?"
+
+If yes: review the last 7 entries in Practice-Log.md and generate:
+
+**File:** `~/Documents/Music/Practice/notes/weekly-summary-[YYYY-MM-DD].md`
+
+```
+# Practice Week — [date range]
+
+**Sessions:** [count]
+**Total time:** [estimate if logged]
+
+**Trumpet:** [what was practiced, any progress noted]
+**Guitar:** [what was practiced, any progress noted]
+
+**Recurring struggles:** [what keeps showing up as "still hard"]
+**Next week's priority:** [1 sentence]
+```
+
+Confirm: "Saved to weekly-summary-[date].md ✓"
+
 ## LHS Blocks Reference
 
 ### Trumpet
