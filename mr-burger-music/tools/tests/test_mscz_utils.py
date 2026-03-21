@@ -58,3 +58,10 @@ def test_guide_tones_bb_major():
     assert gt['v_3rd']  % 12 == 9   # A
     assert gt['v_7th']  % 12 == 3   # Eb
     assert gt['i_3rd']  % 12 == 2   # D
+
+
+def test_transpose_interval():
+    from transpose_pattern import transpose_pitch
+    assert transpose_pitch(60, 7) == 67   # C → G (up perfect 5th)
+    assert transpose_pitch(67, 7) == 74   # G → D
+    assert transpose_pitch(75, 7) == 82   # Eb → Bb (up 5th)
