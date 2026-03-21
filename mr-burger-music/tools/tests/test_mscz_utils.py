@@ -35,3 +35,12 @@ def test_add_enclosures_roundtrip():
         assert os.path.getsize(out) > 10_000
     finally:
         os.unlink(out)
+
+
+def test_diatonic_above_in_bb_major():
+    from diatonic_enclosures import diatonic_step_above
+    # Bb major scale (concert MIDI): 70, 72, 74, 75, 77, 79, 81
+    bb_major = [70, 72, 74, 75, 77, 79, 81]
+    assert diatonic_step_above(77, bb_major) == 79  # F → G
+    assert diatonic_step_above(75, bb_major) == 77  # Eb → F
+    assert diatonic_step_above(81, bb_major) == 82  # A → Bb (wraps, one octave up)
