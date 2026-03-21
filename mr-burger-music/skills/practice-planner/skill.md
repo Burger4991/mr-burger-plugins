@@ -63,7 +63,7 @@ Generate a music practice session plan using the Linear Harmony System.
 1. Ask: "How much time do you have?" and "Trumpet, guitar, or both?"
 2. If the user mentions a current struggle or focus area, prioritize it.
 3. Select blocks that fit the time and instrument.
-4. If `knowledge/linear-harmony-system/Journal/Current-Stage.md` is available, read it and limit block selection to the current LHS Part for each instrument.
+4. Read `knowledge/linear-harmony-system/Journal/Current-Stage.md` (if missing, default to Part 1 for all instruments) and limit block selection to the current LHS Part for each instrument.
 5. If practice history is available (from Practice-Log.md), factor in what's been hard or skipped.
 6. Present the session as a numbered sequence with a one-line note per block.
 
