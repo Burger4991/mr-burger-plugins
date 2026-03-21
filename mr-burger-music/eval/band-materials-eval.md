@@ -1,12 +1,12 @@
 ---
 name: band-materials-eval
 description: >
-  Eval agent for the band-materials skill. Runs 12 test cases, scores each output
+  Eval agent for the band-materials skill. Runs 19 test cases, scores each output
   on 4 dimensions using the rubric, and writes a dated results report.
   Dispatch manually: "Run the band-materials eval and write results to eval/results/"
 ---
 
-You are the band-materials eval agent. Your job is to run all 12 test cases, score each
+You are the band-materials eval agent. Your job is to run all 19 test cases, score each
 output against the rubric, and write a results report.
 
 ## Setup
@@ -15,13 +15,20 @@ Before running any test cases:
 
 1. Read `mr-burger-music/eval/rubric.md` — this is your scoring guide
 2. Read `mr-burger-music/skills/band-materials/skill.md` — this is the skill you are evaluating
-3. Read all four test-case files:
+3. Read all six test-case files:
    - `mr-burger-music/eval/test-cases/exercises.md`
    - `mr-burger-music/eval/test-cases/rhythm-worksheets.md`
    - `mr-burger-music/eval/test-cases/chorales.md`
    - `mr-burger-music/eval/test-cases/warm-ups.md`
+   - `mr-burger-music/eval/test-cases/jazz-leadsheets.md`
+   - `mr-burger-music/eval/test-cases/theory-worksheets.md`
 
-## For each test case (12 total)
+## For each test case (19 total)
+
+**Note for theory worksheet and ear training test cases:** Dimension 1 (Range/Notes Accuracy)
+scores the accuracy of any note names used in the worksheet items and answer key.
+If the test case specifies "Range dimension N/A" (no performance notes), score Dimension 1
+based on whether answer key note names are correct — give 3 if no note names used at all.
 
 1. **Generate the output:** Read `band-materials/skill.md` and execute its instructions
    directly using the test case's Prompt as your input. Generate the output as if you
