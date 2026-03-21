@@ -1,5 +1,5 @@
 # mr-burger-plugins — Project State
-*Last updated: 2026-03-21*
+*Last updated: 2026-03-21 09:38*
 
 ## Phase
 implementing — band-materials eval framework (8 tasks, none started)

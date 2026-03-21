@@ -23,7 +23,7 @@ End a session cleanly. Updates `PROJECT.md` with current workflow state and writ
 
 ```markdown
 # [Project Name] — Project State
-*Last updated: [date]*
+*Last updated: [date HH:MM]*
 
 ## Phase
 [planning | implementing | reviewing | debugging | eval | complete]
@@ -50,7 +50,7 @@ End a session cleanly. Updates `PROJECT.md` with current workflow state and writ
 - **Tried:** [approaches already attempted]
 
 ## Decisions Log
-- [date]: [decision + rationale]
+- [date HH:MM]: [decision + rationale]
 
 ## Open Questions
 - [question]
