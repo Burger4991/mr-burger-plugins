@@ -107,6 +107,12 @@ Outputs that pass the threshold appear in the **Passing** section of the report 
 ```markdown
 # band-materials Eval — YYYY-MM-DD
 
+**Summary:** X flagged, X passing of 12 total
+
+**Top issues:** [1-3 bullet points on most common failure patterns, or "None — all passing"]
+
+---
+
 ## Flagged (X of 12)
 
 ### [Output type] — [Level]
