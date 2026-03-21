@@ -44,3 +44,17 @@ def test_diatonic_above_in_bb_major():
     assert diatonic_step_above(77, bb_major) == 79  # F → G
     assert diatonic_step_above(75, bb_major) == 77  # Eb → F
     assert diatonic_step_above(81, bb_major) == 82  # A → Bb (wraps, one octave up)
+
+
+def test_guide_tones_bb_major():
+    from add_guide_tones import guide_tones_for_key
+    # Bb major: key_root = 70 (Bb4)
+    # ii = Cm7: 3rd = Eb(63), 7th = Bb(70)
+    # V = F7:   3rd = A(69),  7th = Eb(63)
+    # I = Bbmaj7: 3rd = D(62)
+    gt = guide_tones_for_key(70)
+    assert gt['ii_3rd'] % 12 == 3   # Eb
+    assert gt['ii_7th'] % 12 == 10  # Bb
+    assert gt['v_3rd']  % 12 == 9   # A
+    assert gt['v_7th']  % 12 == 3   # Eb
+    assert gt['i_3rd']  % 12 == 2   # D
