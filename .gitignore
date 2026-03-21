@@ -2,3 +2,5 @@
 .DS_Store
 packages/zi*
 HANDOFF.md
+__pycache__/
+*.pyc
