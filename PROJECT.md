@@ -1,31 +1,39 @@
 # mr-burger-plugins — Project State
-*Last updated: 2026-03-21 09:38*
+*Last updated: 2026-03-21*
 
 ## Phase
-implementing — knowledge & workflow system (9 tasks, none started)
+maintenance — knowledge & workflow system complete; 3 local commits not yet pushed
 
 ## Plan
 - **File:** `docs/plans/2026-03-21-knowledge-workflow-system.md`
-- **Current step:** Task 1 — create `session-state-reader` skill (dependency for all other tasks)
-- **Spec:** `docs/specs/2026-03-21-knowledge-workflow-system-design.md`
-- **Decided:** session-state-reader first; hook second; commands in order; /dump is new universal router above /capture; brainstorm docs in `docs/brainstorm/` per project
-- **Open:** Nothing — ready to execute Task 1
+- **Current step:** complete — all 9 tasks shipped
+- **Decided:** session-state-reader first; hook second; commands in order; /brain-dump universal router above /capture; brainstorm docs in `docs/brainstorm/` per project
+- **Open:** None
 
 ## Implementation
-- **Active:** Task 1 — session-state-reader skill
-- **Done:** Spec written + approved (6 sections); plan written (9 tasks); PROJECT.md system deployed to all repos; wrap/resume/capture commands previously updated (will be superseded by this plan)
+- **Active:** None
+- **Done (this session):**
+  - All 9 knowledge & workflow system tasks complete
+  - session-state-reader shared skill
+  - /resume, /wrap, /capture, /reflect, /plan, /brain-dump, /daily commands
+  - workflow-agent (open/close modes)
+  - /dump renamed /brain-dump, /wrap vs /checkpoint clarified, dormant skills activated
+  - README audit, commit skill update, .gitignore audit, superpowers local copy removed
+  - 3 commits ahead of origin/main — needs push
 - **Blocked:** None
 
 ## Parked
-- **band-materials eval:** `docs/plans/2026-03-21-band-materials-eval-plan.md` — 8 files in `mr-burger-music/eval/`, branch `feat/score-transformer-suite`
-- **git-workflow-system plan:** superseded by knowledge-workflow-system plan (broader scope)
+- **band-materials eval:** `docs/plans/2026-03-21-band-materials-eval-plan.md` — 8 files in `mr-burger-music/eval/`; branch `feat/score-transformer-suite` merged
 
 ## Decisions Log
 - 2026-03-21 09:38: PROJECT.md layer added to persistence system
-- 2026-03-21 09:38: Git workflow system expanded to full knowledge & workflow system (added brainstorm capture, /dump command, session-state-reader shared skill)
-- 2026-03-21 09:38: /dump chosen as universal router above /capture — /capture remains the filing layer
-- 2026-03-21 09:38: Brainstorm docs in `docs/brainstorm/` per project; user-scope in `~/Documents/Knowledge/brainstorm/`
+- 2026-03-21 09:38: Git workflow system expanded to full knowledge & workflow system
+- 2026-03-21 09:38: /dump chosen as universal router above /capture
+- 2026-03-21 09:38: Brainstorm docs in `docs/brainstorm/` per project
 - 2026-03-21 09:38: Hook narrates git ops to build habits, not replace them
+- 2026-03-21 17:15: /plan invokes brainstorming first; describe vs invoke antipattern named
+- 2026-03-21: workflow-agent shipped (open/close modes)
 
 ## Open Questions
-- After this system: resume band-materials eval, or use PR workflow as practice on README updates first?
+- Push 3 local commits to origin (workflow agent, README, superpowers removal)
+- workflow-agent not appearing in Claude Code agents list — symlink gap to investigate
