@@ -17,7 +17,9 @@ cat ./HANDOFF.md 2>/dev/null
 ```
 
 3. **Read plan file** (if session state has a plan_file path):
-   - Read it, find the current step (first unchecked `- [ ]`)
+   - Read it
+   - Find the first unchecked `- [ ]` line — that is the exact next action
+   - If all steps are checked: note "plan complete" and surface the next project from PROJECT.md instead
 
 4. **Check active tasks**:
 ```bash
