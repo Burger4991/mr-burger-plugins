@@ -98,15 +98,24 @@ Phase: [current phase] | Resume at: [exact next step or decision]
 
    This is a flag, not a blocker — user can skip it.
 
-6. **Check memory** — did anything happen this session that future-me should know across all conversations? If yes, write to `~/.claude/projects/-Users-alexanderburger/memory/`. Only what's non-obvious and durable — skip ephemeral task state.
+6. **Knowledge check** — did anything shift about *how you approach* something this session?
+   If yes: flag it — "Looks like something shifted about [topic/approach]. Run `/reflect` before `/clear` to update your knowledge files?"
+   Flag only — don't auto-run.
 
-7. **Confirm** — tell the user what was saved and exactly how to resume:
+7. **Skill friction check** — did any skill have gaps, cause repeated corrections, or produce outputs that needed significant fixing?
+   If yes: flag it — "The [skill-name] skill had friction this session. Run `/skill-update [skill-name]` before `/clear`?"
+   Flag only — don't auto-run.
+
+8. **Check memory** — did anything happen this session that future-me should know across all conversations? If yes, write to `~/.claude/projects/-Users-alexanderburger/memory/`. Only what's non-obvious and durable — skip ephemeral task state.
+
+9. **Confirm** — tell the user what was saved and exactly how to resume:
 
 ```
 ✓ PROJECT.md updated
 ✓ HANDOFF.md written
 ✓ TASKS.md — [N new / no changes]
 ✓ Memory — [saved / nothing to save]
+⚑ Before /clear: [/reflect | /skill-update [name] | nothing flagged]
 
 To resume this work:
   cd [absolute path to PROJECT.md directory]
