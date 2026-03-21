@@ -2,31 +2,30 @@
 *Last updated: 2026-03-21 09:38*
 
 ## Phase
-implementing — band-materials eval framework (8 tasks, none started)
+implementing — knowledge & workflow system (9 tasks, none started)
 
 ## Plan
-- **File:** `docs/plans/2026-03-21-band-materials-eval-plan.md`
-- **Current step:** Task 1 of 8 — not started
-- **Decided:** Eval approach = Test Case Library + Rubric (not golden examples or self-critique); subagent reads skill.md and executes directly (no tool calls to the skill); human reviews all passing items, subagent triages failures only; results format = Summary + Top issues sections
-- **Open:** Nothing — plan is approved and ready to execute
+- **File:** `docs/plans/2026-03-21-knowledge-workflow-system.md`
+- **Current step:** Task 1 — create `session-state-reader` skill (dependency for all other tasks)
+- **Spec:** `docs/specs/2026-03-21-knowledge-workflow-system-design.md`
+- **Decided:** session-state-reader first; hook second; commands in order; /dump is new universal router above /capture; brainstorm docs in `docs/brainstorm/` per project
+- **Open:** Nothing — ready to execute Task 1
 
 ## Implementation
-- **Active:** band-materials eval framework — 8 files to create in `mr-burger-music/eval/`, none exist yet
-- **Done:** mr-burger-music plugin Phase 1 + 2 complete (14 knowledge files, 5 skills, 2 agents, merged to main); spec and plan for eval framework written and committed
-- **Blocked:** None — working branch is `feat/score-transformer-suite`
+- **Active:** Task 1 — session-state-reader skill
+- **Done:** Spec written + approved (6 sections); plan written (9 tasks); PROJECT.md system deployed to all repos; wrap/resume/capture commands previously updated (will be superseded by this plan)
+- **Blocked:** None
+
+## Parked
+- **band-materials eval:** `docs/plans/2026-03-21-band-materials-eval-plan.md` — 8 files in `mr-burger-music/eval/`, branch `feat/score-transformer-suite`
+- **git-workflow-system plan:** superseded by knowledge-workflow-system plan (broader scope)
 
 ## Decisions Log
-- 2026-03-21: mr-burger-music plugin formalized — merged Phase 1 + 2 to main
-- 2026-03-21: Eval approach chosen: Test Case Library + Rubric over golden examples or self-critique
-- 2026-03-21: Subagent executes band-materials skill directly from skill.md — no tool call indirection
-- 2026-03-21: Results format: Summary + Top issues sections (spec updated to match plan)
-- 2026-03-21: Band-materials skill expansion deferred until eval is built — eval first for a baseline
+- 2026-03-21 09:38: PROJECT.md layer added to persistence system
+- 2026-03-21 09:38: Git workflow system expanded to full knowledge & workflow system (added brainstorm capture, /dump command, session-state-reader shared skill)
+- 2026-03-21 09:38: /dump chosen as universal router above /capture — /capture remains the filing layer
+- 2026-03-21 09:38: Brainstorm docs in `docs/brainstorm/` per project; user-scope in `~/Documents/Knowledge/brainstorm/`
+- 2026-03-21 09:38: Hook narrates git ops to build habits, not replace them
 
 ## Open Questions
-- After eval is built: what expansions does band-materials need?
-- Other skills that need eval frameworks?
-
-## Watch Out For
-- Working branch: `feat/score-transformer-suite` — not main
-- Branch has other unrelated work (score-transformer, mscz_utils, band-rehearsal skill) — don't merge everything at once
-- Skill stub .md files can appear in `~/.claude/commands/` after package operations — run `ls ~/.claude/commands/` periodically and delete orphans
+- After this system: resume band-materials eval, or use PR workflow as practice on README updates first?
