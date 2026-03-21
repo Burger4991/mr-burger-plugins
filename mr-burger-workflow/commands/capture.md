@@ -17,9 +17,14 @@ Invoke `/capture` followed by your brain dump (or just run it and talk):
 
 ## What to Do
 
-### Step 1: Parse the dump
+### Step 0: Call session-state-reader
 
-Identify each item and classify it:
+Get current project state. Use it to pre-classify items — life area and project context are already known.
+
+### Step 1: Parse + pre-classify (context-first)
+
+Use session state + conversation context to infer routing for every item before asking anything.
+Confidence: high = file it; low = flag for confirm.
 
 | Type | Description | Example |
 |------|-------------|---------|
@@ -29,36 +34,45 @@ Identify each item and classify it:
 | **Skill/agent fix** | Something to improve in the plugin system | "benchmark-rhetoric skill needs updating" |
 | **Memory-worthy** | A preference, lesson, or fact Claude should retain | "User prefers X approach" |
 | **Music/Dog/Personal** | Life area note | "Jazz vocabulary practice" |
-| **Unclear** | Can't route confidently | Ask one targeted question |
+| **Brainstorm** | Multiple options compared, exploratory, directional not actionable | "Should we add a new skill or extend esol-core?" |
+| **Unclear** | Can't route confidently | Flag for confirm |
 
-### Step 2: Surface existing notes first
+**Brainstorm detection** — classify as brainstorm if:
+- Multiple options being compared
+- Exploratory language ("should we / what if / I'm thinking about")
+- No clear action item — it's directional, not actionable
 
-Before filing anything, check what's already been captured in the relevant areas:
+Route brainstorm items to `docs/brainstorm/YYYY-MM-DD-topic.md` (or `~/Documents/Knowledge/brainstorm/` if no project context).
 
-```bash
-cat ~/Documents/Teaching/Resources/ideas.md 2>/dev/null | tail -10
-cat ~/Documents/Career/notes.md 2>/dev/null | tail -10
-# etc. for any area touched by this dump
+### Step 2: One confirm message for ALL items
+
+Present routing for everything at once before filing anything:
+
+```
+I'll route these:
+→ TASKS.md: [item]
+→ Teaching/ideas.md: [item]
+→ docs/brainstorm/[topic].md: [item]
+→ Career/notes.md: [item]
+Anything to change?
 ```
 
-Show the last 5-10 entries for each relevant area under a heading like:
+File everything on approval. No item-by-item back-and-forth.
+
+For time-sensitive tasks, note them for iPhone Reminders:
 ```
-📋 Already in Teaching Ideas:
-- 2026-03-15 Unit with current events angle
-- 2026-03-10 Short story sequence with ESOL scaffold
+📱 Also add to iPhone Reminders (time-sensitive):
+- Grade PM2 data — by Friday
 ```
 
-This lets you spot duplicates or related items before adding.
-
-### Step 3: File what you can
+### Step 3: File on approval
 
 **Teaching ideas** → Append to `~/Documents/Teaching/Resources/ideas.md`
-- Create the file if it doesn't exist with a `# Teaching Ideas` header
+- Create if needed with `# Teaching Ideas` header
 - Add as `- [date] [idea]`
 
 **Career notes** → Append to `~/Documents/Career/notes.md`
 - Create if needed with `# Career Notes` header
-- Add as `- [date] [note]`
 
 **Music notes** → Append to `~/Documents/Music/notes.md`
 
@@ -66,27 +80,15 @@ This lets you spot duplicates or related items before adding.
 
 **Personal notes** → Append to `~/Documents/Personal/notes.md`
 
-**Skill/agent fixes** → Note these for `/skill-update` — don't edit skill files here, just surface them clearly
+**Tasks** → Write to `~/Documents/TASKS.md` under `## Active`
 
-**Memory-worthy** → Write to the appropriate memory file at `~/.claude/projects/-Users-alexanderburger/memory/` following the memory format (user/feedback/project/reference). Ask before saving.
+**Brainstorm** → Write to `docs/brainstorm/YYYY-MM-DD-[topic].md`
 
-### Step 4: Handle tasks
+**Skill/agent fixes** → Note for `/skill-update` — don't edit skill files here, just surface them clearly
 
-Write tasks and action items to `~/Documents/TASKS.md` under `## Active`:
-```
-- [ ] Grade PM2 data (by Friday)
-- [ ] Look into Amplify job posting
-```
+**Memory-worthy** → Write to `~/.claude/projects/-Users-alexanderburger/memory/` — always ask before saving
 
-For time-sensitive tasks, also output a copy-paste list for iPhone Reminders:
-```
-📱 Also add to iPhone Reminders (time-sensitive):
-- Grade PM2 data — by Friday
-```
-
-Only suggest iPhone Reminders for things with deadlines or that need a push notification. Everything else just goes in TASKS.md.
-
-### Step 5: Confirm
+### Step 4: Confirm
 
 Output a brief summary:
 ```
