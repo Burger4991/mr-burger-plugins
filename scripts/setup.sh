@@ -114,7 +114,7 @@ link_commands() {
   done
 }
 
-for plugin in ir-teaching ir-data-pipeline ir-classroom-ops mr-burger-workflow mr-burger-music superpowers; do
+for plugin in ir-teaching ir-data-pipeline ir-classroom-ops mr-burger-workflow mr-burger-music; do
   link_skills "$plugin"
   link_agents "$plugin"
   link_commands "$plugin"

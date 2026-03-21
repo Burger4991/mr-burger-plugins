@@ -20,7 +20,6 @@ ALL_PLUGINS=(
   "ir-classroom-ops"
   "ir-data-pipeline"
   "mr-burger-workflow"
-  "superpowers"
 )
 
 if [ $# -gt 0 ]; then
