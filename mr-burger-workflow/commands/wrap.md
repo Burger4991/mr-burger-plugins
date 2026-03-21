@@ -9,6 +9,10 @@ End a session cleanly. Updates `PROJECT.md` with current workflow state and writ
 
 ## What to do
 
+0. **Call session-state-reader** — get current project state. Use it to:
+   - Validate what you write to PROJECT.md (does it match actual current state?)
+   - Detect if brainstorm-style discussion happened this session
+
 1. **Review the conversation** — scan for:
    - What was worked on, what decisions were made, what's unfinished
    - Current workflow phase: planning | implementing | reviewing | debugging | eval
@@ -89,9 +93,14 @@ Phase: [current phase] | Resume at: [exact next step or decision]
    - Completed → move to `## Done` with `(completed [date])`
    - No changes → skip
 
-5. **Check memory** — did anything happen this session that future-me should know across all conversations? If yes, write to `~/.claude/projects/-Users-alexanderburger/memory/`. Only what's non-obvious and durable — skip ephemeral task state.
+5. **Brainstorm check** — if the session contained exploratory discussion (options compared, directions weighed) and no `/brainstorm-capture` was run, flag it:
+   > "Looks like this session had brainstorm-style discussion about [topic]. Run `/brainstorm-capture` before `/clear` to preserve that thinking?"
 
-6. **Confirm** — tell the user: PROJECT.md updated, HANDOFF.md written, tasks updated (or no changes), memory updated (or nothing worth saving), safe to `/clear`.
+   This is a flag, not a blocker — user can skip it.
+
+6. **Check memory** — did anything happen this session that future-me should know across all conversations? If yes, write to `~/.claude/projects/-Users-alexanderburger/memory/`. Only what's non-obvious and durable — skip ephemeral task state.
+
+7. **Confirm** — tell the user: PROJECT.md updated, HANDOFF.md written, tasks updated (or no changes), memory updated (or nothing worth saving), safe to `/clear`.
 
 ## Live update behavior
 
