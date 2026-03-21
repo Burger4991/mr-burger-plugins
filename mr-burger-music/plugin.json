@@ -2,6 +2,6 @@
   "name": "mr-burger-music",
   "plugin_id": "mr-burger-music",
   "version": "1.0.0",
-  "skills": ["practice-planner", "session-logger", "exercise-generator", "band-materials"],
+  "skills": ["practice-planner", "session-logger", "exercise-generator", "band-materials", "score-transformer"],
   "agents": ["music-coach", "score-writer"]
 }

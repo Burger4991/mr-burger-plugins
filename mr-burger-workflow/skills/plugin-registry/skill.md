@@ -18,6 +18,7 @@ This is the central registry of Mr. Burger's plugin ecosystem and how they conne
 | Plugin | What It Tracks | Key Files/Locations |
 |--------|---------------|-------------------|
 | **ir-teaching** | Lesson plans, units, benchmarks, ESOL materials | `~/Documents/Teaching/` |
+| **mr-burger-music** | Practice sessions, exercises, band materials, LHS system | `~/Documents/Music/` |
 | **ir-data-pipeline** | Student assessment data, growth analysis, reports | `~/Documents/Teaching/Student-Data/` (inputs), `~/Documents/Teaching/` (outputs) |
 | **mr-burger-workflow** | Tasks, captures, session state across all areas | `~/Documents/TASKS.md`, `~/Documents/[area]/notes.md` |
 | **ir-classroom-ops** | Parent contacts, behavior notes, PD hours, observation prep | `~/Documents/Teaching/logs/`, `~/Documents/Teaching/observation-prep/` |

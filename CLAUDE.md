@@ -24,6 +24,7 @@ Full architecture: `README.md`
 | ir-teaching | `ir-teaching/` | 55+ skills, 11 agents — FL BEST ELA |
 | ir-data-pipeline | `ir-data-pipeline/` | 10 skills, 2 agents — student data |
 | ir-classroom-ops | `ir-classroom-ops/` | 6 skills — classroom logistics |
+| mr-burger-music | `mr-burger-music/` | 4 skills, 2 agents — trumpet, guitar, jazz, LHS, band |
 | mr-burger-workflow | `mr-burger-workflow/` | 5 skills, commands, hooks |
 | ui-ux-pro-max | — | Official plugin, not in this repo |
 
