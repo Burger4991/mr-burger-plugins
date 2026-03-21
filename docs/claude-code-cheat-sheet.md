@@ -58,9 +58,17 @@ Key skills: `band-materials`, `practice-planner`, `score-transformer`
 Key agents: `music-coach`, `score-writer`
 
 ### mr-burger-workflow
-**What:** Second brain, session management, capture, brainstorm, PROJECT.md/HANDOFF.md system
+**What:** Session management, capture, brainstorm, PROJECT.md/HANDOFF.md system
 
-Key skills: `session-state-reader`, `area-context`, `plugin-registry`, `work-logger`, `second-brain-ops`, `notion-sync`
+Core skills (auto-invoked by commands): `session-state-reader`, `area-context`
+
+**Supporting skills — invoke explicitly:**
+
+| Skill | When to say "use the X skill" |
+|-------|-------------------------------|
+| `work-logger` | After a session with a deliverable — unit built, data analyzed, parent contacted. "Log this session" or "mark this done." Also during /wrap when significant work was completed. |
+| `plugin-registry` | When output from one plugin needs to route to another (e.g. data analysis → parent contact task), or unsure which folder/plugin owns a type of content. |
+| `notion-sync` | "Sync to Notion" or "push tasks to Notion." Connector currently inactive — skill falls back gracefully and will resume when reconnected. |
 
 ### ui-ux-pro-max (official plugin)
 **What:** UI/UX design intelligence — invoke for design work, component design, visual polish

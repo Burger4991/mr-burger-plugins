@@ -1,9 +1,11 @@
 ---
 name: work-logger
 description: >
-  Use this skill when "logging completed work" or converting the output of any
-  teaching or data session into task updates and notes. Defines how to record
-  completions in TASKS.md and area notes.md files.
+  Defines how to log completed work into TASKS.md and area notes.md files.
+  Invoke when: a session produced a deliverable (unit, lesson plan, data analysis, parent contact),
+  marking tasks done in TASKS.md, converting session output into structured log entries,
+  or any time "log this", "mark this done", or "record this" is needed.
+  Also invoked during /wrap when significant work was completed this session.
 version: 2.0.0
 ---
 

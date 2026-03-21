@@ -1,11 +1,12 @@
 ---
 name: plugin-registry
 description: >
-  This skill documents which PLUGIN owns what data and how plugins connect to each other.
-  Clarifies PLUGIN ownership, data routing, and inter-plugin coordination.
-  Use when commands need to find and coordinate data sources,
-  or when you need to understand what each plugin tracks and where to look for outputs.
-  Distinct from area-context which is about personal life areas and project file locations.
+  Registry of all plugins, what data they own, and how they connect.
+  Invoke when: routing output across plugins (e.g. data analysis → parent contact task),
+  unsure which plugin or folder owns a type of content, or any command needs to find
+  where something lives in the ecosystem. Also invoke during /wrap or /capture when
+  work from one plugin produces action items for another.
+  Distinct from area-context (personal life areas + file locations) — this is plugin ownership and data flow.
 version: 2.0.0
 ---
 

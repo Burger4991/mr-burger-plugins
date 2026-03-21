@@ -1,12 +1,10 @@
 ---
 name: notion-sync
 description: >
-  Use when syncing between file-based system and Notion. Use this when "syncing to Notion",
-  "pushing tasks to Notion", "pulling completed tasks", or during /plan and /review workflows.
-  Trigger on: weekly planning, task completion review, bidirectional sync needed.
-  This skill should be used when "syncing to Notion", "pushing tasks to Notion",
-  or when any command needs to read or write Notion data. Requires the Notion
-  MCP connector to be active.
+  Bidirectional sync between file-based system (TASKS.md) and Notion task database.
+  Invoke when: "sync to Notion", "push tasks to Notion", "pull from Notion", or weekly planning/review.
+  NOTE: Notion MCP connector is currently inactive — skill gracefully falls back to file-only
+  and resumes sync automatically when connector returns. Do not block operations waiting for Notion.
 version: 1.0.0
 ---
 
