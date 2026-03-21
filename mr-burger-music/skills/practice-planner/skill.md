@@ -11,6 +11,14 @@ version: 1.0.0
 
 Generate a music practice session plan using the Linear Harmony System.
 
+## When to Use This vs music-coach
+
+| Use this skill | Use music-coach agent |
+|----------------|----------------------|
+| Quick plan, no history context needed | Want history-informed recommendations |
+| Mid-conversation plan request | Starting a full practice session |
+| Light overhead preferred | Want post-session logging too |
+
 ## Player Status
 
 - **Trumpet**: Comeback player, embouchure rebuilding, range C4–C5 (middle C to C in staff)
@@ -63,8 +71,9 @@ Generate a music practice session plan using the Linear Harmony System.
 1. Ask: "How much time do you have?" and "Trumpet, guitar, or both?"
 2. If the user mentions a current struggle or focus area, prioritize it.
 3. Select blocks that fit the time and instrument.
-4. If practice history is available (from Practice-Log.md), factor in what's been hard or skipped.
-5. Present the session as a numbered sequence with a one-line note per block.
+4. Read `knowledge/linear-harmony-system/Journal/Current-Stage.md` (if missing, default to Part 1 for all instruments) and limit block selection to the current LHS Part for each instrument.
+5. If practice history is available (from Practice-Log.md), factor in what's been hard or skipped.
+6. Present the session as a numbered sequence with a one-line note per block.
 
 ## Knowledge Files
 

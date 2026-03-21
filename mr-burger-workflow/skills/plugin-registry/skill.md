@@ -18,6 +18,7 @@ This is the central registry of Mr. Burger's plugin ecosystem and how they conne
 | Plugin | What It Tracks | Key Files/Locations |
 |--------|---------------|-------------------|
 | **ir-teaching** | Lesson plans, units, benchmarks, ESOL materials | `~/Documents/Teaching/` |
+| **mr-burger-music** | Practice sessions, exercises, band materials, LHS system | `~/Documents/Music/` |
 | **ir-data-pipeline** | Student assessment data, growth analysis, reports | `~/Documents/Teaching/Student-Data/` (inputs), `~/Documents/Teaching/` (outputs) |
 | **mr-burger-workflow** | Tasks, captures, session state across all areas | `~/Documents/TASKS.md`, `~/Documents/[area]/notes.md` |
 | **ir-classroom-ops** | Parent contacts, behavior notes, PD hours, observation prep | `~/Documents/Teaching/logs/`, `~/Documents/Teaching/observation-prep/` |
@@ -32,6 +33,8 @@ This is the central registry of Mr. Burger's plugin ecosystem and how they conne
 | ir-data-pipeline | Growth summary | → mr-burger-workflow | Entry in Teaching/notes.md |
 | ir-classroom-ops | Contact log entries | → mr-burger-workflow | Task follow-ups in TASKS.md |
 | ir-classroom-ops | Observation prep | → ir-teaching | Lesson plan reference |
+| mr-burger-music | Session log entry | → mr-burger-workflow | Note in notes/music/ |
+| mr-burger-music | Weekly practice summary | → mr-burger-workflow | Journal entry |
 
 ## File Detection Patterns
 
@@ -70,6 +73,11 @@ BEHAVIOR LOGGING → PARENT CONTACT
   → Identify pattern (3+ entries about disruption)
   → Action: Add task "Schedule parent conference re: [Student X] behavior support"
   → Route to: TASKS.md Active + parent-contacts-log (pending follow-up)
+
+PRACTICE LOGGING → NOTES
+  music-coach session completed (optional weekly summary)
+  → Summary: "Week of YYYY-MM-DD — X sessions, trumpet blocks, guitar blocks, key struggles"
+  → Route to: ~/Documents/Music/Practice/notes/weekly-summary-YYYY-MM-DD.md
 ```
 
 ## Bash Commands for File Discovery
