@@ -30,9 +30,13 @@ Text-based material for direct use or passing to score-writer.
 
 ## Range Constraints
 
-- Beginner range: C4–G4 (written pitch for Bb trumpet)
-- Early beginner rhythm: quarter notes, half notes, whole notes only
-- Developing rhythm: add eighth notes
+Written pitch for Bb trumpet:
+
+| Level | Range | Rhythm |
+|-------|-------|--------|
+| Early beginner | C4–G4 | Whole, half notes only |
+| Beginner | C4–C5 | Add quarter notes |
+| Developing | C4–F5 | Add eighth notes |
 
 ## Knowledge File
 
