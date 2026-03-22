@@ -2,29 +2,32 @@
 *Last updated: 2026-03-22*
 
 ## Phase
-complete — repo cleaned up; all audit work pushed; stale plans deleted
+active — post-audit remediation (8 tasks across cleanup, standardization, and hardening)
 
 ## Implementation
-- **Active:** None
-- **Done:**
+- **Active:** Post-audit remediation — see `TASKS.md` for full task list
+  - Quick wins: FUSE cleanup, collaborative-protocols verify, music knowledge stubs
+  - Standardization: plugin.json convention, GWS plugin decision
+  - Hardening: runtime smoke tests, regression suite
+- **Done (prior phase):**
   - Plugin system audit — full 5-phase audit + eval complete
+  - Ecosystem component evaluation — 25 components sampled, scored 2.67/3.0
+  - Audit evaluation — scored 2.71/3.0, 0 flags
   - Removed: `benchmark-guides` skill (lower-quality duplicate of `benchmarks`)
   - Cleaned: `settings.local.json` (160 → 78 allow entries)
   - Updated: memory skill counts (91 skills, 16 agents)
   - Moved: `pixel-agents/` to `~/Documents/Tech/third-party/`
   - Fixed: `setup.sh` warns on silent skill/agent/command skips
   - Documented: skill-loading architecture in `CLAUDE.md`
-  - Deleted: `gemini/` agents directory (8 files)
-  - Removed: Gemini symlink block from `setup.sh` + deleted dangling `~/.gemini/extensions` symlink
-  - Deleted: 10 completed plan/spec files (all work was done and marked in TASKS.md)
+  - Deleted: `gemini/` agents directory (8 files), Gemini symlink block from `setup.sh`
+  - Deleted: 10 completed plan/spec files
   - Added: `.playwright-mcp/` to `.gitignore`
-  - All commits pushed to origin
 - **Blocked:** None
 
 ## Parked
 - **band-materials eval:** `docs/plans/2026-03-21-band-materials-eval-plan.md` + `docs/specs/2026-03-21-band-materials-eval-design.md` — Someday in TASKS.md; no active work
 - **score-transformer build-out:** `docs/superpowers/plans/2026-03-21-mr-burger-music-score-transformer.md` — branch merged but full suite (guide tones, enclosures, 12-key generator) status unclear; needs review before starting
-- **GWS plugin:** 92 Google Workspace skills orphaned at `~/.agents/skills/` — not loaded by Claude Code; decision deferred (integrate or leave)
+- **GWS plugin:** Now in TASKS.md as task 6 — decision needed (integrate or remove)
 
 ## Decisions Log
 - 2026-03-21 09:38: PROJECT.md layer added to persistence system
