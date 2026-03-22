@@ -292,7 +292,15 @@ Checked custom agent names (16) against:
 ## Phase 4: Cleanup
 
 ### Decisions Made
-<!-- populated in Task 17+ -->
+
+**Approved by user: 2026-03-21**
+
+| Action | What | Result |
+|--------|------|--------|
+| Remove skill | `ir-teaching/skills/benchmark-guides/` + symlink | Done — lower-quality duplicate of `benchmarks` |
+| Clean settings | `settings.local.json` — removed GSD permissions, Obsidian permissions, stale superpowers 5.0.2 refs, one-time session permissions | Done — 160 → 78 allow entries |
+| Update memory | `project_mr_burger_plugins.md` — skill counts updated to 91 skills, 16 agents | Done |
+| Re-run setup.sh | Verified clean state post-removal | Done — no errors, no skips |
 
 ## Phase 5: Evaluation
 
