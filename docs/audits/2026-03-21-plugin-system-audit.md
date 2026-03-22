@@ -6,8 +6,8 @@
 - Total community skill dirs (Cowork): 1259
 - Total agents (custom): 16
 - Broken symlinks: 0
-- Name collisions — custom vs community: TBD (Phase 2)
-- Within-plugin overlap candidates: TBD (Phase 2)
+- Name collisions — custom vs community: **0**
+- Within-plugin overlap candidates: **1** (`benchmark-guides` → remove)
 - `.fuse_hidden` artifacts: 10 (skills), 183 (commands), 0 (agents)
 - Stale items flagged: GWS plugin (orphaned at ~/.agents/skills/), GSD plugin (dead references in settings.local.json), stale memory counts
 
@@ -254,22 +254,40 @@ Checked custom agent names (16) against:
 ## Phase 3: Findings Report
 
 ### Broken Symlinks
-<!-- populated in Task 15 -->
+
+**None.** All 91 custom skill symlinks and 16 agent symlinks are valid. No Phase 4 action needed for symlinks.
 
 ### Name Collisions — Custom vs Community
-<!-- populated in Task 15 -->
+
+**None.** Zero name conflicts between custom skills/agents and any community plugin skills/agents (Cowork dirs, superpowers cache, or other enabled plugins).
 
 ### Within-Plugin Overlap Candidates
-<!-- populated in Task 15 -->
+
+| Skill | Plugin | Action | Reason |
+|-------|--------|--------|--------|
+| `benchmark-guides` | ir-teaching | **Remove** | Lower-quality subset of `benchmarks`; contains factual errors; references dead file paths |
 
 ### Settings Issues
-<!-- populated in Task 15 -->
+
+| Location | Issue | Action |
+|----------|-------|--------|
+| `settings.local.json` | 3 dead `Skill(gsd:*)` permissions — GSD plugin not installed | Remove |
+| `settings.local.json` | Stale superpowers `5.0.2` path in permissions (now `5.0.5`) | Remove |
+| `settings.local.json` | Hundreds of one-time session permissions accumulated over time | Review + prune |
+| `settings.local.json` | Obsidian vault `Read` permissions — vault migration status unclear | Leave (low risk) |
 
 ### Project-Level Conflicts
-<!-- populated in Task 15 -->
+
+**None.** No project-level `settings.json` files found — no shadowing or override conflicts.
 
 ### Memory / CLAUDE.md Issues
-<!-- populated in Task 15 -->
+
+| Item | Issue | Action |
+|------|-------|--------|
+| `project_mr_burger_plugins.md` (user memory) | Skill count stale: "69 skills, 14 agents" → actual: 91 skills, 16 agents | Update |
+| `~/.claude/CLAUDE.md` | Does not exist | No action needed |
+| GWS plugin (`~/.agents/skills/`) | 92 skills at non-standard path, not loaded by Claude Code | Decide: integrate or leave |
+| GSD plugin | Dead `Skill(gsd:*)` in settings.local.json, plugin not installed | Remove permissions |
 
 ## Phase 4: Cleanup
 
