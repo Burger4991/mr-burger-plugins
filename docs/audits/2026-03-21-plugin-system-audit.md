@@ -1,5 +1,5 @@
 # Plugin System Audit
-*Date: 2026-03-21 | Status: In Progress*
+*Date: 2026-03-21 | Status: Complete*
 
 ## Summary
 - Total custom skills: 91 (via symlinks → mr-burger-plugins)
@@ -305,7 +305,17 @@ Checked custom agent names (16) against:
 ## Phase 5: Evaluation
 
 ### Behavioral Eval — Renamed + Consolidated Skills
-<!-- populated in Task 22 -->
+
+| Skill | Change | Removed from source | Symlink removed | Replacement resolves | Broken references | Verdict |
+|-------|--------|--------------------|-----------------|--------------------|-------------------|---------|
+| `benchmark-guides` | Removed (subset of `benchmarks`) | Yes | Yes | Yes — `benchmarks` covers both routing and quick-reference | None (audit docs only) | **PASS** |
 
 ### Regression Check — Known-Good Workflows
-<!-- populated in Task 23 -->
+
+| Workflow | Skills | Status |
+|----------|--------|--------|
+| IR Unit Build | menu-mode-planner → unit-builder-protocol | **PASS** — both OK, chain reference intact |
+| Student Data Pipeline | student-data-processor → data-quality-checker → growth-analyzer | **PASS** — all OK |
+| IR Teaching Core | benchmark-theme, stop-strategy, race-strategy | **PASS** — all OK |
+
+No core skill references the removed `benchmark-guides` skill. All workflows intact.

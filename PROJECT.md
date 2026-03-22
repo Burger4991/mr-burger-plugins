@@ -1,23 +1,23 @@
 # mr-burger-plugins — Project State
-*Last updated: 2026-03-21 20:00*
+*Last updated: 2026-03-21*
 
 ## Phase
-complete — workflow system shipped, eval + audit done, all pushed and clean
+complete — plugin system audit done (2026-03-21)
 
 ## Plan
-- **File:** `docs/plans/2026-03-21-knowledge-workflow-system.md`
-- **Current step:** complete
-- **Decided:** session-state-reader shared by all commands; two-agent eval pattern (audit + behavioral) for QA; plugin hygiene audit checklist added to knowledge; "done includes docs" as completion criteria
+- **File:** `docs/superpowers/plans/2026-03-21-plugin-system-audit.md`
+- **Status:** All 24 tasks complete
 
 ## Implementation
 - **Active:** None
 - **Done:**
-  - Workflow system: session-state-reader, 11 commands, workflow-agent — all shipped
-  - Eval session: 5 pass / 6 minor issues / 0 needs work → all 8 fixes applied and pushed
-  - Audit: 3 broken symlinks removed, stale benchmark-mastery-analyzer deleted, Cowork daily name collision resolved
-  - Cheat sheets: all 5 files updated (new commands + workflow-agent)
-  - IR platform: 1 pending commit pushed
-  - /reflect: tech-systems.md + workflows.md updated
+  - Plugin system audit — full 5-phase audit complete
+  - Spec: `docs/superpowers/specs/2026-03-21-plugin-system-audit-design.md`
+  - Audit doc: `docs/audits/2026-03-21-plugin-system-audit.md`
+  - Removed: `benchmark-guides` (lower-quality duplicate)
+  - Cleaned: `settings.local.json` (160 → 78 allow entries; removed GSD, Obsidian, stale refs)
+  - Updated: memory skill counts (91 skills, 16 agents)
+  - Eval: all behavioral + regression checks PASS
 - **Blocked:** None
 
 ## Parked
@@ -33,3 +33,4 @@ complete — workflow system shipped, eval + audit done, all pushed and clean
 - 2026-03-21 20:00: Two-agent eval pattern established (audit agent + behavioral eval agent in parallel)
 - 2026-03-21 20:00: "Done includes docs" — cheat sheets are part of completion, not afterthought
 - 2026-03-21 20:00: ir-data-pipeline/benchmark-mastery-analyzer removed — ir-teaching version is canonical
+- 2026-03-21 21:30: Plugin system audit approach decided — Option A (audit first); scope = full ~/.claude/ + mr-burger-plugins; 4-phase spec written and reviewed
