@@ -198,13 +198,58 @@
 ## Phase 2: Collision Detection
 
 ### Custom vs Community Name Collisions
-<!-- populated in Task 11 -->
+
+**Result: ZERO collisions.**
+
+Checked custom skill names (91) against:
+- 1259 Cowork community directories in `~/.claude/skills/` — no matches
+- 14 superpowers skills in plugin cache — no matches
+- All other official plugin skills (plugin-dev, skill-creator, Notion, claude-code-setup, etc.) — no matches
+
+Checked custom agent names (16) against:
+- 6 community agents (agent-creator, code-architect, code-explorer, code-reviewer, plugin-validator, skill-reviewer) — no matches
+
+**No Phase 4 collision resolution needed.**
+
+**Note:** 14 superpowers skills appear as both Cowork dirs AND plugin cache entries — community-vs-community duplication, not a custom/community collision. Not actionable for cleanup.
 
 ### Within-Plugin Overlap Candidates
-<!-- populated in Task 12 -->
+
+| Pair | Overlap? | Recommendation |
+|------|----------|----------------|
+| `benchmarks` + `benchmark-guides` | Yes — same purpose, `benchmark-guides` is a lower-quality subset | **Remove `benchmark-guides`** |
+| `benchmarks` + 11 `benchmark-[topic]` skills | No — complementary routing hub vs. deep-dive content | Keep both |
+| `feedback-system` + `feedback-checkpoint-builder` | No — pedagogical framework vs. generator tool | Keep both |
+| `unit-quality-gate` + `skill-quality-gate` | No — checks units vs. checks skill files (different domains) | Keep both |
+| `unit-recovery` + `unit-troubleshooter` | No — restore from archive vs. diagnose underperformance | Keep both |
+| `esol-core` + `esol-strategies` | Partial — daily requirements in both, but intentional primary/supplementary design | Keep both |
+| `interactive-lesson-builder` skill + agent | No — skill is implementation, agent is routing wrapper | Keep both |
+| `session-logger` (music) + `session-state-reader` (workflow) | No — music logging vs. project state reading | Keep both |
+
+**Details:**
+
+**`benchmark-guides` → REMOVE**
+- Same purpose as `benchmarks` (benchmark reference/navigation) but strictly worse
+- Contains factual errors: R.1.2 labeled as "Point of View" (it's Theme); R.1.3 description is duplicated
+- References dead file paths: `/Users/alexanderburger/Documents/Teaching/Resources/BenchmarkCards/`
+- `benchmarks` already covers all routing and quick-reference needs, and links to the correct `standards/` content
+- Passes consolidation rule: `benchmark-guides` is a strict subset of `benchmarks` for the same input
+
+**All other pairs: keep as distinct.** None meet the consolidation threshold — either serve different domains, serve different roles in the same workflow, or are intentionally layered (esol-core/esol-strategies).
 
 ### Commands / Hooks / Agents Collisions
-<!-- populated in Task 13 -->
+
+**Commands:** No active collisions.
+- 11 custom commands loaded in `~/.claude/commands/` (all custom symlinks)
+- Community plugin commands (from enabled plugins) are loaded separately through the plugin system — not written to `~/.claude/commands/`. They surface as `pluginname:commandname` and do not conflict with unnamespaced custom commands.
+- The Notion plugin has a `commands/tasks/plan.md` (subcommand path, not `/plan`) — not a collision with custom `/plan`.
+
+**Hooks:** No conflicts.
+- 2 custom hook scripts (SessionStart, UserPromptSubmit) + 2 inline bash hooks (Stop, PreCompact)
+- No community plugin registers hooks for any of the same events (verified in Task 6)
+
+**Agents:** No collisions.
+- 16 custom agents, 6 community agents — zero name overlap (verified in Task 11)
 
 ## Phase 3: Findings Report
 
