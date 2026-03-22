@@ -66,3 +66,11 @@
 
 ### Decisions Made
 <!-- populated in Task 17+ -->
+
+## Phase 5: Evaluation
+
+### Behavioral Eval — Renamed + Consolidated Skills
+<!-- populated in Task 22 -->
+
+### Regression Check — Known-Good Workflows
+<!-- populated in Task 23 -->

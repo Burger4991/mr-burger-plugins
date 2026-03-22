@@ -4,7 +4,7 @@
 
 **Goal:** Produce a verified inventory of everything loaded in `~/.claude/`, identify all name collisions and within-plugin overlaps, and clean up based only on what the audit finds.
 
-**Architecture:** 4 sequential phases — inventory → collision detection → findings report → cleanup. No changes made until Phase 3 findings are reviewed and approved. The audit doc (`docs/audits/2026-03-21-plugin-system-audit.md`) is built incrementally throughout and committed at phase boundaries.
+**Architecture:** 5 sequential phases — inventory → collision detection → findings report → cleanup → evaluation. No changes made until Phase 3 findings are reviewed and approved. The audit doc (`docs/audits/2026-03-21-plugin-system-audit.md`) is built incrementally throughout and committed at phase boundaries.
 
 **Tech Stack:** Bash (`find`, `ls -la`, `readlink`, `file`), manual skill file inspection, `./scripts/setup.sh` for final verification.
 
@@ -885,6 +885,170 @@ Change phase to `complete — plugin system audit done` and update the Implement
 ```bash
 git add PROJECT.md
 git commit -m "docs: update PROJECT.md — plugin system audit complete"
+```
+
+---
+
+---
+
+## Task 22: Phase 5 — Behavioral Eval (Renamed + Consolidated Skills)
+
+**Goal:** Confirm that every skill renamed or consolidated in Phase 4 still triggers correctly and produces expected output.
+
+**Files:**
+- Modify: `docs/audits/2026-03-21-plugin-system-audit.md` (eval results section)
+
+This task is only meaningful if Phase 4 produced renames or consolidations. If Phase 4 made no changes, skip to Task 23.
+
+- [ ] **Step 1: Build the eval list**
+
+From the audit doc's "Decisions Made" section, extract every skill that was:
+- Renamed (old name → new name)
+- Consolidated (skill A absorbed into skill B)
+
+Create a table:
+
+| Skill | Change | Trigger to test | Expected behavior |
+|-------|--------|-----------------|-------------------|
+| `interactive-lesson-builder` | renamed to `ir-interactive-lesson-builder` | invoke by new name | loads skill, produces HTML lesson output |
+| ... | ... | ... | ... |
+
+- [ ] **Step 2: Test each renamed skill — trigger check**
+
+For each renamed skill, verify the new name resolves in `~/.claude/skills/`:
+
+```bash
+ls -la ~/.claude/skills/<new-name>
+readlink ~/.claude/skills/<new-name>
+```
+
+Expected: symlink exists and points to the correct source file in `mr-burger-plugins/`.
+
+- [ ] **Step 3: Test each renamed skill — behavioral check**
+
+For each renamed skill, invoke it with a minimal representative prompt and verify:
+- The skill loads (no "skill not found" error)
+- The output matches the skill's documented purpose (spot-check, not full eval)
+
+Document: skill name | prompt used | output summary | pass/fail
+
+- [ ] **Step 4: Test each consolidated skill — coverage check**
+
+For each consolidation (skill A absorbed into B), verify that skill B's content covers both original use cases:
+
+Read the kept skill file and confirm:
+- The trigger descriptions cover both former skills' use cases
+- No behavioral instructions were dropped that were unique to the removed skill
+
+```bash
+cat ~/Documents/Tech/mr-burger-plugins/<plugin>/skills/<kept-skill>/skill.md
+```
+
+- [ ] **Step 5: Record eval results in audit doc**
+
+Add a `## Phase 5: Evaluation` section to the audit doc with:
+- Eval table (from Step 1)
+- Pass/fail per skill
+- Any issues found
+
+- [ ] **Step 6: Fix any failures before proceeding**
+
+If a renamed or consolidated skill fails behavioral check:
+- Diagnose: is the symlink wrong, is the skill file missing content, or is the trigger not matching?
+- Fix the root cause (re-run `setup.sh`, update skill content, etc.)
+- Re-test until passing
+
+---
+
+## Task 23: Phase 5 — Regression Check (Known-Good Workflows)
+
+**Goal:** Verify that the 3 most critical end-to-end workflows still work correctly after all Phase 4 changes.
+
+**Files:**
+- Modify: `docs/audits/2026-03-21-plugin-system-audit.md` (regression results section)
+
+**Workflows to test:**
+
+| Workflow | Entry point | What "working" looks like |
+|----------|-------------|---------------------------|
+| IR unit build | `menu-mode-planner` → `unit-builder-protocol` | menu-mode-planner loads and presents the planner menu; unit-builder-protocol triggers on demand |
+| Student data pipeline | `student-data-processor` → `data-quality-checker` → `growth-analyzer` | each skill loads; skill descriptions are accurate and non-overlapping |
+| IR teaching core | `benchmark-theme`, `unit-builder-protocol`, `stop-strategy`, `race-strategy` | all load by name; no name collision with community skills |
+
+- [ ] **Step 1: Verify entry-point skills exist and resolve**
+
+```bash
+for skill in menu-mode-planner unit-builder-protocol student-data-processor data-quality-checker growth-analyzer benchmark-theme stop-strategy race-strategy; do
+  target=$(readlink ~/.claude/skills/$skill 2>/dev/null)
+  if [ -n "$target" ] && [ -e "$target" ]; then
+    echo "OK   $skill -> $target"
+  elif [ -d ~/.claude/skills/$skill ]; then
+    echo "DIR  $skill (community install)"
+  else
+    echo "MISSING $skill"
+  fi
+done
+```
+
+Expected: all 8 show `OK` or `DIR` — none show `MISSING`.
+
+- [ ] **Step 2: Spot-invoke each workflow entry point**
+
+For each entry-point skill, invoke it with a minimal prompt in a fresh Claude Code session and confirm:
+- Skill loads without error
+- Output is coherent and matches the skill's purpose
+- No unintended community skill of the same name fires instead
+
+Document: skill | invoked | response coherent | correct skill fired (custom vs community) | pass/fail
+
+- [ ] **Step 3: Cross-check the IR unit build chain**
+
+Specifically confirm that `menu-mode-planner` and `unit-builder-protocol` chain correctly — `menu-mode-planner` should refer the user to `unit-builder-protocol` as part of its flow.
+
+```bash
+grep -i "unit-builder-protocol" ~/Documents/Tech/mr-burger-plugins/ir-teaching/skills/menu-mode-planner/skill.md
+```
+
+Expected: reference exists confirming the chain is intact.
+
+- [ ] **Step 4: Record regression results in audit doc**
+
+Add to the `## Phase 5: Evaluation` section:
+- Regression table with pass/fail per workflow
+- Any issues found and resolved
+
+- [ ] **Step 5: Fix any regressions before marking audit complete**
+
+If a workflow is broken:
+- Check if a Phase 4 rename or removal is the cause
+- Re-run `setup.sh` if symlinks are stale
+- Fix the root cause — do not mark the audit complete until all 3 workflows pass
+
+---
+
+## Task 24: Final Commit + Mark Audit Complete
+
+- [ ] **Step 1: Commit eval results to audit doc**
+
+```bash
+cd ~/Documents/Tech/mr-burger-plugins
+git add docs/audits/2026-03-21-plugin-system-audit.md
+git commit -m "docs: add Phase 5 eval and regression results — audit complete"
+```
+
+- [ ] **Step 2: Update audit doc Status to Complete**
+
+Change the header line from `Status: In Progress` to `Status: Complete`.
+
+- [ ] **Step 3: Update PROJECT.md**
+
+Change phase to `complete — plugin system audit + eval done`.
+
+- [ ] **Step 4: Final commit**
+
+```bash
+git add docs/audits/2026-03-21-plugin-system-audit.md PROJECT.md
+git commit -m "docs: mark plugin system audit complete"
 ```
 
 ---
