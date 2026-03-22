@@ -58,7 +58,7 @@ link_skills() {
     if [ -L "$target" ]; then
       : # already linked
     elif [ -e "$target" ]; then
-      echo "[claude-code] SKIP $name — already exists (not a symlink)"
+      echo "[claude-code] WARNING: SKIP skill '$name' — a directory already exists at $target (likely Cowork community install). Custom skill is shadowed and will NOT load."
     else
       ln -s "$skill" "$target"
       echo "[claude-code] Linked skill: $name"
@@ -87,7 +87,7 @@ link_agents() {
     if [ -L "$target" ]; then
       : # already linked
     elif [ -e "$target" ]; then
-      echo "[claude-code] SKIP $name — already exists (not a symlink)"
+      echo "[claude-code] WARNING: SKIP agent '$name' — a file already exists at $target (not a symlink). Custom agent is shadowed."
     else
       ln -s "$agent" "$target"
       echo "[claude-code] Linked agent: $name"
@@ -106,7 +106,7 @@ link_commands() {
     if [ -L "$target" ]; then
       : # already linked
     elif [ -e "$target" ]; then
-      echo "[claude-code] SKIP $name — already exists (not a symlink)"
+      echo "[claude-code] WARNING: SKIP command '$name' — a file already exists at $target (not a symlink). Custom command is shadowed."
     else
       ln -s "$cmd" "$target"
       echo "[claude-code] Linked command: $name"
