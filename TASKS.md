@@ -4,18 +4,11 @@
 
 ## Quick Wins
 
-### 1. Clean FUSE artifacts
-- [ ] Delete `~/.claude/commands/.fuse_hidden*` (183 files)
-- [ ] Delete `~/.claude/skills/.fuse_hidden*` (10 files)
-- **Why:** Flagged in audit Phase 1, left unresolved in Phase 4. Harmless but adds noise to future audits and `ls` output.
-- **How:** `find ~/.claude/commands -name '.fuse_hidden*' -delete && find ~/.claude/skills -name '.fuse_hidden*' -delete`
-- **Verify:** `find ~/.claude -name '.fuse_hidden*' | wc -l` should return 0
+### ~~1. Clean FUSE artifacts~~ ✓ DONE
+- [x] Already clean — 0 FUSE artifacts found anywhere in `~/.claude/`
 
-### 2. Fix collaborative-protocols naming
-- [ ] Rename `SKILL.md` → `skill.md` in `ir-teaching/skills/collaborative-protocols/`
-- **Why:** File exists but uses uppercase `SKILL.md` while every other skill in the repo uses lowercase `skill.md`. This caused the component evaluation to fail reading it.
-- **How:** `mv ir-teaching/skills/collaborative-protocols/SKILL.md ir-teaching/skills/collaborative-protocols/skill.md`
-- **Verify:** `head -5 ir-teaching/skills/collaborative-protocols/skill.md`
+### ~~2. Fix collaborative-protocols naming~~ ✓ DONE
+- [x] Renamed `SKILL.md` → `skill.md` in `ir-teaching/skills/collaborative-protocols/` (commit d5fcdd4)
 
 ### 3. Create ear-training knowledge file
 - [ ] Remove broken symlink: `rm mr-burger-music/knowledge/linear-harmony-system`
