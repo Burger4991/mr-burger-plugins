@@ -6,26 +6,6 @@ echo "mr-burger-plugins setup"
 echo "Repo: $REPO"
 echo ""
 
-# --- Gemini CLI symlink ---
-GEMINI_EXT="$HOME/.gemini/extensions"
-GEMINI_SRC="$REPO/gemini"
-
-if [ -L "$GEMINI_EXT" ]; then
-  echo "[gemini] Already symlinked: $GEMINI_EXT -> $(readlink "$GEMINI_EXT")"
-elif [ -d "$GEMINI_EXT" ]; then
-  if [ -d "$GEMINI_EXT.bak" ]; then
-    echo "[gemini] ERROR: $GEMINI_EXT.bak already exists from a prior run. Remove it and re-run."
-    exit 1
-  fi
-  echo "[gemini] Backing up existing extensions to $GEMINI_EXT.bak"
-  mv "$GEMINI_EXT" "$GEMINI_EXT.bak"
-  ln -s "$GEMINI_SRC" "$GEMINI_EXT"
-  echo "[gemini] Symlinked: $GEMINI_EXT -> $GEMINI_SRC"
-else
-  ln -s "$GEMINI_SRC" "$GEMINI_EXT"
-  echo "[gemini] Symlinked: $GEMINI_EXT -> $GEMINI_SRC"
-fi
-
 # --- Obsidian symlink ---
 OBSIDIAN_VAULT="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Teaching/Teaching"
 OBSIDIAN_LINK="$OBSIDIAN_VAULT/Teaching Skills"
