@@ -1,7 +1,7 @@
 {
   "name": "mr-burger-workflow",
   "version": "1.2.0",
-  "description": "Personal productivity system \u2014 brain dumps, weekly planning, daily briefings, and Second Brain management with Notion integration",
+  "description": "Personal productivity system — brain dumps, weekly planning, daily briefings, and Second Brain management with Notion integration",
   "author": {
     "name": "Mr. Burger"
   },
@@ -11,5 +11,30 @@
     "second-brain",
     "notion",
     "task-management"
+  ],
+  "skills": [
+    "area-context",
+    "notion-sync",
+    "plugin-registry",
+    "prompt-scaffold",
+    "second-brain-ops",
+    "session-state-reader",
+    "work-logger"
+  ],
+  "agents": [
+    "workflow-agent"
+  ],
+  "commands": [
+    "brain-dump",
+    "brainstorm-capture",
+    "capture",
+    "checkpoint",
+    "daily",
+    "plan",
+    "reflect",
+    "resume",
+    "revise",
+    "skill-update",
+    "wrap"
   ]
 }

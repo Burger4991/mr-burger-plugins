@@ -5,5 +5,20 @@
   "author": {
     "name": "Mr. Burger"
   },
-  "keywords": ["data-analysis", "assessment", "student-data", "progress-monitoring", "reporting"]
+  "keywords": ["data-analysis", "assessment", "student-data", "progress-monitoring", "reporting"],
+  "skills": [
+    "class-comparison-generator",
+    "data-quality-checker",
+    "data-visualization-builder",
+    "growth-analyzer",
+    "intervention-planner",
+    "report-builder",
+    "reporting-category-tracker",
+    "student-data-processor",
+    "student-data-workflow"
+  ],
+  "agents": [
+    "data-analyst",
+    "parent-reporter"
+  ]
 }

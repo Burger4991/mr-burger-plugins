@@ -1,7 +1,7 @@
 {
   "name": "ir-classroom-ops",
   "version": "1.2.0",
-  "description": "Classroom operations for Intensive Reading \u2014 parent contact logs, behavior tracking, observation prep, PD tracking, and substitute folder management",
+  "description": "Classroom operations for Intensive Reading — parent contact logs, behavior tracking, observation prep, PD tracking, and substitute folder management",
   "author": {
     "name": "Mr. Burger"
   },
@@ -11,5 +11,13 @@
     "observation",
     "contact-log",
     "professional-development"
+  ],
+  "skills": [
+    "behavior-tracker",
+    "observation-prep",
+    "parent-contact-log",
+    "pd-tracker",
+    "sub-folder-builder",
+    "unit-distribution"
   ]
 }

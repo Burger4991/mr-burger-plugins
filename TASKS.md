@@ -10,27 +10,21 @@
 ### ~~2. Fix collaborative-protocols naming~~ ✓ DONE
 - [x] Renamed `SKILL.md` → `skill.md` in `ir-teaching/skills/collaborative-protocols/` (commit d5fcdd4)
 
-### 3. Create ear-training knowledge file
-- [ ] Remove broken symlink: `rm mr-burger-music/knowledge/linear-harmony-system`
-- [ ] Create directory structure: `mkdir -p mr-burger-music/knowledge/linear-harmony-system/04-Reference`
-- [ ] Write `Ear-Training-Protocol.md` with LHS ear training protocol content
-- **Why:** `knowledge/linear-harmony-system` is a broken symlink → `/Users/alexanderburger/Documents/Music/Practice/Linear Harmony System` (macOS path). The `ear-training` skill references `knowledge/linear-harmony-system/04-Reference/Ear-Training-Protocol.md` and falls back to general knowledge when missing.
-- **Content needed:** Core rule, 3-level protocol, outline progressions, instrument adaptations (trumpet comeback / guitar beginner), success criteria, example exercises
-- **Source:** The skill.md itself has the framework — the knowledge file should expand with specifics
+### ~~3. Create ear-training knowledge file~~ ✓ DONE
+- [x] Removed broken symlink, created directory structure, wrote `Ear-Training-Protocol.md`
+- Content: 5 outlines, 3 levels (sing-then-play / sing-with-chord / full-audiation), instrument adaptations, practice sequence, key progression, intervals reference
 
 ### ~~4. Populate band-materials knowledge file~~ ✓ DONE
 - [x] Already populated — `knowledge/band/beginning-band-essentials.md` is 400+ lines with fingering charts, warm-up sequences, chorale content, rhythm curriculum, and 12-week lesson sequence.
 
 ## Standardization
 
-### 5. Standardize plugin.json convention
-- [ ] Add explicit `skills`, `agents`, `commands` arrays to all 4 plugins that lack them (matching the mr-burger-music pattern)
-- **Why:** Only mr-burger-music enumerates components. The other 4 rely on implicit directory discovery — works but inconsistent.
-- **Affected files:**
-  - `ir-teaching/.claude-plugin/plugin.json` — add skills (62), agents (11)
-  - `ir-data-pipeline/.claude-plugin/plugin.json` — add skills (9), agents (2)
-  - `ir-classroom-ops/.claude-plugin/plugin.json` — add skills (6)
-  - `mr-burger-workflow/.claude-plugin/plugin.json` — add skills (7), agents (1), commands (11)
+### ~~5. Standardize plugin.json convention~~ ✓ DONE
+- [x] Added explicit `skills`, `agents`, `commands` arrays to all 4 plugins:
+  - `ir-teaching` — 61 skills, 11 agents
+  - `ir-data-pipeline` — 9 skills, 2 agents
+  - `ir-classroom-ops` — 6 skills
+  - `mr-burger-workflow` — 7 skills, 1 agent, 11 commands
 
 ### ~~6. Decide on GWS plugin~~ ✓ DONE
 - [x] `~/.agents/skills/` no longer exists — GWS plugin was already removed.
